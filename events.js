@@ -1,13 +1,15 @@
-/* Copyright (C) 2020 Yusuf Usta.
-PINKY V2
+/* 
+Copyright (C) 2021 Mikhaiel.
+Licensed under the  GPL-3.0 License;
+you may not use this file except in compliance with the License.
 */
 
-// Komutları burada tutacağız.
+// We will keep the commands here.
 var config = require('./config');
 var Commands = [];
 
 function addCommand(info, func) {
-    // Basit bir fonksiyon, komut eklemek için.
+   // A simple function to add commands.
     var types = ['photo', 'image', 'text', 'message'];
 
     var infos = {
