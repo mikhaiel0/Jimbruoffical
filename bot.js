@@ -1,8 +1,9 @@
-/* Copyright (C) 2020 Yusuf Usta.
-RECODDED BY AFNANPPLK
-Plk  
+/* 
+Copyright (C) 2020 MIKHAIEL.
+Licensed under the  GPL-3.0 License;
+you may not use this file except in compliance with the License.
+WhatsAsena - jimbrootan
 */
-
 const os = require("os");
 const fs = require("fs");
 const path = require("path");
@@ -10,13 +11,13 @@ const events = require("./events");
 const chalk = require('chalk');
 const config = require('./config');
 const {WAConnection, MessageType, Mimetype, Presence} = require('@adiwajshing/baileys');
-const {Message, StringSession, Image, Video} = require('./PinkyMwol/');
+const {Message, StringSession, Image, Video} = require('./jimbru/');
 const { DataTypes } = require('sequelize');
 const { GreetingsDB, getMessage } = require("./plugins/sql/greetings");
 const got = require('got');
 const axios = require('axios');
 
-// Sql
+// ════════════════════ SQL◽◽◽◽
 const WhatsAsenaDB = config.DATABASE.define('WhatsAsena', {
     info: {
       type: DataTypes.STRING,
@@ -36,7 +37,6 @@ fs.readdirSync('./plugins/sql/').forEach(plugin => {
 
 const plugindb = require('./plugins/sql/plugin');
 
-// Yalnızca bir kolaylık. https://stackoverflow.com/questions/4974238/javascript-equivalent-of-pythons-format-function //
 String.prototype.format = function () {
     var i = 0, args = arguments;
     return this.replace(/{}/g, function () {
@@ -66,10 +66,9 @@ async function whatsAsena () {
         }
     });
     
-    
+// ════════════════════WA CONNECTION◽◽◽◽    
     const conn = new WAConnection();
-    const res = await axios('https://untitled-1ouyr1rszhaw.runkit.sh/web')
-    conn.version = res.data.version
+    conn.version = [3, 3234, 9];
     const Session = new StringSession();
 
     conn.logger.level = config.DEBUG ? 'debug' : 'warn';
@@ -84,7 +83,7 @@ async function whatsAsena () {
 
     conn.on ('credentials-updated', async () => {
         console.log(
-            chalk.blueBright.italic('✅ Login information updated!')
+            chalk.blueBright.italic('🧞 login information updated!')
         );
 
         const authInfo = conn.base64EncodedAuthInfo();
@@ -98,17 +97,17 @@ async function whatsAsena () {
     conn.on('connecting', async () => {
         console.log(`${chalk.green.bold('Whats')}${chalk.blue.bold('Asena')}
 ${chalk.white.bold('Version:')} ${chalk.red.bold(config.VERSION)}
-${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please wait.')}`);
+${chalk.blue.italic('🧞 Connecting to WhatsApp...')}`);
     });
     
 
     conn.on('open', async () => {
         console.log(
-            chalk.green.bold('✅ Login successful!')
+            chalk.green.bold('🧞 Login successfull...!')
         );
 
         console.log(
-            chalk.blueBright.italic('⬇️ Installing external plugins...')
+            chalk.blueBright.italic('Installing external plugins...🧞')
         );
 
         var plugins = await plugindb.PluginDB.findAll();
@@ -124,7 +123,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please wait.')}`);
         });
 
         console.log(
-            chalk.blueBright.italic('⬇️  Installing plugins...')
+            chalk.blueBright.italic('Installing plugins...')
         );
 
         fs.readdirSync('./plugins').forEach(plugin => {
@@ -132,13 +131,185 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please wait.')}`);
                 require('./plugins/' + plugin);
             }
         });
-
+// ════════════════════ PLUGGINS SUCCESS◽◽◽◽
         console.log(
-            chalk.green.bold('𝚙𝚒𝚗𝚔𝚢 𝚠𝚘𝚛𝚔𝚒𝚗𝚐 ' + config.WORKTYPE + ' 𝚗𝚘𝚠 👻'));
-            await conn.sendMessage(conn.user.jid, "ᴘɪɴᴋʏ ɪꜱ ᴀʟʟ ꜱᴇᴛ", MessageType.text);
-            await conn.sendMessage(conn.user.jid, "``` WORKING " + config.WORKTYPE + "```" , MessageType.text);
-    });
+            chalk.green.bold('MASTER I AM WORKING , WELCOME TO THE WORLD OF JIMBROOTAN 🧞!')
+       );
+        
+         if (config.LANG == 'EN') {
+             await conn.sendMessage(conn.user.jid, fs.readFileSync("./src/image/logo.png"), MessageType.image, { caption: `Hey MASTER...🧖!!  ${conn.user.name}! \n*✓ Welcome To The World Of Jimbrootan 🧞 *\n🪡 I AM Working As ${config.WORKTYPE} 🧞 \n\n*🪡 JIMBROOTAN WORKING ON YOUR ACCOUNT ✅*\n\n*🪡 use .list command to fully understand the whole commands of Me *\n\n*🪡 I am a Powerfull WhatsApp bot developed by Mikhaiel.*\n\n\n *🪡 Master ✓...This is your LOG number so please dont use the command here ✅.*\n\n`});
+             
+         } else if (config.LANG == 'ML') {
+             await conn.sendMessage(conn.user.jid, fs.readFileSync("./src/image/logo.png"), MessageType.image, { caption: `Hey MASTER...🧖!!  ${conn.user.name}! \n*✓ Welcome To The World Of Jimbrootan 🧞 *\n🪡 I AM Working As ${config.WORKTYPE} 🧞 \n\n*🪡 JIMBROOTAN WORKING ON YOUR ACCOUNT ✅*\n\n*🪡 use .list command to fully understand the whole commands of Me *\n\n*🪡 I am a Powerfull WhatsApp bot developed by Mikhaiel.*\n\n\n *🪡 Master ✓...This is your LOG number so please dont use the command here ✅.*\n\n`});
+           
+         } else {
+             await conn.sendMessage(conn.user.jid, fs.readFileSync("./src/image/logo.png"), MessageType.image, { caption: `Hey MASTER...🧖!!  ${conn.user.name}! \n*✓ Welcome To The World Of Jimbrootan 🧞 *\n🪡 I AM Working As ${config.WORKTYPE} 🧞 \n\n*🪡 JIMBROOTAN WORKING ON YOUR ACCOUNT ✅*\n\n*🪡 use .list command to fully understand the whole commands of Me *\n\n*🪡 I am a Powerfull WhatsApp bot developed by Mikhaiel.*\n\n\n *🪡 Master ✓...This is your LOG number so please dont use the command here ✅.*\n\n`});
+        }
+     });
     
+// ════════════════════LOGIN MESSAGE◽◽◽◽
+    setInterval(async () => { 
+        if (config.AUTOBIO == 'true') {
+            if (conn.user.jid.startsWith('90')) { 
+                var ov_time = new Date().toLocaleString('LK', { timeZone: 'Europe/Istanbul' }).split(' ')[1]
+                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
+                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n⏱ Auto Bio By...powered By Jimbrootan'
+                await conn.setStatus(biography)
+            }
+            else if (conn.user.jid.startsWith('994')) { 
+                var ov_time = new Date().toLocaleString('AZ', { timeZone: 'Asia/Baku' }).split(' ')[1]
+                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
+                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n⏱ Auto Bio By ...powered By Jimbrootan'
+                await conn.setStatus(biography)
+            }
+            else if (conn.user.jid.startsWith('94')) { 
+                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
+                var ov_time = new Date().toLocaleString('LK', { timeZone: 'Asia/Colombo' }).split(' ')[1]
+                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n⏱ Auto Bio B...powered By Jimbrootan'
+                await conn.setStatus(biography)
+            }
+            else if (conn.user.jid.startsWith('351')) { 
+                var ov_time = new Date().toLocaleString('PT', { timeZone: 'Europe/Lisbon' }).split(' ')[1]
+                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
+                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n⏱ Auto Bio By ...powered By Jimbrootan'
+                await conn.setStatus(biography)
+            }
+            else if (conn.user.jid.startsWith('75')) { 
+                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
+                var ov_time = new Date().toLocaleString('RU', { timeZone: 'Europe/Kaliningrad' }).split(' ')[1]
+                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n⏱ Auto Bio By Whitedevil'
+                await conn.setStatus(biography)
+            }
+            else if (conn.user.jid.startsWith('91')) { 
+                var ov_time = new Date().toLocaleString('HI', { timeZone: 'Asia/Kolkata' }).split(' ')[1]
+                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
+                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n⏱ Auto Bio By ...powered By Jimbrootan'
+                await conn.setStatus(biography)
+            }
+            else if (conn.user.jid.startsWith('62')) { 
+                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
+                var ov_time = new Date().toLocaleString('ID', { timeZone: 'Asia/Jakarta' }).split(' ')[1]
+                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n⏱ Auto Bio By ...powered By Jimbrootan'
+                await conn.setStatus(biography)
+            }
+            else if (conn.user.jid.startsWith('49')) { 
+                var ov_time = new Date().toLocaleString('DE', { timeZone: 'Europe/Berlin' }).split(' ')[1]
+                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
+                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n⏱ Auto Bio By ...powered By Jimbrootan'
+                await conn.setStatus(biography)
+            }
+            else if (conn.user.jid.startsWith('61')) {  
+                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
+                var ov_time = new Date().toLocaleString('AU', { timeZone: 'Australia/Lord_Howe' }).split(' ')[1]
+                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n⏱ Auto Bio By ...powered By Jimbrootan'
+                await conn.setStatus(biography)
+            }
+            else if (conn.user.jid.startsWith('55')) { 
+                var ov_time = new Date().toLocaleString('BR', { timeZone: 'America/Noronha' }).split(' ')[1]
+                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
+                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n⏱ Auto Bio By ...powered By Jimbrootan'
+                await conn.setStatus(biography)
+            }
+            else if (conn.user.jid.startsWith('33')) {
+                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
+                var ov_time = new Date().toLocaleString('FR', { timeZone: 'Europe/Paris' }).split(' ')[1]
+                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n⏱ Auto Bio By ...powered By Jimbrootan'
+                await conn.setStatus(biography)
+            }
+            else if (conn.user.jid.startsWith('34')) { 
+                var ov_time = new Date().toLocaleString('ES', { timeZone: 'Europe/Madrid' }).split(' ')[1]
+                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
+                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n⏱ Auto Bio By ...powered By Jimbrootan'
+                await conn.setStatus(biography)
+            }
+            else if (conn.user.jid.startsWith('44')) { 
+                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
+                var ov_time = new Date().toLocaleString('GB', { timeZone: 'Europe/London' }).split(' ')[1]
+                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n⏱ Auto Bio By ...powered By Jimbrootan'
+                await conn.setStatus(biography)
+            }
+            else if (conn.user.jid.startsWith('39')) {  
+                var ov_time = new Date().toLocaleString('IT', { timeZone: 'Europe/Rome' }).split(' ')[1]
+                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
+                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n⏱ Auto Bio By ...powered By kJimbrootan'
+                await conn.setStatus(biography)
+            }
+            else if (conn.user.jid.startsWith('7')) { 
+                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
+                var ov_time = new Date().toLocaleString('KZ', { timeZone: 'Asia/Almaty' }).split(' ')[1]
+                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n⏱ Auto Bio By ...powered By Jimbrootan'
+                await conn.setStatus(biography)
+            }
+            else if (conn.user.jid.startsWith('998')) {  
+                var ov_time = new Date().toLocaleString('UZ', { timeZone: 'Asia/Samarkand' }).split(' ')[1]
+                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
+                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n⏱ Auto Bio By ...powered By Jimbrootan'
+                await conn.setStatus(biography)
+            }
+            else if (conn.user.jid.startsWith('993')) { 
+                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
+                var ov_time = new Date().toLocaleString('TM', { timeZone: 'Asia/Ashgabat' }).split(' ')[1]
+                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n⏱ Auto Bio By ...powered By Jimbrootan'
+                await conn.setStatus(biography)
+            }
+            else {
+                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
+                var ov_time = new Date().toLocaleString('EN', { timeZone: 'America/New_York' }).split(' ')[1]
+                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n⏱ Auto Bio By ...powered By Jimbrootan'
+                await conn.setStatus(biography)
+            }
+        }
+    }, 7890);
+// ════════════════════AUTO BIO◽◽◽◽◽    
+    setInterval(async () => { 
+        var getGMTh = new Date().getHours()
+        var getGMTm = new Date().getMinutes()
+         
+        while (getGMTh == 19 && getGMTm == 1) {
+            var announce = ''
+            if (config.LANG == 'EN') announce = '📢 𝗝𝗜𝗠𝗕𝗥𝗢𝗢𝗧𝗔𝗡 \n🍒 𝙰𝚗𝚗𝚘𝚞𝚗𝚌𝚎𝚖𝚎𝚗𝚝 𝚏𝚛𝚘𝚖 𝚖𝚢 𝚌𝚛𝚎𝚊𝚝𝚘𝚛'
+            if (config.LANG == 'ml') announce = '📢 𝗝𝗜𝗠𝗕𝗥𝗢𝗢𝗧𝗔𝗡 \n🍒 എന്റെ സ്രഷ്ടാവിൽ നിന്നുള്ള അറിയിപ്പ്'
+            if (config.LANG == 'ID') announce = '📢 𝗝𝗜𝗠𝗕𝗥𝗢𝗢𝗧𝗔𝗡 \n🍒 Announcement System 🔘'
+            
+            let video = 'https://i.imgur.com/kaWjcIv.mp4'
+            let image = 'https://i.imgur.com/9HhM6RP.jpg'
+            
+            if (video.includes('http') || video.includes('https')) {
+                var VID = video.split('youtu.be')[1].split(' ')[0].replace('/', '')
+                var yt = ytdl(VID, {filter: format => format.container === 'mp4' && ['1080p','720p', '480p', '360p', '240p', '144p'].map(() => true)});
+                yt.pipe(fs.createWriteStream('./' + VID + '.mp4'));
+                yt.on('end', async () => {
+                    return await conn.sendMessage(conn.user.jid,fs.readFileSync('./' + VID + '.mp4'), MessageType.video, {caption: announce, mimetype: Mimetype.mp4});
+                });
+            } else {
+                if (image.includes('http') || image.includes('https')) {
+                    var imagegen = await axios.get(image, { responseType: 'arraybuffer'})
+                    return await conn.sendMessage(conn.user.jid, Buffer.from(imagegen.data), MessageType.image, { caption: announce })
+                } else {
+                    return await conn.sendMessage(conn.user.jid, announce, MessageType.text)
+                }
+            }
+        }
+    }, 50000);
+ // ════════════════════ ANNOUNCEMENT◽◽◽◽◽   
     conn.on('chat-update', async m => {
         if (!m.hasNewMessage) return;
         if (!m.messages && !m.count) return;
@@ -148,38 +319,39 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please wait.')}`);
         if (config.NO_ONLINE) {
             await conn.updatePresence(msg.key.remoteJid, Presence.unavailable);
         }
-        
-
-        if (msg.messageStubType === 32 || msg.messageStubType === 28) {
-        var plk_say = new Date().toLocaleString('HI', { timeZone: 'Asia/Kolkata' }).split(' ')[1]
+// ════════════════════ NO ONLINE◽◽◽◽◽ 
+      if (msg.messageStubType === 32 || msg.messageStubType === 28) {
+          var jinn_say = new Date().toLocaleString('HI', { timeZone: 'Asia/Kolkata' }).split(' ')[1]
         const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-        var plk_here = new Date().toLocaleDateString(get_localized_date)
-	    var afn_plk_ = '```⏱ Time :' + plk_say + '```\n```📅 Date :' + plk_here + '```'
+        var jinn_here = new Date().toLocaleDateString(get_localized_date)
+	    var jinn_ofc_ = '```⏱ Time :' + jinn_say + '```\n```📅 Date :' + jinn_here + '```' // SPEICAL THANKZ @afnanplk 
+
+          
 
             var gb = await getMessage(msg.key.remoteJid, 'goodbye');
             if (gb !== false) {
                 if (gb.message.includes('{pp}')) {
                 let pp 
                 try { pp = await conn.getProfilePicture(msg.messageStubParameters[0]); } catch { pp = await conn.getProfilePicture(); }
-                    var pinkjson = await conn.groupMetadata(msg.key.remoteJid)
+                    var jinnhjson = await conn.groupMetadata(msg.key.remoteJid)
                 await axios.get(pp, {responseType: 'arraybuffer'}).then(async (res) => {
-                await conn.sendMessage(msg.key.remoteJid, res.data, MessageType.image, {caption:  gb.message.replace('{pp}', '').replace('{gphead}', pinkjson.subject).replace('{time}', afn_plk_).replace('{gpmaker}', pinkjson.owner).replace('{gpdesc}', pinkjson.desc).replace('{owner}', conn.user.name) }); });                           
+                await conn.sendMessage(msg.key.remoteJid, res.data, MessageType.image, {caption:  gb.message.replace('{pp}', '').replace('{time}', jinn_ofc_).replace('{gphead}', jinnhjson.subject).replace('{time}', jinn_ofc_).replace('{gpmaker}', jinnhjson.owner).replace('{gpdesc}', jinnhjson.desc).replace('{owner}', conn.user.name) }); });                             
             } else if (gb.message.includes('{gif}')) {
                 //created by afnanplk
                     var plkpinky = await axios.get(config.GIF_BYE, { responseType: 'arraybuffer' })
                     var pinkjson = await conn.groupMetadata(msg.key.remoteJid)
-                await conn.sendMessage(msg.key.remoteJid, Buffer.from(plkpinky.data), MessageType.video, {mimetype: Mimetype.gif, caption: gb.message.replace('{gif}', '').replace('{time}', afn_plk_).replace('{gphead}', pinkjson.subject).replace('{gpmaker}', pinkjson.owner).replace('{gpdesc}', pinkjson.desc).replace('{owner}', conn.user.name) });
+                await conn.sendMessage(msg.key.remoteJid, Buffer.from(plkpinky.data), MessageType.video, {mimetype: Mimetype.gif, caption: gb.message.replace('{gif}', '').replace('{gphead}', pinkjson.subject).replace('{gpmaker}', pinkjson.owner).replace('{gpdesc}', pinkjson.desc).replace('{owner}', conn.user.name) });
             } else {
-                   await conn.sendMessage(msg.key.remoteJid,gb.message.replace('{gphead}', pinkjson.subject).replace('{gpmaker}', pinkjson.owner).replace('{time}', afn_plk_).replace('{gpdesc}', pinkjson.desc).replace('{owner}', conn.user.name), MessageType.text);
+                   await conn.sendMessage(msg.key.remoteJid,gb.message.replace('{time}', jinn_ofc_).replace('{gphead}', pinkjson.subject).replace('{gpmaker}', pinkjson.owner).replace('{gpdesc}', pinkjson.desc).replace('{owner}', conn.user.name), MessageType.text);
               } 
             }//thanks to farhan      
             return;
         } else if (msg.messageStubType === 27 || msg.messageStubType === 31) {
             // welcome
-            var plk_say = new Date().toLocaleString('HI', { timeZone: 'Asia/Kolkata' }).split(' ')[1]
+		var jinn_say = new Date().toLocaleString('HI', { timeZone: 'Asia/Kolkata' }).split(' ')[1]
            const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-           var plk_here = new Date().toLocaleDateString(get_localized_date)
-	       var afn_plk_ = '```⏱ Time :' + plk_say + '```\n```📅 Date :' + plk_here + '```'
+           var jinn_here = new Date().toLocaleDateString(get_localized_date)
+	       var jinn_ofc_ = '```⏱ Time :' + jinn_say + '```\n```📅 Date :' + jinn_here + '```'
              var gb = await getMessage(msg.key.remoteJid);
             if (gb !== false) {
                 if (gb.message.includes('{pp}')) {
@@ -188,19 +360,21 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please wait.')}`);
                     var pinkjson = await conn.groupMetadata(msg.key.remoteJid)
                 await axios.get(pp, {responseType: 'arraybuffer'}).then(async (res) => {
                     //created by afnanplk
-                await conn.sendMessage(msg.key.remoteJid, res.data, MessageType.image, {caption:  gb.message.replace('{pp}', '').replace('{time}', afn_plk_).replace('{gphead}', pinkjson.subject).replace('{gpmaker}', pinkjson.owner).replace('{gpdesc}', pinkjson.desc).replace('{owner}', conn.user.name) }); });                           
+                await conn.sendMessage(msg.key.remoteJid, res.data, MessageType.image, {caption:  gb.message.replace('{pp}', '').replace('{time}', jinn_ofc_).replace('{gphead}', pinkjson.subject).replace('{gpmaker}', pinkjson.owner).replace('{gpdesc}', pinkjson.desc).replace('{owner}', conn.user.name) }); });                           
             } else if (gb.message.includes('{gif}')) {
                 var plkpinky = await axios.get(config.WEL_GIF, { responseType: 'arraybuffer' })
                 var pinkjson = await conn.groupMetadata(msg.key.remoteJid)
-                await conn.sendMessage(msg.key.remoteJid, Buffer.from(plkpinky.data), MessageType.video, {mimetype: Mimetype.gif, caption: gb.message.replace('{gif}', '').replace('{time}', afn_plk_).replace('{gphead}', pinkjson.subject).replace('{gpmaker}', pinkjson.owner).replace('{gpdesc}', pinkjson.desc).replace('{owner}', conn.user.name) });
+                await conn.sendMessage(msg.key.remoteJid, Buffer.from(plkpinky.data), MessageType.video, {mimetype: Mimetype.gif, caption: gb.message.replace('{gif}', '').replace('{time}', jinn_ofc_).replace('{gphead}', pinkjson.subject).replace('{gpmaker}', pinkjson.owner).replace('{gpdesc}', pinkjson.desc).replace('{owner}', conn.user.name) });
             } else {
                 var pinkjson = await conn.groupMetadata(msg.key.remoteJid)
-                   await conn.sendMessage(msg.key.remoteJid,gb.message.replace('{gphead}', pinkjson.subject).replace('{gpmaker}', pinkjson.owner).replace('{gpdesc}', pinkjson.desc).replace('{time}', afn_plk_).replace('{owner}', conn.user.name), MessageType.text);
+                   await conn.sendMessage(msg.key.remoteJid,gb.message.replace('{gphead}', pinkjson.subject).replace('{gpmaker}', pinkjson.owner).replace('{gpdesc}', pinkjson.desc).replace('{time}', jinn_ofc_).replace('{owner}', conn.user.name), MessageType.text);
             }
           }         
             return;                               
     }         
 
+        
+// ════════════════════ WELCOME & GOODBYE◽◽◽◽◽
         events.commands.map(
             async (command) =>  {
                 if (msg.message && msg.message.imageMessage && msg.message.imageMessage.caption) {
@@ -219,12 +393,11 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please wait.')}`);
                         command.pattern.test(text_msg)))) || 
                     (command.pattern !== undefined && command.pattern.test(text_msg)) || 
                     (command.on !== undefined && command.on === 'text' && text_msg) ||
-                    // Video
                     (command.on !== undefined && (command.on === 'video')
                     && msg.message && msg.message.videoMessage !== null && 
                     (command.pattern === undefined || (command.pattern !== undefined && 
                         command.pattern.test(text_msg))))) {
-
+// ════════════════════ VIDEO & IMAGE◽◽◽◽◽◽
                     let sendMsg = false;
                     var chat = conn.chats.get(msg.key.remoteJid)
                         
@@ -235,20 +408,20 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please wait.')}`);
                         if (!command.onlyPm === chat.jid.includes('-')) sendMsg = true;
                         else if (command.onlyGroup === chat.jid.includes('-')) sendMsg = true;
                     }
-                    
-                    else if ((config.MAHN !== false && msg.key.fromMe === false && command.fromMe === true &&
+                     
+                     else if ((config.MAHN !== false && msg.key.fromMe === false && command.fromMe === true &&
                         (msg.participant && config.MAHN.includes(',') ? config.MAHN.split(',').includes(msg.participant.split('@')[0]) : msg.participant.split('@')[0] == config.MAHN || config.MAHN.includes(',') ? config.MAHN.split(',').includes(msg.key.remoteJid.split('@')[0]) : msg.key.remoteJid.split('@')[0] == config.MAHN)
                     ) || command.fromMe === msg.key.fromMe || (command.fromMe === false && !msg.key.fromMe)) {
                         if (command.onlyPinned && chat.pin === undefined) return;
                         if (!command.onlyPm === chat.jid.includes('-')) sendMsg = true;
                         else if (command.onlyGroup === chat.jid.includes('-')) sendMsg = true;
                     }
-    
+// ════════════════════ SUDO◽◽◽◽◽  
                     if (sendMsg) {
                         if (config.SEND_READ && command.on === undefined) {
                             await conn.chatRead(msg.key.remoteJid);
                         }
-                        
+                       
                         var match = text_msg.match(command.pattern);
                         
                         if (command.on !== undefined && (command.on === 'image' || command.on === 'photo' )
@@ -268,18 +441,14 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please wait.')}`);
                         try {
                             await command.function(whats, match);
                         } catch (error) {
-                            if (config.LANG == 'TR' || config.LANG == 'AZ') {
-                                await conn.sendMessage(conn.user.jid, '-- HATA RAPORU [WHATSASENA] --' + 
-                                    '\n*WhatsAsena bir hata gerçekleşti!*'+
-                                    '\n_Bu hata logunda numaranız veya karşı bir tarafın numarası olabilir. Lütfen buna dikkat edin!_' +
-                                    '\n_Yardım için Telegram grubumuza yazabilirsiniz._' +
-                                    '\n_Bu mesaj sizin numaranıza (kaydedilen mesajlar) gitmiş olmalıdır._\n\n' +
-                                    'Gerçekleşen Hata: ' + error + '\n\n'
-                                    , MessageType.text);
+                            if (config.LANG == 'EN') {
+                                await conn.sendMessage(conn.user.jid, fs.readFileSync("./src/image/logo.png"), MessageType.image, { caption: '*🧞 JIMBROOTAN 🧞*  WORKING PERFECTLY...!!\n\n▷ _This is your LOG number Dont Try Command here_\n▷ Also You Can join Our Support group for more Help.\n_Support Group ▷ https://chat.whatsapp.com/Buyz3sEdhaWB0Rp7gtsKjd\n\n*Error:* ```' + error + '```\n\n' });
+                                
+                            } else if (config.LANG == 'ML') {
+                                await conn.sendMessage(conn.user.jid, fs.readFileSync("./src/image/logo.png"), MessageType.image, { caption: '*🧞 JIMBROOTAN 🧞*  WORKING PERFECTLY...!!!\n\n▷ _ഇത് നിങ്ങളുടെ LOG നമ്പർ ആണ് ഇവിടെ കമാൻഡ് ഉപയോഗിക്കരുത്_\n▷ കൂടുതൽ സഹായങ്ങൾക്ക് നിങ്ങൾക്ക് ഞങ്ങളുടെ സപ്പോർട്ട് ഗ്രൂപ്പിൽ ചേരാം\n_Support Group ▷ https://chat.whatsapp.com/Buyz3sEdhaWB0Rp7gtsKjd\n\n*Error:* ```' + error + '```\n\n' });
+                                
                             } else {
-                                await conn.sendMessage(conn.user.jid, '__PINKYBOT_☠☠_[error] ' +
-                                    '\n\n*👻 ' + error + '*\n'
-                                    , MessageType.text);
+                                await conn.sendMessage(conn.user.jid, fs.readFileSync("./src/image/logo.png"), MessageType.image, { caption: '*🧞 JIMBROOTAN 🧞*  WORKING PERFECTLY...!!!\n\n▷ _This is your LOG number Dont Try Command here_\n▷ Also You Can join Our Support group for more Help.\n_Support Group ▷ https://chat.whatsapp.com/Buyz3sEdhaWB0Rp7gtsKjd\n\n*Error:* ```' + error + '```\n\n' });
                             }
                         }
                     }
@@ -287,12 +456,12 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please wait.')}`);
             }
         )
     });
-    
+ // ════════════════════ERRROR MESSAGES◽◽◽◽◽   
     try {
         await conn.connect();
     } catch {
         if (!nodb) {
-            console.log(chalk.red.bold('Eski sürüm stringiniz yenileniyor...'))
+            console.log(chalk.red.bold('Refreshing your old version string...'))
             conn.loadAuthInfo(Session.deCrypt(config.SESSION)); 
             try {
                 await conn.connect();
