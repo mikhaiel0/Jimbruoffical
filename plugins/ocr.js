@@ -1,23 +1,22 @@
 /* Copyright (C) 2020 Yusuf Usta.
-
 Licensed under the  GPL-3.0 License;
 you may not use this file except in compliance with the License.
-
 WhatsAsena - Yusuf Usta
 Thanks to github/@justinthoms for base and helps.
 */
 
-const MyPnky = require('../events');
+const Jimbrootan = require('../events');
 const Config = require('../config');
 const {MessageType} = require('@adiwajshing/baileys');
 const tesseract = require("node-tesseract-ocr")
 const langs = require('langs');
 const Language = require('../language');
 const Lang = Language.getString('ocr');
+
 if (Config.STANDPLK == 'off' || Config.STANDPLK == 'OFF') {
 if (Config.WORKTYPE == 'private') {
 
-    MyPnky.addCommand({pattern: 'ocr ?(.*)', fromMe: true, desc: Lang.OCR_DESC}, (async (message, match) => { 
+    Jimbrootan.addCommand({pattern: 'ocr ?(.*)', fromMe: true, desc: Lang.OCR_DESC}, (async (message, match) => { 
 
         if (message.reply_message === false) return await message.sendMessage(Lang.NEED_REPLY);    
 	var info = await message.reply(Lang.DOWNLOADING);
@@ -54,7 +53,7 @@ if (Config.WORKTYPE == 'private') {
 }
 else if (Config.WORKTYPE == 'public') {
 
-    MyPnky.addCommand({pattern: 'ocr ?(.*)', fromMe: false, desc: Lang.OCR_DESC}, (async (message, match) => { 
+    Jimbrootan.addCommand({pattern: 'ocr ?(.*)', fromMe: false, desc: Lang.OCR_DESC}, (async (message, match) => { 
 
         if (message.reply_message === false) return await message.sendMessage(Lang.NEED_REPLY);    
 	var info = await message.reply(Lang.DOWNLOADING);
@@ -88,5 +87,4 @@ else if (Config.WORKTYPE == 'public') {
 
         return await message.reply(Lang.RESULT.format(dil[2], result));
     }));
-}
 }
