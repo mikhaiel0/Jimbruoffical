@@ -1,6 +1,6 @@
 /*
 Copyright (C) 2020 afnanplk.
-NEW WORK TYPE TYPE ADDED
+NEW WORK TYPE TYPE ADDED 
 */
 
 const Jimbrootan = require('../events');
