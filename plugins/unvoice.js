@@ -3,7 +3,7 @@ Telegram: t.me/phaticusthiccy
 Instagram: www.instagram.com/kyrie.baran
 */
 
-const MyPnky = require('../events');
+const Jimbrootan = require('../events');
 const {MessageType,Mimetype} = require('@adiwajshing/baileys');
 const fs = require('fs');
 const ffmpeg = require('fluent-ffmpeg');
@@ -14,10 +14,10 @@ const Config = require('../config');
 const Language = require('../language');
 const Lang = Language.getString('unvoice'); // Language support
 
-if (Config.STANDPLK == 'off' || Config.STANDPLK == 'OFF') {
+
 if (Config.WORKTYPE == 'private') {
 
-  MyPnky.addCommand({pattern: 'U ?(.*)', fromMe: true, desc: Lang.UV_DESC}, (async (message, match) => {    
+  Jimbrootan.addCommand({pattern: 'U ?(.*)', fromMe: true, desc: Lang.UV_DESC}, (async (message, match) => {    
     if (message.reply_message === false);
     var location = await message.client.downloadAndSaveMediaMessage({
         key: {
@@ -34,7 +34,7 @@ let id = match[1];
             await message.client.sendMessage(id, fs.readFileSync('output.mp3'), MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: true});
 });}));
 
-MyPnky.addCommand({pattern: 'unvoice', fromMe: true, desc: Lang.UV_DESC}, (async (message, match) => {    
+Jimbrootan.addCommand({pattern: 'unvoice', fromMe: true, desc: Lang.UV_DESC}, (async (message, match) => {    
     if (message.reply_message === false);
     var location = await message.client.downloadAndSaveMediaMessage({
         key: {
@@ -51,7 +51,7 @@ MyPnky.addCommand({pattern: 'unvoice', fromMe: true, desc: Lang.UV_DESC}, (async
             await message.sendMessage(fs.readFileSync('output.mp3'), MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: true});
 });}));
 
-MyPnky.addCommand({pattern: '2 ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
+Jimbrootan.addCommand({pattern: '2 ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
     if (message.reply_message === false);
     var location = await message.client.downloadAndSaveMediaMessage({
         key: {
@@ -68,7 +68,7 @@ let id = match[1];
             await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {mimetype: Mimetype.mpeg});
 });}));
 
-MyPnky.addCommand({pattern: '1', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
+Jimbrootan.addCommand({pattern: '1', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
     if (message.reply_message === false);
     var location = await message.client.downloadAndSaveMediaMessage({
         key: {
@@ -85,7 +85,7 @@ MyPnky.addCommand({pattern: '1', fromMe: true, dontAddCommandList: true}, (async
             await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {mimetype: Mimetype.mpeg});
 });}));
 
-MyPnky.addCommand({pattern: 'unimage', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
+Jimbrootan.addCommand({pattern: 'unimage', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
     if (message.reply_message === false) return await message.sendMessage("Tag an image");
     var downloading = await message.client.sendMessage(message.jid,"```Downloading & Uploading...```",MessageType.text);
     var location = await message.client.downloadAndSaveMediaMessage({
@@ -107,7 +107,7 @@ MyPnky.addCommand({pattern: 'unimage', fromMe: true, dontAddCommandList: true}, 
 }
 else if (Config.WORKTYPE == 'public') {
 
-   MyPnky.addCommand({pattern: 'U ?(.*)', fromMe: true, desc: Lang.UV_DESC}, (async (message, match) => {    
+   Jimbrootan.addCommand({pattern: 'U ?(.*)', fromMe: true, desc: Lang.UV_DESC}, (async (message, match) => {    
     if (message.reply_message === false);
     var location = await message.client.downloadAndSaveMediaMessage({
         key: {
@@ -124,7 +124,7 @@ let id = match[1];
             await message.client.sendMessage(id, fs.readFileSync('output.mp3'), MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: true});
 });}));
 
-MyPnky.addCommand({pattern: 'unvoice', fromMe: false, desc: Lang.UV_DESC}, (async (message, match) => {    
+Jimbrootan.addCommand({pattern: 'unvoice', fromMe: false, desc: Lang.UV_DESC}, (async (message, match) => {    
     if (message.reply_message === false);
     var location = await message.client.downloadAndSaveMediaMessage({
         key: {
@@ -141,7 +141,7 @@ MyPnky.addCommand({pattern: 'unvoice', fromMe: false, desc: Lang.UV_DESC}, (asyn
             await message.sendMessage(fs.readFileSync('output.mp3'), MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: true});
 });}));
 
-MyPnky.addCommand({pattern: '2 ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
+Jimbrootan.addCommand({pattern: '2 ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
     if (message.reply_message === false);
     var location = await message.client.downloadAndSaveMediaMessage({
         key: {
@@ -158,7 +158,7 @@ let id = match[1];
             await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {mimetype: Mimetype.mpeg});
 });}));
 
-MyPnky.addCommand({pattern: '1', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
+Jimbrootan.addCommand({pattern: '1', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
     if (message.reply_message === false);
     var location = await message.client.downloadAndSaveMediaMessage({
         key: {
@@ -175,7 +175,7 @@ MyPnky.addCommand({pattern: '1', fromMe: true, dontAddCommandList: true}, (async
             await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {mimetype: Mimetype.mpeg});
 });}));
 
-MyPnky.addCommand({pattern: 'unimage', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
+Jimbrootan.addCommand({pattern: 'unimage', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
     if (message.reply_message === false) return await message.sendMessage("Tag an image");
     var downloading = await message.client.sendMessage(message.jid,"```Downloading & Uploading...```",MessageType.text);
     var location = await message.client.downloadAndSaveMediaMessage({
@@ -194,5 +194,4 @@ MyPnky.addCommand({pattern: 'unimage', fromMe: true, dontAddCommandList: true}, 
         });
     return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
  }));
-}
 }
