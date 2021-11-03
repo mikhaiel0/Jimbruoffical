@@ -13,7 +13,7 @@ function convertToBool(text, fault = 'true') {
 
 module.exports = {
  MKLO: process.env.BAD_WORDS === undefined ? false : process.env.BAD_WORDS,
- OA_NAME: process.env.DEPLOYER === undefined ? 'Mikhaiel is my creator' : process.env.DEPLOYER,
+ OA_NAME: process.env.DEPLOYER === undefined ? 'Mikhaiel' : process.env.DEPLOYER,
  PHONE: process.env.NUMBER === undefined ? '+919544846609' : process.env.NUMBER,    
 
 };
