@@ -1,24 +1,23 @@
 /* 
 */
 
-const MyPnky = require('../events');
+const Jimbrootan = require('../events');
 const config = require('../config');
 const Heroku = require('heroku-client');
 const heroku = new Heroku({
     token: config.HEROKU.API_KEY
 });
 let baseURI = '/apps/' + config.HEROKU.APP_NAME;
-
 if (config.STANDPLK == 'off' || config.STANDPLK == 'OFF') {
-   var l_dsc = ''
+    var l_dsc = ''
     var alr_on = ''
     var alr_off = ''
     var BGM_on = ''
     var BGM_off = ''
     if (config.LANG == 'EN') {
-        l_dsc = 'turn on and turn of bgm. -bot owner command'
-        BGM_on = 'bgm option turned on!'
-        BGM_off = 'bgm option turned off'
+        l_dsc = 'turn on and turn of bgm. - bot owner command'
+        BGM_on = '```Bgm option turned on!😉'
+        BGM_off = '```Bgm option turned off 😑```'
     }
     if (config.LANG == 'ML') {
         l_dsc = 'turn on and turn of bgm. -bot owner command'        
@@ -30,7 +29,7 @@ if (config.STANDPLK == 'off' || config.STANDPLK == 'OFF') {
         BGM_on = 'bgm option turned on!'
         BGM_off = 'bgm option turned off'
     }
-    MyPnky.addCommand({pattern: 'bgm ?(.*)', fromMe: true, desc: l_dsc, usage: '.bgm on / off' }, (async (message, match) => {
+    Jimbrootan.addCommand({pattern: 'bgm ?(.*)', fromMe: true, desc: l_dsc, usage: '.bgm on / off' }, (async (message, match) => {
         if (match[1] == 'off') {
                 await heroku.patch(baseURI + '/config-vars', { 
                     body: { 
@@ -73,7 +72,7 @@ if (config.STANDPLK == 'off' || config.STANDPLK == 'OFF') {
         THERI_offp = 'ᴜꜱᴇʀꜱ ᴡɪʟʟ ɴᴏᴛ ʙᴇ ʙʟᴏᴄᴋᴇᴅ ɪꜰ ɢɪᴠᴇɴ ʙᴀᴅ ᴡᴏʀᴅꜱ ᴀʀᴇ ᴜꜱᴇᴅ'
     }
    
-    MyPnky.addCommand({pattern: 'theri ?(.*)', fromMe: true, desc: l_dss, usage: 'for pm .theri pm no / pm yes \n for group .theri gp no / gp yes' }, (async (message, match) => {
+    Jimbrootan.addCommand({pattern: 'theri ?(.*)', fromMe: true, desc: l_dss, usage: 'for pm .theri pm no / pm yes \n for group .theri gp no / gp yes' }, (async (message, match) => {
         if (match[1] == 'pm yes') {
                 await heroku.patch(baseURI + '/config-vars', { 
                     body: { 
@@ -122,7 +121,7 @@ if (config.STANDPLK == 'off' || config.STANDPLK == 'OFF') {
     }
 
 
- MyPnky.addCommand({pattern: 'bgm ?(.*)', fromMe: true, desc: plk_desc, usage: '.bgm one / two' }, (async (message, match) => {
+ Jimbrootan.addCommand({pattern: 'bgm ?(.*)', fromMe: true, desc: plk_desc, usage: '.bgm one / two' }, (async (message, match) => {
         if (match[1] == 'two') {
                 await heroku.patch(baseURI + '/config-vars', { 
                     body: { 
@@ -208,7 +207,7 @@ if (config.STANDPLK == 'off' || config.STANDPLK == 'OFF') {
         succ_on = 'Antilink Berhasil Dibuka!'
         succ_off = 'Antilink Berhasil Ditutup!'
     }
-    MyPnky.addCommand({pattern: 'antilink ?(.*)', fromMe: true, desc: l_dsc, usage: '.antilink on / off' }, (async (message, match) => {
+    Jimbrootan.addCommand({pattern: 'antilink ?(.*)', fromMe: true, desc: l_dsc, usage: '.antilink on / off' }, (async (message, match) => {
         if (match[1] == 'off') {
                 await heroku.patch(baseURI + '/config-vars', { 
                     body: { 
@@ -248,7 +247,7 @@ if (config.STANDPLK == 'off' || config.STANDPLK == 'OFF') {
         LINKT_off = 'M_LINK TURNED Off'
     }
    
-    MyPnky.addCommand({pattern: 'mlink ?(.*)', fromMe: true, desc: l_dsc, usage: '.mlink on / of' }, (async (message, match) => {
+    Jimbrootan.addCommand({pattern: 'mlink ?(.*)', fromMe: true, desc: l_dsc, usage: '.mlink on / of' }, (async (message, match) => {
         if (match[1] == 'off') {
                 await heroku.patch(baseURI + '/config-vars', { 
                     body: { 
@@ -285,7 +284,7 @@ if (config.STANDPLK == 'off' || config.STANDPLK == 'OFF') {
     }
 
 
- MyPnky.addCommand({pattern: 'austick ?(.*)', fromMe: true, desc: plk_desc, usage: '.austick on / off' }, (async (message, match) => {
+ Jimbrootan.addCommand({pattern: 'austick ?(.*)', fromMe: true, desc: plk_desc, usage: '.austick on / off' }, (async (message, match) => {
         if (match[1] == 'on') {
                 await heroku.patch(baseURI + '/config-vars', { 
                     body: { 
@@ -321,7 +320,7 @@ if (config.STANDPLK == 'off' || config.STANDPLK == 'OFF') {
       W_PRI = 'ᴡᴏʀᴋ_ᴛʏᴘᴇ ɪꜱ ɴᴏᴡ ᴘʀɪᴠᴀᴛᴇ'
     }
 
-    MyPnky.addCommand({pattern: 'work ?(.*)', fromMe: true,dontAddCommandList: true, }, (async (message, match) => {
+    Jimbrootan.addCommand({pattern: 'work ?(.*)', fromMe: true,dontAddCommandList: true, }, (async (message, match) => {
         if (match[1] == 'public') {
                 await heroku.patch(baseURI + '/config-vars', { 
                     body: { 
@@ -345,24 +344,24 @@ if (config.STANDPLK == 'off' || config.STANDPLK == 'OFF') {
                 await message.sendMessage(W_ADM)
         }
     }));
-
     
-var plk_STN = ''
-var AFN_STN = ''
+    
+var ON_STN = ''
+var OFF_STN = ''
  
   if (config.LANG == 'EN') {
     
-    plk_STN = 'make your bot standby'
-    AFN_STN = 'make your bot not standby'  
+    ON_STN = 'make your bot standby'
+    OFF_STN = 'make your bot not standby'  
     }
 
     if (config.LANG == 'ML') {
       
-      plk_STN = 'നിങ്ങളുടെ ബോട്ട് സ്റ്റാൻഡ്ബൈ ആക്കുക'
-      AFN_STN = 'സ്റ്റാൻഡ്ബൈയിൽ നിന്ന് നിങ്ങളുടെ ബോട്ട് മാറ്റുക' 
+      ON_STN = 'നിങ്ങളുടെ ബോട്ട് സ്റ്റാൻഡ്ബൈ ആക്കുക'
+      OFF_STN = 'സ്റ്റാൻഡ്ബൈയിൽ നിന്ന് നിങ്ങളുടെ ബോട്ട് മാറ്റുക' 
     }
 
-MyPnky.addCommand({pattern: 'standby ?(.*)', fromMe: true, desc: plk_STN }, (async (message, match) => {
+Jimbrootan.addCommand({pattern: 'standby ?(.*)', fromMe: true, desc: ON_STN }, (async (message, match) => {
                 await heroku.patch(baseURI + '/config-vars', { 
                     body: { 
                         ['STANDBY_MODE']: 'on'
@@ -371,7 +370,7 @@ MyPnky.addCommand({pattern: 'standby ?(.*)', fromMe: true, desc: plk_STN }, (asy
      await message.sendMessage('your bot is standby now')
     }));
 }
-MyPnky.addCommand({pattern: 'run again ?(.*)', fromMe: true, desc: AFN_STN }, (async (message, match) => {
+Jimbrootan.addCommand({pattern: 'run again ?(.*)', fromMe: true, desc: OFF_STN }, (async (message, match) => {
                 await heroku.patch(baseURI + '/config-vars', { 
                     body: { 
                         ['STANDBY_MODE']: 'off'
