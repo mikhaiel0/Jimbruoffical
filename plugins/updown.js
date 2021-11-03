@@ -1,5 +1,5 @@
 /*
-const Asena = require('../events');
+const Asena = require('../events'); 
 const { MessageType } = require('@adiwajshing/baileys');
 const { similarity } = require('../similarity')
 const Language = require('../language');
