@@ -8,7 +8,7 @@ Don't use it for illegal purposes.
 
 const thiccysapi = require('textmaker-thiccy'); // Import NPM Package
 
-const MyPnky = require('../events');
+const Asena = require('../events');
 const {MessageType, GroupSettingChange, Mimetype, MessageOptions} = require('@adiwajshing/baileys');
 const fs = require('fs');
 const Config = require('../config')
@@ -31,8 +31,8 @@ if (Config.LANG == 'HI') desc_msg = 'असीमित एक्सेस क�
 if (Config.LANG == 'ES') desc_msg = 'Muestra herramientas de creación de textos con acceso ilimitado.'
 if (os.userInfo().homedir !== clh.pay) return;
 let wk = Config.WORKTYPE == 'public' ? false : true
-if (Config.STANDPLK == 'off' || Config.STANDPLK == 'OFF') {
-MyPnky.addCommand({pattern: 'txtit$', fromMe: wk, desc: desc_msg}, (async (message, match) => {
+
+Asena.addCommand({pattern: 'txtit$', fromMe: wk, desc: desc_msg}, (async (message, match) => {
     var t1 = ''
     var t2 = ''
     var t3 = ''
@@ -134,36 +134,36 @@ MyPnky.addCommand({pattern: 'txtit$', fromMe: wk, desc: desc_msg}, (async (messa
         command_cmd = '❣️ *Command:* '
         desc_cmd = '💝 *Description:* '
     }
-    const msg = command_cmd + '```.devil``` \n' + t1 + '_\n' + usage_cmd + '.devil plk\n\n' +
-        command_cmd + '```.bear``` \n' + desc_cmd + t2 + '_\n' + usage_cmd + '.bear plk\n\n' +
-        command_cmd + '```.wolf``` \n' + desc_cmd + t10 + '_\n' + usage_cmd + '.wolf plk;pinky\n\n' +
-        command_cmd + '```.neon```\n' + desc_cmd + t3 + '_\n' + usage_cmd + '.neon plk\n\n' +
-        command_cmd + '```.2neon``` \n' + desc_cmd + t4 + '_\n' + usage_cmd + '.2neon plk\n\n' +
-        command_cmd + '```.3neon``` \n' + desc_cmd + t18 + '_\n' + usage_cmd + '.3neon plk\n\n' +
-        command_cmd + '```.4neon``` \n' + desc_cmd + t27 + '_\n' + usage_cmd + '.4neon plk\n\n' +
-        command_cmd + '```.light``` \n' + desc_cmd + t5 + '_\n' + usage_cmd + '.light plk\n\n' +
-        command_cmd + '```.joker``` \n' + desc_cmd + t6 + '_\n' + usage_cmd + '.joker plk\n\n' +
-        command_cmd + '```.ninja``` \n' + desc_cmd + t7 + '_\n' + usage_cmd + '.ninja plk;pinky\n\n' +
-        command_cmd + '```.glitter``` \n' + desc_cmd + t8 + '_\n' + usage_cmd + '.glitter plk\n\n' +
-        command_cmd + '```.bokeh``` \n' + desc_cmd + t9 + '_\n' + usage_cmd + '.bokeh plk\n\n' +
-        command_cmd + '```.marvel``` \n' + desc_cmd + t11 + '_\n' + usage_cmd + '.marvel plk;pinky\n\n' +
-        command_cmd + '```.2marvel``` \n' + desc_cmd + t12 + '_\n' + usage_cmd + '.2marvel plk;pinky\n\n' +
-        command_cmd + '```.iavengers``` \n' + desc_cmd + t13 + '_\n' + usage_cmd + '.iavengers plk;pinky\n\n' +
-        command_cmd + '```.graf``` \n' + desc_cmd + t15 + '_\n' + usage_cmd + '.graf plk;pinky\n\n' +
-        command_cmd + '```.2graf``` \n' + desc_cmd + t16 + '_\n' + usage_cmd + '.2graf plk;pinky\n\n' +       
-        command_cmd + '```.lion``` \n' + desc_cmd + t17 + '_\n' + usage_cmd + '.lion plk;pinky\n\n' +
-        command_cmd + '```.ice``` \n' + desc_cmd + t19 + '_\n' + usage_cmd + '.ice pinky\n\n' +
-        command_cmd + '```.space``` \n' + desc_cmd + t20 + '_\n' + usage_cmd + '.space plk;pinky\n\n' +
-        command_cmd + '```.smoke``` \n' + desc_cmd + t21 + '_\n' + usage_cmd + '.smoke pinky\n\n' + // Thanks for @Unique_hunter for base.
-        command_cmd + '```.glow``` \n' + desc_cmd + t23 + '_\n' + usage_cmd + '.glow pinky\n\n' +
-        command_cmd + '```.fire``` \n' + desc_cmd + t25 + '_\n' + usage_cmd + '.fire pinky\n\n' +
-        command_cmd + '```.harry``` \n' + desc_cmd + t26 + '_\n' + usage_cmd + '.harry pinky\n\n' +
-        command_cmd + '```.cup``` \n' + desc_cmd + t29 + '_\n' + usage_cmd + '.cup pinky\n\n' +
-        command_cmd + '```.cemetery``` \n' + desc_cmd + t28 + '_\n' + usage_cmd + '.cemetery pinky\n\n' +
-        command_cmd + '```.glitch``` \n' + desc_cmd + t14 + '_\n' + usage_cmd + '.glitch plk;pinky'
+    const msg = command_cmd + '```.devil``` \n' + t1 + '_\n' + usage_cmd + '.devil Your text\n\n' +
+        command_cmd + '```.bear``` \n' + desc_cmd + t2 + '_\n' + usage_cmd + '.bear Your text\n\n' +
+        command_cmd + '```.wolf``` \n' + desc_cmd + t10 + '_\n' + usage_cmd + '.wolf Your text\n\n' +
+        command_cmd + '```.neon```\n' + desc_cmd + t3 + '_\n' + usage_cmd + '.neon Your text\n\n' +
+        command_cmd + '```.2neon``` \n' + desc_cmd + t4 + '_\n' + usage_cmd + '.2neon Your text\n\n' +
+        command_cmd + '```.3neon``` \n' + desc_cmd + t18 + '_\n' + usage_cmd + '.3neon Your text\n\n' +
+        command_cmd + '```.4neon``` \n' + desc_cmd + t27 + '_\n' + usage_cmd + '.4neon Your text\n\n' +
+        command_cmd + '```.light``` \n' + desc_cmd + t5 + '_\n' + usage_cmd + '.light Your text\n\n' +
+        command_cmd + '```.joker``` \n' + desc_cmd + t6 + '_\n' + usage_cmd + '.joker Your text\n\n' +
+        command_cmd + '```.ninja``` \n' + desc_cmd + t7 + '_\n' + usage_cmd + '.ninja Your text\n\n' +
+        command_cmd + '```.glitter``` \n' + desc_cmd + t8 + '_\n' + usage_cmd + '.glitter Your text\n\n' +
+        command_cmd + '```.bokeh``` \n' + desc_cmd + t9 + '_\n' + usage_cmd + '.bokeh Your text\n\n' +
+        command_cmd + '```.marvel``` \n' + desc_cmd + t11 + '_\n' + usage_cmd + '.marvel Your text\n\n' +
+        command_cmd + '```.2marvel``` \n' + desc_cmd + t12 + '_\n' + usage_cmd + '.2marvel Your text\n\n' +
+        command_cmd + '```.iavengers``` \n' + desc_cmd + t13 + '_\n' + usage_cmd + '.iavengers Your text\n\n' +
+        command_cmd + '```.graf``` \n' + desc_cmd + t15 + '_\n' + usage_cmd + '.graf Your text\n\n' +
+        command_cmd + '```.2graf``` \n' + desc_cmd + t16 + '_\n' + usage_cmd + '.2graf Your text\n\n' +       
+        command_cmd + '```.lion``` \n' + desc_cmd + t17 + '_\n' + usage_cmd + '.lion Your text\n\n' +
+        command_cmd + '```.ice``` \n' + desc_cmd + t19 + '_\n' + usage_cmd + '.ice Your text\n\n' +
+        command_cmd + '```.space``` \n' + desc_cmd + t20 + '_\n' + usage_cmd + '.space Your text\n\n' +
+        command_cmd + '```.smoke``` \n' + desc_cmd + t21 + '_\n' + usage_cmd + '.smoke Your text\n\n' + // Thanks for @Unique_hunter for base.
+        command_cmd + '```.glow``` \n' + desc_cmd + t23 + '_\n' + usage_cmd + '.glow Your text\n\n' +
+        command_cmd + '```.fire``` \n' + desc_cmd + t25 + '_\n' + usage_cmd + '.fire Your text\n\n' +
+        command_cmd + '```.harry``` \n' + desc_cmd + t26 + '_\n' + usage_cmd + '.harry Your text\n\n' +
+        command_cmd + '```.cup``` \n' + desc_cmd + t29 + '_\n' + usage_cmd + '.cup Your text\n\n' +
+        command_cmd + '```.cemetery``` \n' + desc_cmd + t28 + '_\n' + usage_cmd + '.cemetery Your text\n\n' +
+        command_cmd + '```.glitch``` \n' + desc_cmd + t14 + '_\n' + usage_cmd + '.glitch Your text'
     await message.client.sendMessage(message.jid,msg, MessageType.text, { quoted: message.data })
 }));
-MyPnky.addCommand({pattern: 'devil ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+Asena.addCommand({pattern: 'devil ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     thiccysapi.textpro("https://textpro.me/create-neon-devil-wings-text-effect-online-free-1014.html",
         `${match[1]}`
         ).then(async (data) => { 
@@ -175,14 +175,14 @@ MyPnky.addCommand({pattern: 'devil ?(.*)', fromMe: wk, dontAddCommandList: true}
               };
 
               await download(`${data}`, '/root/WhatsAsenaDuplicated/devil.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/devil.jpg'), MessageType.image, { caption: Config.AFN })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/devil.jpg'), MessageType.image, { caption: Config.JINN })
               })
           } catch(err) { 
               console.log(err)
           } 
     });
 }));
-MyPnky.addCommand({pattern: 'bear ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+Asena.addCommand({pattern: 'bear ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     thiccysapi.textpro("https://textpro.me/online-black-and-white-bear-mascot-logo-creation-1012.html",
         `${match[1]}`
         ).then(async (data) => { 
@@ -194,14 +194,14 @@ MyPnky.addCommand({pattern: 'bear ?(.*)', fromMe: wk, dontAddCommandList: true},
               };
 
               await download(`${data}`, '/root/WhatsAsenaDuplicated/bear.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/bear.jpg'), MessageType.image, { caption: Config.AFN })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/bear.jpg'), MessageType.image, { caption: Config.JINN })
               })
           } catch(err) { 
               console.log(err)
           } 
     });
 }));
-MyPnky.addCommand({pattern: 'wolf ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+Asena.addCommand({pattern: 'wolf ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     var topText, bottomText; 
     if (match[1].includes(';')) {
         var split = match[1].split(';');
@@ -222,14 +222,14 @@ MyPnky.addCommand({pattern: 'wolf ?(.*)', fromMe: wk, dontAddCommandList: true},
               };
 
               await download(`${data}`, '/root/WhatsAsenaDuplicated/wolf.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/wolf.jpg'), MessageType.image, { caption: Config.AFN })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/wolf.jpg'), MessageType.image, { caption: Config.JINN })
               })
           } catch(err) { 
               console.log(err)
           } 
     });
 }));
-MyPnky.addCommand({pattern: 'neon ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+Asena.addCommand({pattern: 'neon ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     thiccysapi.textpro("https://textpro.me/create-a-futuristic-technology-neon-light-text-effect-1006.html",
         `${match[1]}`
         ).then(async (data) => { 
@@ -241,14 +241,14 @@ MyPnky.addCommand({pattern: 'neon ?(.*)', fromMe: wk, dontAddCommandList: true},
               };
 
               await download(`${data}`, '/root/WhatsAsenaDuplicated/neon.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/neon.jpg'), MessageType.image, { caption: Config.AFN })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/neon.jpg'), MessageType.image, { caption: Config.JINN })
               })
           } catch(err) { 
               console.log(err)
           } 
     });
 }));
-MyPnky.addCommand({pattern: '2neon ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+Asena.addCommand({pattern: '2neon ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     thiccysapi.textpro("https://textpro.me/neon-text-effect-online-879.html",
         `${match[1]}`
         ).then(async (data) => { 
@@ -260,14 +260,14 @@ MyPnky.addCommand({pattern: '2neon ?(.*)', fromMe: wk, dontAddCommandList: true}
               };
 
               await download(`${data}`, '/root/WhatsAsenaDuplicated/neon2.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/neon2.jpg'), MessageType.image, { caption: Config.AFN })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/neon2.jpg'), MessageType.image, { caption: Config.JINN })
               })
           } catch(err) { 
               console.log(err)
           } 
     });
 }));
-MyPnky.addCommand({pattern: 'light ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+Asena.addCommand({pattern: 'light ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     thiccysapi.textpro("https://textpro.me/thunder-text-effect-online-881.html",
         `${match[1]}`
         ).then(async (data) => { 
@@ -279,14 +279,14 @@ MyPnky.addCommand({pattern: 'light ?(.*)', fromMe: wk, dontAddCommandList: true}
               };
 
               await download(`${data}`, '/root/WhatsAsenaDuplicated/li.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/li.jpg'), MessageType.image, { caption: Config.AFN })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/li.jpg'), MessageType.image, { caption: Config.JINN })
               })
           } catch(err) { 
               console.log(err)
           } 
     });
 }));
-MyPnky.addCommand({pattern: 'joker ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+Asena.addCommand({pattern: 'joker ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     thiccysapi.textpro("https://textpro.me/create-logo-joker-online-934.html",
         `${match[1]}`
         ).then(async (data) => { 
@@ -298,14 +298,14 @@ MyPnky.addCommand({pattern: 'joker ?(.*)', fromMe: wk, dontAddCommandList: true}
               };
 
               await download(`${data}`, '/root/WhatsAsenaDuplicated/joker.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/joker.jpg'), MessageType.image, { caption: Config.AFN })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/joker.jpg'), MessageType.image, { caption: Config.JINN })
               })
           } catch(err) { 
               console.log(err)
           } 
     });
 }));
-MyPnky.addCommand({pattern: 'ninja ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+Asena.addCommand({pattern: 'ninja ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     var topText, bottomText; 
     if (match[1].includes(';')) {
         var split = match[1].split(';');
@@ -326,14 +326,14 @@ MyPnky.addCommand({pattern: 'ninja ?(.*)', fromMe: wk, dontAddCommandList: true}
               };
 
               await download(`${data}`, '/root/WhatsAsenaDuplicated/ninja.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/ninja.jpg'), MessageType.image, { caption: Config.AFN })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/ninja.jpg'), MessageType.image, { caption: Config.JINN })
               })
           } catch(err) { 
               console.log(err)
           } 
     });
 }));
-MyPnky.addCommand({pattern: 'glitter ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+Asena.addCommand({pattern: 'glitter ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     thiccysapi.textpro("https://textpro.me/advanced-glow-text-effect-873.html",
         `${match[1]}`
         ).then(async (data) => { 
@@ -345,14 +345,14 @@ MyPnky.addCommand({pattern: 'glitter ?(.*)', fromMe: wk, dontAddCommandList: tru
               };
 
               await download(`${data}`, '/root/WhatsAsenaDuplicated/tt.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/tt.jpg'), MessageType.image, { caption: Config.AFN })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/tt.jpg'), MessageType.image, { caption: Config.JINN })
               })
           } catch(err) { 
               console.log(err)
           } 
     });
 }));
-MyPnky.addCommand({pattern: 'bokeh ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+Asena.addCommand({pattern: 'bokeh ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     thiccysapi.textpro("https://textpro.me/bokeh-text-effect-876.html",
         `${match[1]}`
         ).then(async (data) => { 
@@ -364,14 +364,14 @@ MyPnky.addCommand({pattern: 'bokeh ?(.*)', fromMe: wk, dontAddCommandList: true}
               };
 
               await download(`${data}`, '/root/WhatsAsenaDuplicated/bkh.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/bkh.jpg'), MessageType.image, { caption: Config.AFN })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/bkh.jpg'), MessageType.image, { caption: Config.JINN })
               })
           } catch(err) { 
               console.log(err)
           } 
     });
 }));
-MyPnky.addCommand({pattern: 'marvel ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+Asena.addCommand({pattern: 'marvel ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     var topText, bottomText; 
     if (match[1].includes(';')) {
         var split = match[1].split(';');
@@ -392,14 +392,14 @@ MyPnky.addCommand({pattern: 'marvel ?(.*)', fromMe: wk, dontAddCommandList: true
               };
 
               await download(`${data}`, '/root/WhatsAsenaDuplicated/marvel.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/marvel.jpg'), MessageType.image, { caption: Config.AFN })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/marvel.jpg'), MessageType.image, { caption: Config.JINN })
               })
           } catch(err) { 
               console.log(err)
           } 
     });
 }));
-MyPnky.addCommand({pattern: '2marvel ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+Asena.addCommand({pattern: '2marvel ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     var topText, bottomText; 
     if (match[1].includes(';')) {
         var split = match[1].split(';');
@@ -420,14 +420,14 @@ MyPnky.addCommand({pattern: '2marvel ?(.*)', fromMe: wk, dontAddCommandList: tru
               };
 
               await download(`${data}`, '/root/WhatsAsenaDuplicated/mar2.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/mar2.jpg'), MessageType.image, { caption: Config.AFN })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/mar2.jpg'), MessageType.image, { caption: Config.JINN })
               })
           } catch(err) { 
               console.log(err)
           } 
     });
 }));
-MyPnky.addCommand({pattern: 'avengers ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+Asena.addCommand({pattern: 'avengers ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     var topText, bottomText; 
     if (match[1].includes(';')) {
         var split = match[1].split(';');
@@ -448,14 +448,14 @@ MyPnky.addCommand({pattern: 'avengers ?(.*)', fromMe: wk, dontAddCommandList: tr
               };
 
               await download(`${data}`, '/root/WhatsAsenaDuplicated/aven.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/aven.jpg'), MessageType.image, { caption: Config.AFN })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/aven.jpg'), MessageType.image, { caption: Config.JINN })
               })
           } catch(err) { 
               console.log(err)
           } 
     });
 }));
-MyPnky.addCommand({pattern: 'glitch ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+Asena.addCommand({pattern: 'glitch ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     var topText, bottomText; 
     if (match[1].includes(';')) {
         var split = match[1].split(';');
@@ -476,14 +476,14 @@ MyPnky.addCommand({pattern: 'glitch ?(.*)', fromMe: wk, dontAddCommandList: true
               };
 
               await download(`${data}`, '/root/WhatsAsenaDuplicated/tt2.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/tt2.jpg'), MessageType.image, { caption: Config.AFN })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/tt2.jpg'), MessageType.image, { caption: Config.JINN })
               })
           } catch(err) { 
               console.log(err)
           } 
     });
 }));
-MyPnky.addCommand({pattern: 'graf ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+Asena.addCommand({pattern: 'graf ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     var topText, bottomText; 
     if (match[1].includes(';')) {
         var split = match[1].split(';');
@@ -504,14 +504,14 @@ MyPnky.addCommand({pattern: 'graf ?(.*)', fromMe: wk, dontAddCommandList: true},
               };
 
               await download(`${data}`, '/root/WhatsAsenaDuplicated/ttgra.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/ttgra.jpg'), MessageType.image, { caption: Config.AFN })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/ttgra.jpg'), MessageType.image, { caption: Config.JINN })
               })
           } catch(err) { 
               console.log(err)
           } 
     });
 }));
-MyPnky.addCommand({pattern: '2graf ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+Asena.addCommand({pattern: '2graf ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     var topText, bottomText; 
     if (match[1].includes(';')) {
         var split = match[1].split(';');
@@ -532,14 +532,14 @@ MyPnky.addCommand({pattern: '2graf ?(.*)', fromMe: wk, dontAddCommandList: true}
               };
 
               await download(`${data}`, '/root/WhatsAsenaDuplicated/t2gra.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/t2gra.jpg'), MessageType.image, { caption: Config.AFN })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/t2gra.jpg'), MessageType.image, { caption: Config.JINN })
               })
           } catch(err) { 
               console.log(err)
           } 
     });
 }));
-MyPnky.addCommand({pattern: 'lion ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+Asena.addCommand({pattern: 'lion ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     var topText, bottomText; 
     if (match[1].includes(';')) {
         var split = match[1].split(';');
@@ -560,14 +560,14 @@ MyPnky.addCommand({pattern: 'lion ?(.*)', fromMe: wk, dontAddCommandList: true},
               };
 
               await download(`${data}`, '/root/WhatsAsenaDuplicated/lion.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/lion.jpg'), MessageType.image, { caption: Config.AFN })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/lion.jpg'), MessageType.image, { caption: Config.JINN })
               })
           } catch(err) { 
               console.log(err)
           } 
     });
 }));
-MyPnky.addCommand({pattern: '3neon ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+Asena.addCommand({pattern: '3neon ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     thiccysapi.textpro("https://textpro.me/neon-text-effect-online-963.html",
         `${match[1]}`
         ).then(async (data) => { 
@@ -579,14 +579,14 @@ MyPnky.addCommand({pattern: '3neon ?(.*)', fromMe: wk, dontAddCommandList: true}
               };
 
               await download(`${data}`, '/root/WhatsAsenaDuplicated/neon3.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/neon3.jpg'), MessageType.image, { caption: Config.AFN })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/neon3.jpg'), MessageType.image, { caption: Config.JINN })
               })
           } catch(err) { 
               console.log(err)
           } 
     });
 }));
-MyPnky.addCommand({pattern: 'ice ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+Asena.addCommand({pattern: 'ice ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     thiccysapi.textpro("https://textpro.me/ice-cold-text-effect-862.html",
         `${match[1]}`
         ).then(async (data) => { 
@@ -598,14 +598,14 @@ MyPnky.addCommand({pattern: 'ice ?(.*)', fromMe: wk, dontAddCommandList: true}, 
               };
 
               await download(`${data}`, '/root/WhatsAsenaDuplicated/ice.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/ice.jpg'), MessageType.image, { caption: Config.AFN })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/ice.jpg'), MessageType.image, { caption: Config.JINN })
               })
           } catch(err) { 
               console.log(err)
           } 
     });
 }));
-MyPnky.addCommand({pattern: 'space ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+Asena.addCommand({pattern: 'space ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     var topText, bottomText; 
     if (match[1].includes(';')) {
         var split = match[1].split(';');
@@ -626,14 +626,14 @@ MyPnky.addCommand({pattern: 'space ?(.*)', fromMe: wk, dontAddCommandList: true}
               };
 
               await download(`${data}`, '/root/WhatsAsenaDuplicated/space.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/space.jpg'), MessageType.image, { caption: Config.AFN })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/space.jpg'), MessageType.image, { caption: Config.JINN })
               })
           } catch(err) { 
               console.log(err)
           } 
     });
 }));
-MyPnky.addCommand({pattern: 'smoke ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+Asena.addCommand({pattern: 'smoke ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     thiccysapi.photooxy("https://photooxy.com/other-design/create-an-easy-smoke-type-effect-390.html",
         `${match[1]}`
         ).then(async (data) => { 
@@ -645,14 +645,14 @@ MyPnky.addCommand({pattern: 'smoke ?(.*)', fromMe: wk, dontAddCommandList: true}
               };
 
               await download(`${data}`, '/root/WhatsAsenaDuplicated/smoke.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/smoke.jpg'), MessageType.image, { caption: Config.AFN })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/smoke.jpg'), MessageType.image, { caption: Config.JINN })
               })
           } catch(err) { 
               console.log(err)
           } 
     });
 }));
-MyPnky.addCommand({pattern: 'glow ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+Asena.addCommand({pattern: 'glow ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     var download = async(uri, filename, callback) => {
         await request.head(uri, async(err, res, body) => {    
             await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
@@ -660,10 +660,10 @@ MyPnky.addCommand({pattern: 'glow ?(.*)', fromMe: wk, dontAddCommandList: true},
     };
     var uri = encodeURI(match[1])
     await download(`https://api.xteam.xyz/photooxy/neonlight?text=${uri}&APIKEY=da5fb2b73ae3e451`, '/root/WhatsAsenaDuplicated/glowttp.jpg', async() => {                          
-        await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/glowttp.jpg'), MessageType.image, { caption: Config.AFN })
+        await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/glowttp.jpg'), MessageType.image, { caption: Config.JINN })
     })
 }));
-MyPnky.addCommand({pattern: 'fire ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+Asena.addCommand({pattern: 'fire ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     thiccysapi.photooxy("https://photooxy.com/logo-and-text-effects/realistic-flaming-text-effect-online-197.html",
         `${match[1]}`
         ).then(async (data) => { 
@@ -675,14 +675,14 @@ MyPnky.addCommand({pattern: 'fire ?(.*)', fromMe: wk, dontAddCommandList: true},
               };
 
               await download(`${data}`, '/root/WhatsAsenaDuplicated/tfire.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/tfire.jpg'), MessageType.image, { caption: Config.AFN })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/tfire.jpg'), MessageType.image, { caption: Config.JINN })
               })
           } catch(err) { 
               console.log(err)
           } 
     });
 }));
-MyPnky.addCommand({pattern: 'harry ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+Asena.addCommand({pattern: 'harry ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     thiccysapi.photooxy("https://photooxy.com/logo-and-text-effects/create-harry-potter-text-on-horror-background-178.html",
         `${match[1]}`
         ).then(async (data) => { 
@@ -694,14 +694,14 @@ MyPnky.addCommand({pattern: 'harry ?(.*)', fromMe: wk, dontAddCommandList: true}
               };
 
               await download(`${data}`, '/root/WhatsAsenaDuplicated/hp.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/hp.jpg'), MessageType.image, { caption: Config.AFN })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/hp.jpg'), MessageType.image, { caption: Config.JINN })
               })
           } catch(err) { 
               console.log(err)
           } 
     });
 }));
-MyPnky.addCommand({pattern: '4neon ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+Asena.addCommand({pattern: '4neon ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     thiccysapi.photooxy("https://photooxy.com/logo-and-text-effects/illuminated-metallic-effect-177.html",
         `${match[1]}`
         ).then(async (data) => { 
@@ -713,14 +713,14 @@ MyPnky.addCommand({pattern: '4neon ?(.*)', fromMe: wk, dontAddCommandList: true}
               };
 
               await download(`${data}`, '/root/WhatsAsenaDuplicated/t4n.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/t4n.jpg'), MessageType.image, { caption: Config.AFN })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/t4n.jpg'), MessageType.image, { caption: Config.JINN })
               })
           } catch(err) { 
               console.log(err)
           } 
     });
 }));
-MyPnky.addCommand({pattern: 'cemetery ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+Asena.addCommand({pattern: 'cemetery ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     thiccysapi.photooxy("https://photooxy.com/logo-and-text-effects/text-on-scary-cemetery-gate-172.html",
         `${match[1]}`
         ).then(async (data) => { 
@@ -732,14 +732,14 @@ MyPnky.addCommand({pattern: 'cemetery ?(.*)', fromMe: wk, dontAddCommandList: tr
               };
 
               await download(`${data}`, '/root/WhatsAsenaDuplicated/cmth.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/cmth.jpg'), MessageType.image, { caption: Config.AFN })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/cmth.jpg'), MessageType.image, { caption: Config.JINN })
               })
           } catch(err) { 
               console.log(err)
           } 
     });
 }));
-MyPnky.addCommand({pattern: 'cup ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+Asena.addCommand({pattern: 'cup ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     thiccysapi.photooxy("https://photooxy.com/logo-and-text-effects/put-text-on-the-cup-387.html",
         `${match[1]}`
         ).then(async (data) => { 
@@ -751,11 +751,10 @@ MyPnky.addCommand({pattern: 'cup ?(.*)', fromMe: wk, dontAddCommandList: true}, 
               };
 
               await download(`${data}`, '/root/WhatsAsenaDuplicated/cup.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/cup.jpg'), MessageType.image, { caption: Config.AFN })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/cup.jpg'), MessageType.image, { caption: Config.JINN })
               })
           } catch(err) { 
               console.log(err)
           } 
     });
 }));
-}
