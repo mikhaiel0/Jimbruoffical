@@ -1,7 +1,7 @@
-/* Codded by @PLK
-HEHE
+/* 
+Codded by @Mikhaiel
 */
-const MyPnky = require('../events');
+const Jimbrootan = require('../events');
 const {MessageType, MessageOptions, Mimetype} = require('@adiwajshing/baileys');
 const axios = require('axios');
 const { requestLyricsFor, requestAuthorFor, requestTitleFor, requestIconFor } = require("solenolyrics");
@@ -21,10 +21,11 @@ const vf = "Confirmed Account"
 const novf = "Unconfirmed Account"
 const bs = "Yes"
 const nobs = "no"
+
 if (cn.STANDPLK == 'off' || cn.STANDPLK == 'OFF') {
 if (cn.WORKTYPE == 'private') {
 
-    MyPnky.addCommand({ pattern: 'pinsta ?(.*)', fromMe: false, desc: 'instagram profile' }, async (message, match) => {
+    Jimbrootan.addCommand({ pattern: 'pinsta ?(.*)', fromMe: false, desc: 'instagram profile' }, async (message, match) => {
 
         const userName = match[1]
 
@@ -51,7 +52,7 @@ if (cn.WORKTYPE == 'private') {
 
 else if (cn.WORKTYPE == 'public') {
 
-    MyPnky.addCommand({ pattern: 'pinsta ?(.*)', fromMe: false, desc: 'instagram profile' }, async (message, match) => {
+    Jimbrootan.addCommand({ pattern: 'pinsta ?(.*)', fromMe: false, desc: 'instagram profile' }, async (message, match) => {
 
         const userName = match[1]
 
@@ -73,5 +74,4 @@ else if (cn.WORKTYPE == 'public') {
             await message.sendMessage(errorMessage('NOT_FOUND' + userName))
         })
     });
-}
 }
