@@ -155,4 +155,4 @@ Asena.addCommand({pattern: 'remove(?: |$)(.*)', fromMe: true, dontAddCommandList
         }
     } catch (errormsg) { return await message.sendMessage(message.jid, Lang.NOT_FOUND_PLUGIN, MessageType.text) }
 }));
-}
+
