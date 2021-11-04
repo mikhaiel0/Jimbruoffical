@@ -88,3 +88,4 @@ else if (Config.WORKTYPE == 'public') {
         return await message.reply(Lang.RESULT.format(dil[2], result));
     }));
 }
+}
