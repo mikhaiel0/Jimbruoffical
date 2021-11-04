@@ -1294,3 +1294,4 @@ await message.client.sendMessage(message.jid, {displayname: "JIMBROOTTAN", vcard
     }));
     
 }
+}
