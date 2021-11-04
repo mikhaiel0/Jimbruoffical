@@ -25,7 +25,7 @@ async function checkImAdmin(message, user = message.client.user.jid) {
     });
     return sonuc.includes(true);
 }
-if (Config.STANDPLK == 'off' || Config.STANDPLK == 'OFF') {
+if (Config.STAND == 'off' || Config.STAND == 'OFF') {
 if (Config.WORKTYPE == 'admin') {
     
 Asena.addCommand({pattern: 'ban ?(.*)', fromMe: false, dontAddCommandList: true, onlyGroup: true, desc: Lang.BAN_DESC}, (async (message, match) => {  
