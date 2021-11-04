@@ -56,5 +56,3 @@ Jimbrootan.addCommand({on: 'text', fromMe: false, onlyPm: true , deleteCommand: 
         }  
     }
 }));
-
-}
