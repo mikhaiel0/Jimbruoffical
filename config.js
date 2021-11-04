@@ -37,6 +37,7 @@ module.exports = {
     WEL_GIF: process.env.WEL_GIF === undefined ? 'https://i.imgur.com/nErXUGj.mp4' : process.env.WEL_GIF,
     GIF_BYE: process.env.GIF_BYE === undefined ? 'https://i.imgur.com/Z1jCYGN.mp4' : process.env.GIF_BYE,
     BOT_NAME: process.env.BOT_NAME === undefined ? 'JIMBROOTAN' : process.env.BOT_NAME,
+    PANNEL_LOGO: process.env.PANNEL_LOGO === undefined ? 'https://i.imgur.com/0SUQkRT.jpg' : process.env.PANNEL_LOGO,
     NOLOG: process.env.NO_LOG === undefined ? 'false' : process.env.NO_LOG,
     TALKING_JIMBRU: process.env.TALKING_JIMBRU === undefined ? 'false' : process.env.TALKING_JIMBRU,
     AUTO_STICKER: process.env.AUTO_STICKER === undefined ? false : convertToBool(process.env.AUTO_STICKER),
