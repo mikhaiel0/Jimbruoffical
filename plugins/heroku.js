@@ -701,3 +701,4 @@ Jimbrootan.addCommand({pattern: 'getvar ?(.*)', fromMe: true, dontAddCommandList
         await message.client.sendMessage(message.jid,error.message, MessageType.text);
     });
 }));
+}
