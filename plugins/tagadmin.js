@@ -54,3 +54,4 @@ else if (Config.WORKTYPE == 'admin') {
         await message.client.sendMessage(message.jid,mesaj, MessageType.extendedText, {contextInfo: {mentionedJid: jids}, previewType: 0})
     }));
 }
+}
