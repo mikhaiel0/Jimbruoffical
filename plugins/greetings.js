@@ -159,3 +159,4 @@ Jimbrootan.addCommand({pattern: 'goodbye (.*)', fromMe: false, dontAddCommandLis
     }
 }));
 }
+}
