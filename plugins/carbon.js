@@ -145,4 +145,4 @@ else if (Config.WORKTYPE == 'public') {
         await message.sendMessage(Buffer.from(respoimage.data), MessageType.image, { mimetype: Mimetype.png, caption: Config.JINN})
     }));
 }
-}
+
