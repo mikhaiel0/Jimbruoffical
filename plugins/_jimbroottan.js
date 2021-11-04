@@ -1,7 +1,7 @@
-/* Copyright (C) 2021 TENUX-Neotro.
+/*
+Copyright (C) 2021 Mikhaiel.
 Licensed under the  GPL-3.0 License;
 you may not use this file except in compliance with the License.
-NEOTROX - TEENUHX
 */
 
 const Jimbrootan = require('../events');
@@ -61,12 +61,12 @@ if (Config.WORKTYPE == 'private') {
                 }
             );
 
-            await message.client.sendMessage(message.jid, '◄◉◉◉◉◉◉◉◯◉◯◉◯◉◉◉◉◉◉◉◉►\n\n◁' + Config.BOT_NAME + '▷\n_Private Bot_\n\n' + Config.MENU_INFO + '\n\n◄◉◉◉◉◉◉◯◉◯◉◯◉◉◉◉◉◉◉◉►\nᴾᵒʷᵉʳᵉᵈ ᴮʸ ᴬᴹᴬᶻᴼᴺᴱ🛸ᴬᴸᴱˣᴬ\n\n' + CMD_HELP, MessageType.text,{quoted: message.data}); 
+            await message.client.sendMessage(message.jid, '༺࿀࿉_ _ _ _ 🧞‍♂️_ _ _ _࿉࿁༻\n\n' + Config.BOT_NAME + Config.MENU_INFO + '\n\n༺࿀࿉_ _ _ _ 🧞‍♂️_ _ _ _࿉࿁༻\n © ᴛʜᴇ_ʀᴇᴀʟ_ᴍɪᴋʜᴀɪᴇʟ\n\n' + CMD_HELP, MessageType.text,{quoted: message.data}); 
        }
        else {
             var CMD_HELP = '';
             
-            amazone.commands.map(
+            Jimbrootan.commands.map(
                 async (command) =>  {
                     if (command.dontAddCommandList || command.pattern === undefined) return;
                     try {
@@ -120,7 +120,7 @@ if (Config.WORKTYPE == 'private') {
     }
 if (Config.WORKTYPE == 'public') {
     
-     amazone.addCommand({pattern: `${Config.PANEL_COMMAND} ?(.*)`, fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+     Jimbrootan.addCommand({pattern: `${Config.PANEL_COMMAND} ?(.*)`, fromMe: false, dontAddCommandList: true}, (async (message, match) => {
          
         var CMD_HELP = '';
         if (match[1] === '') {
@@ -171,7 +171,7 @@ if (Config.WORKTYPE == 'public') {
        }
        else {
             var CMD_HELP = '';
-            amazone.commands.map(
+            Jimbrootan.commands.map(
                 async (command) =>  {
                     if (command.dontAddCommandList || command.pattern === undefined) return;
                     try {
@@ -223,11 +223,11 @@ if (Config.WORKTYPE == 'public') {
         }
     }));
 
-amazone.addCommand({pattern: `${Config.PANEL_COMMAND} ?(.*)`, fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+Jimbrootan.addCommand({pattern: `${Config.PANEL_COMMAND} ?(.*)`, fromMe: true, dontAddCommandList: true}, (async (message, match) => {
          
         var CMD_HELP = '';
         if (match[1] === '') {
-            amazone.commands.map(
+            Jimbrootan.commands.map(
                 async (command) =>  {
                     if (command.dontAddCommandList || command.pattern === undefined) return;
                     try {
@@ -274,7 +274,7 @@ amazone.addCommand({pattern: `${Config.PANEL_COMMAND} ?(.*)`, fromMe: true, dont
        }
        else {
             var CMD_HELP = '';
-            amazone.commands.map(
+            Jimbrootan.commands.map(
                 async (command) =>  {
                     if (command.dontAddCommandList || command.pattern === undefined) return;
                     try {
