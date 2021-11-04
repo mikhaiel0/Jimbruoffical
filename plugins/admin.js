@@ -1,10 +1,10 @@
-/* Copyright (C) 2020 Yusuf Usta.
+/* 
+Copyright (C) 2020 Yusuf Usta.
 recodded by afnanplk  
-PINKY V2
 */
 
 const {MessageType, GroupSettingChange} = require('@adiwajshing/baileys');
-const MyPnky = require('../events');
+const Jimbrootan = require('../events');
 const Config = require('../config');
 
 const Language = require('../language');
@@ -20,8 +20,8 @@ async function checkImAdmin(message, user = message.client.user.jid) {
     });
     return sonuc.includes(true);
 }
-if (Config.STANDPLK == 'off' || Config.STANDPLK == 'OFF') {
-MyPnky.addCommand({pattern: 'ban ?(.*)', fromMe: true, dontAddCommandList: true, onlyGroup: true, desc: Lang.BAN_DESC}, (async (message, match) => {  
+if (Config.STAND == 'off' || Config.STAND == 'OFF') {
+Jimbrootan.addCommand({pattern: 'ban ?(.*)', fromMe: true, dontAddCommandList: true, onlyGroup: true, desc: Lang.BAN_DESC}, (async (message, match) => {  
     var im = await checkImAdmin(message);
     if (!im) return await message.client.sendMessage(message.jid,Lang.IM_NOT_ADMIN,MessageType.text);
 
@@ -59,7 +59,7 @@ MyPnky.addCommand({pattern: 'ban ?(.*)', fromMe: true, dontAddCommandList: true,
     }
 }));
 
-MyPnky.addCommand({pattern: 'add(?: |$)(.*)', fromMe: true, dontAddCommandList: true, onlyGroup: true, desc: Lang.ADD_DESC}, (async (message, match) => {  
+Jimbrootan.addCommand({pattern: 'add(?: |$)(.*)', fromMe: true, dontAddCommandList: true, onlyGroup: true, desc: Lang.ADD_DESC}, (async (message, match) => {  
     var im = await checkImAdmin(message);
     if (!im) return await message.client.sendMessage(message.jid,Lang.IM_NOT_ADMIN,MessageType.text);
 
@@ -93,7 +93,7 @@ MyPnky.addCommand({pattern: 'add(?: |$)(.*)', fromMe: true, dontAddCommandList: 
     }
 }));
 
-MyPnky.addCommand({pattern: 'promote ?(.*)', fromMe: true, dontAddCommandList: true, onlyGroup: true, desc: Lang.PROMOTE_DESC}, (async (message, match) => {    
+Jimbrootan.addCommand({pattern: 'promote ?(.*)', fromMe: true, dontAddCommandList: true, onlyGroup: true, desc: Lang.PROMOTE_DESC}, (async (message, match) => {    
     var im = await checkImAdmin(message);
     if (!im) return await message.client.sendMessage(message.jid,Lang.IM_NOT_ADMIN,MessageType.text);
 
@@ -151,7 +151,7 @@ MyPnky.addCommand({pattern: 'promote ?(.*)', fromMe: true, dontAddCommandList: t
     }
 }));
 
-MyPnky.addCommand({pattern: 'demote ?(.*)', fromMe: true, onlyGroup: true, desc: Lang.DEMOTE_DESC, dontAddCommandList: true}, (async (message, match) => {    
+Jimbrootan.addCommand({pattern: 'demote ?(.*)', fromMe: true, onlyGroup: true, desc: Lang.DEMOTE_DESC, dontAddCommandList: true}, (async (message, match) => {    
     var im = await checkImAdmin(message);
     if (!im) return await message.client.sendMessage(message.jid,Lang.IM_NOT_ADMIN);
 
@@ -181,7 +181,7 @@ MyPnky.addCommand({pattern: 'demote ?(.*)', fromMe: true, onlyGroup: true, desc:
     }
 }));
 
-MyPnky.addCommand({pattern: 'mute ?(.*)', fromMe: true, dontAddCommandList: true, onlyGroup: true, desc: Lang.MUTE_DESC}, (async (message, match) => {    
+Jimbrootan.addCommand({pattern: 'mute ?(.*)', fromMe: true, dontAddCommandList: true, onlyGroup: true, desc: Lang.MUTE_DESC}, (async (message, match) => {    
     var im = await checkImAdmin(message);
     if (!im) return await message.client.sendMessage(message.jid,Lang.IM_NOT_ADMIN,MessageType.text);
 
@@ -1537,7 +1537,7 @@ MyPnky.addCommand({pattern: 'mute ?(.*)', fromMe: true, dontAddCommandList: true
     }
 }));
 
-MyPnky.addCommand({pattern: 'unmute ?(.*)', fromMe: true, dontAddCommandList: true, onlyGroup: true, desc: Lang.UNMUTE_DESC}, (async (message, match) => {    
+Jimbrootan.addCommand({pattern: 'unmute ?(.*)', fromMe: true, dontAddCommandList: true, onlyGroup: true, desc: Lang.UNMUTE_DESC}, (async (message, match) => {    
     var im = await checkImAdmin(message);
     if (!im) return await message.client.sendMessage(message.jid,Lang.IM_NOT_ADMIN,MessageType.text);
 
@@ -1551,17 +1551,17 @@ MyPnky.addCommand({pattern: 'unmute ?(.*)', fromMe: true, dontAddCommandList: tr
     }
 }));
 
-MyPnky.addCommand({pattern: 'invite ?(.*)', fromMe: true, dontAddCommandList: true, onlyGroup: true, desc: Lang.INVITE_DESC}, (async (message, match) => {    
+Jimbrootan.addCommand({pattern: 'invite ?(.*)', fromMe: true, dontAddCommandList: true, onlyGroup: true, desc: Lang.INVITE_DESC}, (async (message, match) => {    
     var im = await checkImAdmin(message);
     if (!im) return await message.client.sendMessage(message.jid,Lang.IM_NOT_ADMIN, MessageType.text);
     var invite = await message.client.groupInviteCode(message.jid);
     await message.client.sendMessage(message.jid,Lang.INVITE + ' https://chat.whatsapp.com/' + invite, MessageType.text);
 }));
 
-MyPnky.addCommand({pattern: 'rename ?(.*)', onlyGroup: true, fromMe: true,desc: 'change group name'}, (async (message, match) => {
+Jimbrootan.addCommand({pattern: 'rename ?(.*)', onlyGroup: true, fromMe: true,desc: 'change group name'}, (async (message, match) => {
     var im = await checkImAdmin(message);
     if (!im) return await message.client.sendMessage(message.jid,'i am not admin',MessageType.text);
-    if (match[1] === '') return await message.client.sendMessage(message.jid,'give a name for you group \n exampple- .rename pinky',MessageType.text);
+    if (match[1] === '') return await message.client.sendMessage(message.jid,'give a name for you group \n exampple- .rename Jimbrootan offical',MessageType.text);
     await message.client.groupUpdateSubject(message.jid, match[1]);
     await message.client.sendMessage(message.jid,'group name changed to  ```' + match[1] + '```' ,MessageType.text);
     }
