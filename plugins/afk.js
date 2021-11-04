@@ -1,13 +1,11 @@
 /* Copyright (C) 2020 Yusuf Usta.
-
 Licensed under the  GPL-3.0 License;
 you may not use this file except in compliance with the License.
-
 WhatsAsena - Yusuf Usta
 Developer & Co-Founder - Phaticusthiccy
 */
 
-const MyPnky = require('../events');
+const Jimbrootan = require('../events');
 const {MessageType} = require('@adiwajshing/baileys');
 const Config = require('../config');
 
@@ -33,7 +31,7 @@ function secondsToHms(d) {
     return hDisplay + mDisplay + sDisplay; 
 }
 if (Config.STANDPLK == 'off' || Config.STANDPLK == 'OFF') {
-MyPnky.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (message, match) => {
+Jimbrootan.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (message, match) => {
     if (Config.AFKMSG == 'default') {
 
         if (AFK.isAfk && ((!message.jid.includes('-')) || (message.jid.includes('-') && 
@@ -85,7 +83,7 @@ MyPnky.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (mes
     }
 }));
 
-MyPnky.addCommand({on: 'text', fromMe: true, deleteCommand: false}, (async (message, match) => {
+Jimbrootan.addCommand({on: 'text', fromMe: true, deleteCommand: false}, (async (message, match) => {
     if (AFK.isAfk && !message.id.startsWith('3EB0')) {
         AFK.lastseen = 0;
         AFK.reason = false;
@@ -95,7 +93,7 @@ MyPnky.addCommand({on: 'text', fromMe: true, deleteCommand: false}, (async (mess
     }
 }));
 
-MyPnky.addCommand({pattern: 'afk ?(.*)', fromMe: true, dontAddCommandList: true, deleteCommand: false, desc: Lang.AFK_DESC}, (async (message, match) => {     
+Jimbrootan.addCommand({pattern: 'afk ?(.*)', fromMe: true, dontAddCommandList: true, deleteCommand: false, desc: Lang.AFK_DESC}, (async (message, match) => {     
     if (!AFK.isAfk) {
         AFK.lastseen = Math.round((new Date()).getTime() / 1000);
         if (match[1] !== '') { AFK.reason = match[1]; }
