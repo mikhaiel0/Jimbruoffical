@@ -1,5 +1,5 @@
 
-const MyPnky = require('../events');
+const Jimbrootan = require('../events');
 const {MessageType} = require('@adiwajshing/baileys');
 const axios = require ('axios')
 const LOAD_ING = "*Searching details*"
@@ -10,7 +10,7 @@ const Lang = Language.getString('scrapers');
 
 if (Config.STANDPLK == 'off' || Config.STANDPLK == 'OFF') {
 if (Config.WORKTYPE == 'private') {
-MyPnky.addCommand({pattern: 'device ?(.*)', fromMe: true, desc: 'get deatil of requested device' , dontAddCommandList: true }, async (message, match) => {
+Jimbrootan.addCommand({pattern: 'device ?(.*)', fromMe: true, desc: 'get deatil of requested device' , dontAddCommandList: true }, async (message, match) => {
     
 const {data} = await axios(`https://zenzapi.xyz/api/gsmarena?query=${match[1]}&apikey=a9a05974d30e`)
 const { status, result } = data
@@ -35,7 +35,7 @@ msg += '```'
 });
 }
 else if (Config.WORKTYPE == 'public') {
-    MyPnky.addCommand({pattern: 'device ?(.*)', fromMe: false, desc: 'get deatil of requested device' , dontAddCommandList: true }, async (message, match) => {
+    Jimbrootan.addCommand({pattern: 'device ?(.*)', fromMe: false, desc: 'get deatil of requested device' , dontAddCommandList: true }, async (message, match) => {
     
         const {data} = await axios(`https://zenzapi.xyz/api/gsmarena?query=${match[1]}&apikey=a9a05974d30e`)
         const { status, result } = data
