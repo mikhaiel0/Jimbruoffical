@@ -1,5 +1,6 @@
-/* Copyright (C) 2020 Yusuf Usta.
-re coded and edited by afnanplk
+/* 
+Copyright (C) 2020 afnanplk.
+re coded MIKHAIEL
 */
 
 const Asena = require('../events');
@@ -32,7 +33,7 @@ const Language = require('../language');
 const Lang = Language.getString('scrapers');
 const LOAD_ING = "```Downloading media...```"
 if (config.STANDPLK == 'off' || config.STANDPLK == 'OFF') {
-Asena.addCommand({pattern: 'need ?(.*)', fromMe: false, desc: Lang.GET_DESC}, (async (message, match) => { 
+Asena.addCommand({pattern: 'song ?(.*)', fromMe: false, desc: Lang.GET_DESC}, (async (message, match) => { 
 
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_SOME,MessageType.text);    
         if (!match[1].includes('mp3') && match[1].includes('youtu.be') || match[1].includes('youtube.com')) {
@@ -132,7 +133,7 @@ Asena.addCommand({pattern: 'need ?(.*)', fromMe: false, desc: Lang.GET_DESC}, (a
 
                 reply = await message.client.sendMessage(message.jid,Lang.UPLOADING_SONG,MessageType.text);
                 await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.audio, {quoted: message.data , mimetype: Mimetype.mp4Audio, ptt: false});
-                await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.document, {filename: 'for iphone' + config.AFN + '.mp3', mimetype: 'audio/mpeg',quoted: message.data});
+                await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.document, {filename: 'for iphone' + config.JINN + '.mp3', mimetype: 'audio/mpeg',quoted: message.data});
             });
     }
    if (match[1].includes('instagram.com') && match[1].includes('mp3') || match[1].includes('.gov') || match[1].includes('.edu') || match[1].includes('.org') || match[1].includes('.net') || match[1].includes('.biz') || match[1].includes('.info') || match[1].includes('.facebook')) {
