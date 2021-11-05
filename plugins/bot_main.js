@@ -23,11 +23,11 @@ const vCard = 'BEGIN:VCARD\n'
             + 'TEL;type=CELL;type=VOICE;waid=919544846609:+919544846609\n'
             + 'END:VCARD'
 
-Jimbrootan.addCommand({pattern: 'command ?(.*)', fromMe: wk}, (async (message, match) => {
+Jimbrootan.addCommand({on: 'text', fromMe: wk}, (async (message, match) => {
 	if (message.message.includes('jimbru')) {
 		let buttons = [
 		  {buttonId: 'Owner', buttonText: {displayText: "OWNER"}, type: 1},
-		  {buttonId: '/ping', buttonText: {displayText: "PING"}, type: 1}
+		  {buttonId: 'Update', buttonText: {displayText: "PING"}, type: 1}
 		]
 		let buttonMessage = {
 		  contentText: comands,
