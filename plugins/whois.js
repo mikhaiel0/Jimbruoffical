@@ -160,4 +160,3 @@ else if (CON.WORKTYPE == 'public') {
         }
     });
 }
-}
