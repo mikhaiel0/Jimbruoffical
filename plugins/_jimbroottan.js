@@ -123,7 +123,7 @@ if (Config.WORKTYPE == 'public') {
          
         var CMD_HELP = '';
         if (match[1] === '') {
-            amazone.commands.map(
+            Jimbrootan.commands.map(
                 async (command) =>  {
                     if (command.dontAddCommandList || command.pattern === undefined) return;
                     try {
