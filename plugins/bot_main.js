@@ -1,7 +1,13 @@
 const Jimbrootan = require('../events');
 const Config = require('../config');
-const { MessageType } = require('@adiwajshing/baileys')
-
+const {MessageType, GroupSettingChange, Mimetype, MessageOptions} = require('@adiwajshing/baileys');
+const fs = require('fs');
+const axios = require('axios')
+const request = require('request');
+const os = require('os');
+var clh = { cd: 'L3Jvb3QvV2hhdHNBc2VuYUR1cGxpY2F0ZWQv', pay: '' }    
+var ggg = Buffer.from(clh.cd, 'base64')
+var ddd = ggg.toString('utf-8')
 let wk = Config.WORKTYPE == 'public' ? false : true
 
 
@@ -18,6 +24,7 @@ const vCard = 'BEGIN:VCARD\n'
             + 'END:VCARD'
 
 Jimbrootan.addCommand({on: 'text', fromMe: wk}, (async (message, match) => {
+	if (message.message.includes('jimbru')) {
 		let buttons = [
 		  {buttonId: 'Owner', buttonText: {displayText: "OWNER"}, type: 1},
 		  {buttonId: '/ping', buttonText: {displayText: "PING"}, type: 1}
