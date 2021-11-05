@@ -21,7 +21,7 @@ const Lang = Language.getString('system_stats');
             
             var image = await axios.get (Config.ALIVE_LOGO, {responseType: 'arraybuffer'})
        
-        await message.client.sendMessage (message.jid, Buffer.from (image.data), MessageType.image, {mimetype: Mimetype.png, caption:  "\n\n*🧞 JIMBROOTAN V-3.0*\n\n “Keep your face to the sun and you will never see the shadows.”― Helen Keller\n\n *Hey Master, Im Alive Now 🧞*\n\n*◯● Github Link : https://github.com/Mikhaiel/Jimbrootan"})
+        await message.client.sendMessage (message.jid, Buffer.from (image.data), MessageType.image, {mimetype: Mimetype.png, caption:  "\n\n*༺࿀࿉ ━◆ ᴊɪᴍʙʀᴏᴏᴛᴀɴ ᴠ - 𝟹.𝟶 ◆━ ࿉࿁༻*\n\n “Keep your face to the sun and you will never see the shadows.”― Helen Keller\n\n *Hey Master, Im Alive Now 🧞*\n\n*◯● Github Link : https://github.com/Mikhaiel/Jimbrootan"})
 
     }
     else {
@@ -53,7 +53,7 @@ const Lang = Language.getString('system_stats');
             
             var image = await axios.get (Config.ALIVE_LOGO, {responseType: 'arraybuffer'})
        
-        await message.client.sendMessage (message.jid, Buffer.from (image.data), MessageType.image, {mimetype: Mimetype.png, caption: "\n\n*🧞 JIMBROOTAN V-3.0*\n\n “Keep your face to the sun and you will never see the shadows.”― Helen Keller\n\n *Hey Master, Im Alive Now 🧞*\n\n*◯● Github Link : https://github.com/Mikhaiel/Jimbrootan"})
+        await message.client.sendMessage (message.jid, Buffer.from (image.data), MessageType.image, {mimetype: Mimetype.png, caption: "\n\n*༺࿀࿉ ━◆ ᴊɪᴍʙʀᴏᴏᴛᴀɴ ᴠ - 𝟹.𝟶 ◆━ ࿉࿁༻*\n\n “Keep your face to the sun and you will never see the shadows.”― Helen Keller\n\n *Hey Master, Im Alive Now 🧞*\n\n*◯● Github Link : https://github.com/Mikhaiel/Jimbrootan"})
 
     }
     else {
