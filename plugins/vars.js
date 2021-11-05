@@ -1,6 +1,3 @@
-/* 
-*/
-
 const Jimbrootan = require('../events');
 const config = require('../config');
 const Heroku = require('heroku-client');
@@ -8,8 +5,8 @@ const heroku = new Heroku({
     token: config.HEROKU.API_KEY
 });
 let baseURI = '/apps/' + config.HEROKU.APP_NAME;
-if (config.STANDPLK == 'off' || config.STANDPLK == 'OFF') {
-    var l_dsc = ''
+
+   var l_dsc = ''
     var alr_on = ''
     var alr_off = ''
     var BGM_on = ''
@@ -343,38 +340,4 @@ if (config.STANDPLK == 'off' || config.STANDPLK == 'OFF') {
                 });
                 await message.sendMessage(W_ADM)
         }
-    }));
-    
-    
-var ON_STN = ''
-var OFF_STN = ''
- 
-  if (config.LANG == 'EN') {
-    
-    ON_STN = 'make your bot standby'
-    OFF_STN = 'make your bot not standby'  
-    }
-
-    if (config.LANG == 'ML') {
-      
-      ON_STN = 'നിങ്ങളുടെ ബോട്ട് സ്റ്റാൻഡ്ബൈ ആക്കുക'
-      OFF_STN = 'സ്റ്റാൻഡ്ബൈയിൽ നിന്ന് നിങ്ങളുടെ ബോട്ട് മാറ്റുക' 
-    }
-
-Jimbrootan.addCommand({pattern: 'standby ?(.*)', fromMe: true, desc: ON_STN }, (async (message, match) => {
-                await heroku.patch(baseURI + '/config-vars', { 
-                    body: { 
-                        ['STANDBY_MODE']: 'on'
-                    } 
-                });
-     await message.sendMessage('your bot is standby now')
-    }));
-}
-Jimbrootan.addCommand({pattern: 'run again ?(.*)', fromMe: true, desc: OFF_STN }, (async (message, match) => {
-                await heroku.patch(baseURI + '/config-vars', { 
-                    body: { 
-                        ['STANDBY_MODE']: 'off'
-                    } 
-                });
-    await message.sendMessage('your bot will start running in 1 to 2 minute')
     }));
