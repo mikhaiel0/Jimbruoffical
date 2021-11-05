@@ -272,7 +272,7 @@
         "updater": {
             "UPDATER_DESC": "Checks the update.",
             "UPDATE": "Jimbrootan 🧞‍♂️ completely up-to-date!",
-            "NEW_UPDATE": "*New update available for Jimbrootan 🧞‍♂️*\n\n ```use .help for commands``` \n\n *ask support group before updating or your bot might stop working* \n *-if bot stop working you will have to re-deploy* \n\n Updates are:\n\n ",
+            "NEW_UPDATE": "*ᴺᵉʷ ᵁᵖᵈᵃᵗᵉ ᴬᵛᵃⁱˡᵃᵇˡᵉ ᶠᵒʳ ᴶⁱᵐᵇʳᵒᵒᵗᵃⁿ 🧞‍♂️*\n\n *✔️ 𝙖𝙨𝙠 𝙨𝙪𝙥𝙥𝙤𝙧𝙩 𝙜𝙧𝙤𝙪𝙥 𝙗𝙚𝙛𝙤𝙧𝙚 𝙪𝙥𝙙𝙖𝙩𝙞𝙣𝙜 𝙤𝙧 𝙮𝙤𝙪𝙧 𝙗𝙤𝙩 𝙢𝙞𝙜𝙝𝙩 𝙨𝙩𝙤𝙥 𝙬𝙤𝙧𝙠𝙞𝙣𝙜*\n *✔️ 𝙞𝙛 𝙗𝙤𝙩 𝙨𝙩𝙤𝙥 𝙬𝙤𝙧𝙠𝙞𝙣𝙜 𝙮𝙤𝙪 𝙬𝙞𝙡𝙡 𝙝𝙖𝙫𝙚 𝙩𝙤 𝙧𝙚-𝙙𝙚𝙥𝙡𝙤𝙮*\n\n 𝙐𝙥𝙙𝙖𝙩𝙚𝙨 𝘼𝙧𝙚 :\n\n ",
             "UPDATE_NOW_DESC": "It makes updates.",
             "UPDATING": "Updating...🧞‍♂️",
             "INVALID_HEROKU": "*❌ Your Heroku app name or api key wrong!*",
