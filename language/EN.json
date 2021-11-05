@@ -82,7 +82,7 @@
             "RESTART_DESC": "Restart Jimbrootan",
             "RESTART_MSG": "```Restarting 🧞...```",
             "SHUTDOWN_DESC": "Shutdown Jimbrootan",
-            "SHUTDOWN_MSG": "```𝚂𝚑𝚞𝚝𝚝𝚒𝚗𝚐 𝚍𝚘𝚠𝚗 😖```",
+            "SHUTDOWN_MSG": "```𝚂𝚑𝚞𝚝𝚝𝚒𝚗𝚐 𝚍𝚘𝚠𝚗 ⬇️```",
             "DYNO_DESC": "Check heroku dyno usage",
             "DYNO_TOTAL": "```Total Quota```",
             "DYNO_USED": "```Quota used```",
