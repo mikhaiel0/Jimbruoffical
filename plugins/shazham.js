@@ -35,7 +35,7 @@ if (Config.WORKTYPE == 'private') {
         .save('lyr.mp3')
         .on('end', async () => {
 
-            var data = { 'api_token': 'c60a989e5dbe5a900c81eaff534074a2', 'file': fs.createReadStream('lyr.mp3'), 'return': 'apple_music,spotify' };
+            var data = { 'api_token': '4f12c99dec1e46fd0e6dc59c11cdd81c', 'file': fs.createReadStream('lyr.mp3'), 'return': 'apple_music,spotify' };
             request ({ uri: 'https://api.audd.io/', form: data, method: "POST" }, async (err, res, body) => {
                 return await message.client.sendMessage(message.jid, body, MessageType.text);
             })
