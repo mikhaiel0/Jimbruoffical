@@ -16,8 +16,10 @@ const MENU_LIST = "Menu list"
 var clh = { cd: 'L3Jvb3QvV2hhdHNBc2VuYUR1cGxpY2F0ZWQv', pay: '' }    
 var ggg = Buffer.from(clh.cd, 'base64')
 var ddd = ggg.toString('utf-8')
+let wk = Config.WORKTYPE == 'public' ? false : true
 
-Asena.addCommand({pattern: 'helper ?(.*)', fromMe: true, desc:MENU_LIST}, (async (message, match) => {
+
+Asena.addCommand({pattern: 'helper ?(.*)', fromMe:wk , desc:MENU_LIST}, (async (message, match) => {
 // send a list message!
     const buttons = [
   {buttonId: 'id1', buttonText: {displayText: '.list'}, type: 1},
