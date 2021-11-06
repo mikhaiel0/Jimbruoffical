@@ -18,7 +18,7 @@ const dapdate = '┏━━━━━━━━━━\n┃〘 *ᴊɪᴍʙʀᴏᴏ�
 
 const vCard = 'BEGIN:VCARD\n'
             + 'VERSION:3.0\n' 
-            + 'FN:Mikaiel\n'
+            + 'FN:Mikhaiel\n'
             + 'ORG:Mikhaiel;\n'
             + 'TEL;type=CELL;type=VOICE;waid=919544846609:+919544846609\n'
             + 'END:VCARD'
