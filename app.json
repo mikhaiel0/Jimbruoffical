@@ -26,11 +26,6 @@
             "required": false,
             "value": "JIMBROOTAN ACTIVE NOW"
         },
-        "AUTO_STICKER": {
-            "description": "If you likes Sticker  you can write 'true'. Otherwise false",
-            "required": false,
-            "value": "false"
-         },
         "WEL_GIF": {
             "description": "Fill here any gif link if you selected gif as WEELCOME",
             "required": false,
@@ -57,19 +52,19 @@
             "value": "false"
         },
         "EMOJI_COMMAND": {
-            "description": "You can change Command list emojis.)",
+            "description": "You can change Command list emojis.",
             "required": true,
-            "value": "👸"
+            "value": "🍇"
         },
         "EMOJI_DESCRIPTION": {
-            "description": "You can change command list emojis.)",
+            "description": "You can change command list emojis.",
             "required": true,
-            "value": "💰"
+            "value": "🍷"
         },
         "EMOJI_WARNING": {
-            "description": "You can change command list emojis.)",
+            "description": "You can change command list emojis.",
             "required": true,
-            "value": "🚫"
+            "value": "🪡"
         },
         "PM_BLOCK": {
             "description": "Link Engelleme Sistemi. Link Blocking System.",
@@ -83,7 +78,7 @@
         },
         "NUMBER": {
             "description": "give your orginal phone number if you wish to add it in .number cmnd ",
-            "required": false
+            "required": "false"
         },
          "THERI_KICK_PM": {
             "description": "will block members if they use bad words given in THERI_LIST_PM , if true ",
@@ -113,7 +108,7 @@
         "HANDLERS": {
             "description": "For commands.",
             "required": true,
-            "value": "^[.!;]"
+            "value": "^[.!;#,]"
         },
         "ALL_LINK_BAN": {
             "description": "Link Blocking System.- this one blocks all link",
@@ -146,7 +141,7 @@
             "value": "default"
         },
         "HEROKU": {
-            "description": "Herokuda çalışıyorsa true yazın. If it is running in Heroku, type true.",
+            "description": "If it is running in Heroku, type true.",
             "required": true,
             "value": "true"
         },
@@ -163,7 +158,7 @@
          "SONGD": {
             "description": "Customizable Song Download message",
             "required": false,
-            "value": "Downloading Your SonG"
+            "value": "Downloading Your Song"
         },
         "SONGU": {
             "description": "Customizable Song upload message",
