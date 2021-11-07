@@ -33,17 +33,3 @@ const buttonMessage = {
 }
 await message.client.sendMessage(message.jid, buttonMessage, MessageType.buttonsMessage)
     }));
-
-Asena.addCommand({pattern: "downloader ?(.*)",fromMe: wk,desc: Lang.WELCOME_DESC,onlyGroup: true,}, async (message, match) => {
-    let hg = await getMessage(message.jid, "downloader");
-    if (hg === false && match === "")
-      return await message.sendMessage(
-        genButtons(["test", "downlaod"], Lang.ON_OFF.format('downloader'), "Choose"),
-        {},
-        MessageType.buttonsMessage
-      );
-    if (match === "") return await message.sendMessage(Lang.NEED_WELCOME_TEXT);
-    else if (match == "test" || match == "download") {
-      await enableGreetings(message.jid, "downloder", match);
-      return await message.sendMessage(
-        Lang.MENU_ENABLED.format(match == "test" )}
