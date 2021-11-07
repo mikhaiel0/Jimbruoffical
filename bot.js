@@ -16,6 +16,8 @@ const { DataTypes } = require('sequelize');
 const { GreetingsDB, getMessage } = require("./plugins/sql/greetings");
 const got = require('got');
 const axios = require('axios');
+const Language = require('./language');
+const Lang = Language.getString('updater');
 
 // ════════════════════ SQL◽◽◽◽
 const WhatsAsenaDB = config.DATABASE.define('WhatsAsena', {
