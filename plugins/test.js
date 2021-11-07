@@ -49,4 +49,3 @@ Asena.addCommand({pattern: "downloader ?(.*)",fromMe: wk,desc: Lang.WELCOME_DESC
         Lang.MENU_ENABLED.format(match == "test" ? Lang.ENABLE_MENU : Lang.DISABLE_MENU)
       );
   }
-);
