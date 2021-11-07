@@ -47,5 +47,4 @@ Asena.addCommand({pattern: "downloader ?(.*)",fromMe: wk,desc: Lang.WELCOME_DESC
       await enableGreetings(message.jid, "downloder", match);
       return await message.sendMessage(
         Lang.MENU_ENABLED.format(match == "test" ? Lang.ENABLE_MENU : Lang.DISABLE_MENU)
-      );
-  }
+          }
