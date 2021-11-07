@@ -40,6 +40,7 @@ module.exports = {
     PANNEL_LOGO: process.env.PANNEL_LOGO === undefined ? 'https://i.imgur.com/0SUQkRT.jpg' : process.env.PANNEL_LOGO,
     NOLOG: process.env.NO_LOG === undefined ? 'false' : process.env.NO_LOG,
     TALKING_JIMBRU: process.env.TALKING_JIMBRU === undefined ? 'false' : process.env.TALKING_JIMBRU,
+    AUTO_STICKER: process.env.AUTO_STICKER === undefined ? false : convertToBool(process.env.AUTO_STICKER)
     STICKER_REPLY: process.env.STICKER_REPLY === undefined ? false : convertToBool(process.env.STICKER_REPLY,
     BGMFILTER: process.env.BGM_FILTER === undefined ? false : convertToBool(process.env.BGM_FILTER),
     DISBGM: process.env.DISABLE_JID_BGM_FILTER === undefined ? false : process.env.DISABLE_JID_BGM_FILTER,
