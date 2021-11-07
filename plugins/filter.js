@@ -181,7 +181,7 @@ if(pattern.test(message.message)){
 }));
 }
 Jimbrootan.addCommand({on: 'text', fromMe: false}, (async (message, match) => {
-    if(Config.STICKER_REPLY){
+    if(Config.STICKERP){
     let banned = jid.find( Jid => Jid === message.jid);
     if(banned !== undefined) return
     if (!!message.mention && message.mention[0] == '919544846609@s.whatsapp.net') {
