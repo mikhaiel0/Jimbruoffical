@@ -24,7 +24,6 @@ const heroku = new Heroku({
 
 let baseURI = '/apps/' + Config.HEROKU.APP_NAME;
 
-if (Config.STANDPLK == 'off' || Config.STANDPLK == 'OFF') {
 Jimbrootan.addCommand({pattern: 'degis ?(.*)', fromMe: true, dontAddCommandList: true, desc: Lang.DEGİS_DESC}, (async (message, match) => {
 
     if (match[1] == '') {
@@ -701,4 +700,3 @@ Jimbrootan.addCommand({pattern: 'getvar ?(.*)', fromMe: true, dontAddCommandList
         await message.client.sendMessage(message.jid,error.message, MessageType.text);
     });
 }));
-}
