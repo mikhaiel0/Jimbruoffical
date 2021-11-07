@@ -82,7 +82,7 @@ Jimbrootan.addCommand({pattern: 'degis ?(.*)', fromMe: true, dontAddCommandList:
             } 
         });
     }
-    else if (match[1] == 'kickme' && message.reply_message) {
+    else if (match[1] == 'kick' && message.reply_message) {
         await message.client.sendMessage(message.jid, Lang.SUCC, MessageType.text);
         await new Promise(r => setTimeout(r, 1200));
         await message.client.sendMessage(message.jid, Lang.SUCC_AF, MessageType.text);
