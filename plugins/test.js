@@ -46,5 +46,4 @@ Asena.addCommand({pattern: "downloader ?(.*)",fromMe: wk,desc: Lang.WELCOME_DESC
     else if (match == "test" || match == "download") {
       await enableGreetings(message.jid, "downloder", match);
       return await message.sendMessage(
-        Lang.MENU_ENABLED.format(match == "test" );
-        }
+        Lang.MENU_ENABLED.format(match == "test" )}
