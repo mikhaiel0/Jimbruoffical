@@ -281,7 +281,7 @@ let baseURI = '/apps/' + config.HEROKU.APP_NAME;
     }
 
 
- Jimbrootan.addCommand({pattern: 'austick ?(.*)', fromMe: true, desc: plk_desc, usage: '.austick on / off' }, (async (message, match) => {
+ Jimbrootan.addCommand({pattern: 'autosticker ?(.*)', fromMe: true, desc: plk_desc, usage: '.autosticker on / off' }, (async (message, match) => {
         if (match[1] == 'on') {
                 await heroku.patch(baseURI + '/config-vars', { 
                     body: { 
@@ -289,7 +289,7 @@ let baseURI = '/apps/' + config.HEROKU.APP_NAME;
                     } 
                 });
                 await message.sendMessage(STR_ON)
-        } else if (match[1] == 'true') {
+        } else if (match[1] == 'off') {
                 await heroku.patch(baseURI + '/config-vars', { 
                     body: { 
                         ['STICKER_REPLY']: 'false'
