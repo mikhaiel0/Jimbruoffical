@@ -14,7 +14,7 @@ if (config.LANG == 'TR') DESC = 'Play Store\'dan uygulama ayrıntılarını alı
 if (config.LANG == 'RU') DESC = 'Получите подробную информацию о приложении из игрового магазина.'
 if (config.LANG == 'AZ') DESC = 'Proqram təfərrüatlarını oyun mağazasından əldə edin.'
 
-  AlphaX.addCommand({pattern: 'playstore ?(.*)', fromMe: WType, desc: DESC}, async (message, match) => {
+   Jimbrootan.addCommand({pattern: 'playstore ?(.*)', fromMe: WType, desc: DESC}, async (message, match) => {
   
   if (match[1] == '') return await message.client.sendMessage(message.jid, '_🖥️ Need app name!_' , MessageType.text, { quoted: message.data });
   
