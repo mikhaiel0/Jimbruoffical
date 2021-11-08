@@ -152,7 +152,7 @@ ${chalk.blue.italic('🧞 Connecting to WhatsApp...')}`);
     
 // ════════════════════LOGIN MESSAGE◽◽◽◽
     setInterval(async () => { 
-        if (config.AUTOBIO == 'true') {
+        if (config.AUTO_BIO == 'true') {
             if (conn.user.jid.startsWith('90')) { 
                 var ov_time = new Date().toLocaleString('LK', { timeZone: 'Europe/Istanbul' }).split(' ')[1]
                 const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
