@@ -1,5 +1,5 @@
 /* 
-plk
+Special thanks to @afnanplk
 */
 
 const Jimbrootan = require('../events');
