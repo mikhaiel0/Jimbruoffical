@@ -18,7 +18,7 @@ module.exports = {
     VERSION: 'v8.5.0 Global Stable',
     SESSION: process.env.JIMBROOTAN_SESSION === undefined ? '' : process.env.JIMBROOTAN_SESSION,
     ANTİLİNK: process.env.ANTİ_LİNK === undefined ? 'false' : process.env.ANTİ_LİNK,
-    AUTOBİO: process.env.AUTO_BİO === undefined ? 'false' : process.env.AUTO_BİO,
+    AUTO_BIO: process.env.AUTO_BIO === undefined ? 'false' : process.env.AUTO_BIO,
     REMOVE: process.env.THERI_KICK_GP === undefined ? 'false' : process.env.THERI_KICK_GP,
     JINN: process.env.ALL_CAPTION === undefined ? 'MADE BY JIMBRU' : process.env.ALL_CAPTION,
     ALL_LINK_BAN: process.env.ALL_LINK_BAN === undefined ? 'false' : process.env.ALL_LINK_BAN,
