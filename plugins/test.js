@@ -17,7 +17,7 @@ var clh = { cd: 'L3Jvb3QvV2hhdHNBc2VuYUR1cGxpY2F0ZWQv', pay: '' }
 var ggg = Buffer.from(clh.cd, 'base64')
 var ddd = ggg.toString('utf-8')
 let wk = Config.WORKTYPE == 'public' ? false : true
-
+mek = 
 
 Asena.addCommand({pattern: 'main ?(.*)', fromMe:wk , desc:MENU_LIST}, (async (message, match) => {
 // send a list message!
@@ -31,5 +31,6 @@ const buttonMessage = {
     buttons: buttons,
     headerType: 1
 }
+selectedButton = (type == 'buttonsResponseMessage') ? mek.message.buttonsResponseMessage.selectedButtonId : ''
 await message.client.sendMessage(message.jid, buttonMessage, MessageType.buttonsMessage)
     }));
