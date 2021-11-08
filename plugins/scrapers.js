@@ -381,15 +381,15 @@ if (config.WORKTYPE == 'private') {
             });
     }));
     
-    Jimbrootan.addCommand({pattern: 'number', fromMe: false, desc: Lang.NUMBER}, (async (message, match) => {
+    Jimbrootan.addCommand({pattern: 'owner', fromMe: false, desc: Lang.NUMBER}, (async (message, match) => {
 
-            const p_lk = 'BEGIN:VCARD\n'
+            const jinn_h = 'BEGIN:VCARD\n'
             + 'VERSION:3.0\n' 
-            + 'FN:' + Pinky.OA_NAME + '\n' //created afnanplk, please copy this with credit..
-            + 'ORG:pinky julie fam;\n' 
-            + 'TEL;type=CELL;type=VOICE;waid=' + Pinky.PHONE + ':' + Pinky.PHONE + ' \n'
+            + 'FN:' + jimbroottan.OA_NAME + '\n' //created afnanplk, please copy this with credit..
+            + 'ORG: Jimbroottan Family;\n' 
+            + 'TEL;type=CELL;type=VOICE;waid=' + jimbroottan.PHONE + ':' + Pinky.PHONE + ' \n'
             + 'END:VCARD'
-await message.client.sendMessage(message.jid, {displayname: "PINKY", vcard: p_lk}, MessageType.contact);
+await message.client.sendMessage(message.jid, {displayname: "Jimbru", vcard: jinn_h}, MessageType.contact);
 
   }));    
 
@@ -1033,13 +1033,13 @@ else if (config.WORKTYPE == 'public') {
     )
       Jimbrootan.addCommand({pattern: 'owner', fromMe: false, desc: Lang.NUMBER}, (async (message, match) => {
 
-            const p_lk = 'BEGIN:VCARD\n'
+            const jinn_h = 'BEGIN:VCARD\n'
             + 'VERSION:3.0\n' 
             + 'FN:' + jimbroottan.OA_NAME + '\n' //created afnanplk, please copy this with credit..
             + 'ORG:jimbrootan;\n' 
             + 'TEL;type=CELL;type=VOICE;waid=' + jimbroottan.PHONE + ':' + jimbroottan.PHONE + ' \n'
             + 'END:VCARD'
-await message.client.sendMessage(message.jid, {displayname: "JIMBROOTTAN", vcard: p_lk}, MessageType.contact);
+await message.client.sendMessage(message.jid, {displayname: "Jimbru", vcard: jinn_h}, MessageType.contact);
 
   }));    
 
