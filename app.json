@@ -21,7 +21,7 @@
             "required": true,
             "value": "en"
         },
-        "BIO": {
+        "AUTO_BIO": {
             "description": "Change Your live Bio",
             "required": false,
             "value": "JIMBROOTAN ACTIVE NOW"
