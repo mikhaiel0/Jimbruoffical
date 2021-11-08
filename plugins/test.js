@@ -33,6 +33,5 @@ const buttonMessage = {
 }
 }
 		await message.client.sendMessage(message.jid, buttonMessage, MessageType.buttonsMessage, {quoted: message.data});
-	}
-        else If (responseButton === '.list') {
-	       await sendMessage(from, `*Gʀᴏᴜᴘ Oᴘᴇɴᴅ Bʏ Aᴅᴍɪɴ*`, MessageType.text}
+         else If (responseButton === '.list') {
+	       await sendMessage(from, `*Gʀᴏᴜᴘ Oᴘᴇɴᴅ Bʏ Aᴅᴍɪɴ*`, MessageType.text)}}
