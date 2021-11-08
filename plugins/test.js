@@ -32,6 +32,4 @@ const buttonMessage = {
     headerType: 1
 }
 await message.client.sendMessage(message.jid, buttonMessage, MessageType.buttonsMessage)
-
-case 'menu' 
     }));
