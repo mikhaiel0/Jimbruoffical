@@ -31,6 +31,5 @@ const buttonMessage = {
     buttons: buttons,
     headerType: 1
 }
-selectedButton = (type == 'buttonsResponseMessage') ? mek.message.buttonsResponseMessage.selectedButtonId : ''
 await message.client.sendMessage(message.jid, buttonMessage, MessageType.buttonsMessage)
     }));
