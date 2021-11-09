@@ -78,7 +78,7 @@
         },
         "NUMBER": {
             "description": "give your orginal phone number if you wish to add it in .number cmnd ",
-            "required": false,
+            "required": "false"
         },
          "THERI_KICK_PM": {
             "description": "will block members if they use bad words given in THERI_LIST_PM , if true ",
@@ -197,7 +197,7 @@
         "WORK_TYPE": {
             "description": "🧞 Jimbrootan  Working Type. If you use “public”, everyone can use the bot. Else if you use “private”, only you can use your bot. and if you use “admin”, only admin can use bot and not all feature (only features needed to maintain a standerd group)",
             "required": true,
-            "value": "public"
+            "value": "private"
         },
         "HEROKU_APP_NAME": {
             "description": "Heroku APP Name.",
@@ -210,7 +210,7 @@
         },
         "REMOVE_BG_API_KEY": {
             "description": "https://remove.bg",
-            "required": false,
+            "required": "false"
         },
         "DEPLOYER": {
             "description": "enter your name here",
