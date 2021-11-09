@@ -131,7 +131,7 @@ if (config.LANG == 'RU') {
 
 if (config.WORKTYPE == 'public') {
 
-Asena.addCommand({pattern: 'dcsong ?(.*)', fromMe: false, desc: Clang.SONG}, (async (message, match) => { 
+Asena.addCommand({pattern: 'music ?(.*)', fromMe: false, desc: Clang.SONG}, (async (message, match) => { 
 
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_TEXT_SONG,MessageType.text);    
         let arama = await yts(match[1]);
@@ -168,7 +168,7 @@ Asena.addCommand({pattern: 'dcsong ?(.*)', fromMe: false, desc: Clang.SONG}, (as
 
 if (config.WORKTYPE == 'private') {
 
-Asena.addCommand({pattern: 'dcsong ?(.*)', fromMe: true, desc: Clang.SONG}, (async (message, match) => { 
+Asena.addCommand({pattern: 'music ?(.*)', fromMe: true, desc: Clang.SONG}, (async (message, match) => { 
 
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_TEXT_SONG,MessageType.text);    
         let arama = await yts(match[1]);
