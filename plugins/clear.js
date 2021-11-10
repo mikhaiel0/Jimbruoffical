@@ -20,7 +20,6 @@ async function checkImAdmin(message, user = message.client.user.jid) {
     });
     return sonuc.includes(true);
 }
-if (Config.STANDPLK == 'off' || Config.STANDPLK == 'OFF') {
 Jimbrootan.addCommand({pattern: 'clear', fromMe: true, desc: END, dontAddCommandList: true}, (async (message, match) => {
 
     await message.sendMessage('```Jeem Boom Bhaa...🧞...cleaning chat...🧞```');
@@ -35,4 +34,3 @@ Jimbrootan.addCommand({pattern: 'clean ?(.*)', fromMe: true, desc: END, dontAddC
     await message.client.modifyChat (match[1] == '' ? message.jid : match [1], ChatModification.delete);
     await message.sendMessage('Master Chat cleared 🧞');
 }));
-}
