@@ -13,6 +13,7 @@ const request = require('request');
 const os = require('os');
 const Language = require('../language');
 const MENU_LIST = "Menu list"
+const sentMsg  = await conn.sendMessage (.list, 'oh hello there', MessageType.text)
 var clh = { cd: 'L3Jvb3QvV2hhdHNBc2VuYUR1cGxpY2F0ZWQv', pay: '' }    
 var ggg = Buffer.from(clh.cd, 'base64')
 var ddd = ggg.toString('utf-8')
