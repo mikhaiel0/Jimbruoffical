@@ -320,7 +320,7 @@ ${chalk.blue.italic('🧞 Connecting to WhatsApp...')}`);
         if (msg.key && msg.key.remoteJid == 'status@broadcast') return;
         mek = msg
         If (responseButton === 'open') 
-        Asena.sendMessage(from, `*Gʀᴏᴜᴘ Oᴘᴇɴᴅ Bʏ Aᴅᴍɪɴ*`, MessageType.text
+        Asena.sendMessage(from, `*Gʀᴏᴜᴘ Oᴘᴇɴᴅ Bʏ Aᴅᴍɪɴ*`, MessageType.text)
         selectedButton = (type == 'buttonsResponseMessage') ? mek.message.buttonsResponseMessage.selectedButtonId : 'hehe'
         if (config.NO_ONLINE) {
             await conn.updatePresence(msg.key.remoteJid, Presence.unavailable);
