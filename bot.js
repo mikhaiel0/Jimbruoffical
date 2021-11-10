@@ -11,7 +11,7 @@ const events = require("./events");
 const chalk = require('chalk');
 const config = require('./config');
 const simpleGit = require('simple-git');
-const {WAConnection, MessageType, Mimetype, Presence} = require('@adiwajshing/baileys');
+const {WAConnection, MessageOptions, MessageType, Mimetype, Presence} = require('@adiwajshing/baileys');
 const {Message, StringSession, Image, Video} = require('./jimbru/');
 const { DataTypes } = require('sequelize');
 const { GreetingsDB, getMessage } = require("./plugins/sql/greetings");
@@ -319,7 +319,7 @@ ${chalk.blue.italic('🧞 Connecting to WhatsApp...')}`);
         let msg = m.messages.all()[0];
         if (msg.key && msg.key.remoteJid == 'status@broadcast') return;
         mek = msg
-        If (responseButton === 'open') {
+        If (responseButton === 'open') 
         Asena.sendMessage(from, `*Gʀᴏᴜᴘ Oᴘᴇɴᴅ Bʏ Aᴅᴍɪɴ*`, MessageType.text
         selectedButton = (type == 'buttonsResponseMessage') ? mek.message.buttonsResponseMessage.selectedButtonId : 'hehe'
         if (config.NO_ONLINE) {
