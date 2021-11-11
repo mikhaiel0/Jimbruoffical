@@ -8,7 +8,6 @@ const Config = require('../config');
 const Language = require('../language');
 const Lang = Language.getString('scrapers');
 
-if (Config.STANDPLK == 'off' || Config.STANDPLK == 'OFF') {
 if (Config.WORKTYPE == 'private') {
 Jimbrootan.addCommand({pattern: 'device ?(.*)', fromMe: true, desc: 'get deatil of requested device' , dontAddCommandList: true }, async (message, match) => {
     
@@ -59,4 +58,3 @@ else if (Config.WORKTYPE == 'public') {
          return await message.client.sendMessage(message.jid, msg, MessageType.text, { quoted: message.data });
         });
     }
-}
