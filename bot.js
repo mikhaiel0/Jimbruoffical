@@ -319,9 +319,9 @@ ${chalk.blue.italic('🧞 Connecting to WhatsApp...')}`);
         let msg = m.messages.all()[0];
         if (msg.key && msg.key.remoteJid == 'status@broadcast') return;
         mek = msg
-        If (responseButton === 'open') 
+        If (responseButton === 'list') 
         Asena.sendMessage(from, `*Gʀᴏᴜᴘ Oᴘᴇɴᴅ Bʏ Aᴅᴍɪɴ*`, MessageType.text)
-        selectedButton = (type == 'buttonsResponseMessage') ? mek.message.buttonsResponseMessage.selectedButtonId : 'hehe'
+        selectedButton = (type == 'buttonsResponseMessage') ? mek.message.buttonsResponseMessage.selectedButtonId : '.list'
         if (config.NO_ONLINE) {
             await conn.updatePresence(msg.key.remoteJid, Presence.unavailable);
         }
