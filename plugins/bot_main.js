@@ -1,3 +1,4 @@
+/*
 const Jimbrootan = require('../events');
 const Config = require('../config');
 const {MessageType, GroupSettingChange, Mimetype, MessageOptions} = require('@adiwajshing/baileys');
@@ -44,3 +45,4 @@ Jimbrootan.addCommand({on: 'text', fromMe: wk}, (async (message, match) => {
 		await message.client.sendMessage(message.jid, dapdate, MessageType.text, {quoted: message.data});
 	}
 }));
+*/
