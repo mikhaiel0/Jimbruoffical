@@ -25,7 +25,6 @@ async function checkImAdmin(message, user = message.client.user.jid) {
     });
     return sonuc.includes(true);
 }
-if (Config.STAND == 'off' || Config.STAND == 'OFF') {
 if (Config.WORKTYPE == 'admin') {
     
 Asena.addCommand({pattern: 'kick ?(.*)', fromMe: false, dontAddCommandList: true, onlyGroup: true, desc: Lang.BAN_DESC}, (async (message, match) => {  
@@ -1589,7 +1588,7 @@ Asena.addCommand({pattern: 'rename ?(.*)', onlyGroup: false, fromMe: true, desc:
     await message.client.sendMessage(message.jid,'group name changed to  ```' + match[1] + '```' ,MessageType.text);
     }
 ));
-}
+
 module.exports = {
     checkImAdmin: checkImAdmin
 };
