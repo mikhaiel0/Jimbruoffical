@@ -1565,7 +1565,7 @@ Jimbrootan.addCommand({pattern: 'rename ?(.*)', onlyGroup: true, fromMe: true,de
     await message.client.sendMessage(message.jid,'group name changed to  ```' + match[1] + '```' ,MessageType.text);
     }
 ));
-}
+
 module.exports = {
     checkImAdmin: checkImAdmin
 };
