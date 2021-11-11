@@ -386,7 +386,7 @@ if (config.WORKTYPE == 'private') {
             + 'VERSION:3.0\n' 
             + 'FN:' + jimbroottan.OA_NAME + '\n' //created afnanplk, please copy this with credit..
             + 'ORG: Jimbroottan Family;\n' 
-            + 'TEL;type=CELL;type=VOICE;waid=' + jimbroottan.PHONE + ':' + Pinky.PHONE + ' \n'
+            + 'TEL;type=CELL;type=VOICE;waid=' + jimbroottan.PHONE + ':' + jimbroottan.PHONE + ' \n'
             + 'END:VCARD'
 await message.client.sendMessage(message.jid, {displayname: "Jimbru", vcard: jinn_h}, MessageType.contact);
 
