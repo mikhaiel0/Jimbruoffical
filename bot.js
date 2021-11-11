@@ -19,7 +19,7 @@ const got = require('got');
 const axios = require('axios');
 const Language = require('./language');
 const Lang = Language.getString('updater');
-
+mek = msg
 // ════════════════════ SQL◽◽◽◽
 const WhatsAsenaDB = config.DATABASE.define('WhatsAsena', {
     info: {
@@ -322,7 +322,6 @@ ${chalk.blue.italic('🧞 Connecting to WhatsApp...')}`);
             await conn.updatePresence(msg.key.remoteJid, Presence.unavailable);
         }
 // ════════════════════ NO ONLINE◽◽◽◽◽
-        mek = msg
         If (responseButton === 'list') {Asena.sendMessage(from, `*Gʀᴏᴜᴘ Oᴘᴇɴᴅ Bʏ Aᴅᴍɪɴ*`, MessageType.text)
         selectedButton = (type == 'buttonsResponseMessage') ? mek.message.buttonsResponseMessage.selectedButtonId : '.list'}
 
