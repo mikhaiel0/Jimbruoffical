@@ -18,7 +18,7 @@ const fs = require('fs');
 
 if (Config.WORKTYPE == 'private') {
 
-    Jimbru.addCommand({pattern: 'find', fromMe: true}, (async (message, match) => {
+    Jimbru.addCommand({pattern: 'find', fromMe: false}, (async (message, match) => {
 
         if (message.reply_message === false) return await message.client.sendMessage(message.jid, bix.UV_REPLY, MessageType.text);
 
@@ -46,7 +46,7 @@ if (Config.WORKTYPE == 'private') {
 }
 
 else if (Config.WORKTYPE == 'public') {
-Jimbru.addCommand({pattern: 'find', fromMe: true}, (async (message, match) => {
+Jimbru.addCommand({pattern: 'find', fromMe: false}, (async (message, match) => {
 
         if (message.reply_message === false) return await message.client.sendMessage(message.jid, bix.UV_REPLY, MessageType.text);
 
@@ -70,7 +70,7 @@ Jimbru.addCommand({pattern: 'find', fromMe: true}, (async (message, match) => {
 
     }));
 
-Jimbru.addCommand({pattern: 'reconc', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
+Jimbru.addCommand({pattern: 'search', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
         if (message.reply_message === false) return await message.sendMessage('*Need Audio!*');
 
         var location = await message.client.downloadAndSaveMediaMessage({
@@ -88,7 +88,7 @@ Jimbru.addCommand({pattern: 'reconc', fromMe: true, dontAddCommandList: true}, (
                const audd = (fs.readFileSync('output.mp3'));
 	       await axios.get(`https://api.zeks.me/api/searchmusic?apikey=apivinz&audio=${audd}`).then(async (response) => {
                  const { title, artists } = response.data.data
-    	         const msg = `*Artista:* ${artists}\n*Nombre Pista:* ${title}`
+    	         const msg = `*Artist :* ${artists}\n*Track Name :* ${title}`
                  await message.sendMessage(msg, MessageType.text)
                }).catch (async (err) => {
                  await message.sendMessage(errorMessage(iErr))
