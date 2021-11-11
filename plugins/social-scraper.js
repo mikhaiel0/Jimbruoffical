@@ -22,7 +22,6 @@ const novf = "Unconfirmed Account"
 const bs = "Yes"
 const nobs = "no"
 
-if (cn.STANDPLK == 'off' || cn.STANDPLK == 'OFF') {
 if (cn.WORKTYPE == 'private') {
 
     Jimbrootan.addCommand({ pattern: 'pinsta ?(.*)', fromMe: false, desc: 'instagram profile' }, async (message, match) => {
@@ -75,4 +74,4 @@ else if (cn.WORKTYPE == 'public') {
         })
     });
 }
-}
+
