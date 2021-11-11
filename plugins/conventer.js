@@ -63,7 +63,6 @@ function webp2mp4File(path) {
     })
 }
 
-if (Config.STAND == 'off' || Config.STAND == 'OFF') {
 if (Config.WORKTYPE == 'private') {
 
     Asena.addCommand({pattern: 'mp3$', fromMe: true, desc: Lang.MP4TOAUDİO_DESC}, (async (message, match) => {    
@@ -201,7 +200,7 @@ else if (Config.WORKTYPE == 'public') {
         doc_desc = 'CONVERT TO DOCUMENT AND ADD GIVEN NAME'
         mkl = '```NAMING AND DOCIFYING```'
         txt = '```PLEASE REPLY TO A AUDIO```'
-        usge = '```.doc jimbrootan *replace pinky with desired name*```'
+        usge = '```.doc jimbrootan *replace Jimbrootan with desired name*```'
     }
     if (Config.LANG == 'ML') {
         doc_desc = 'ഡോക്യുമെന്റിലേക്ക് പരിവർത്തനം ചെയ്യുകയും നൽകിയപേര് ചേർക്കുകയും ചെയ്യുക'
@@ -233,5 +232,4 @@ else if (Config.WORKTYPE == 'public') {
     }));
 
 }
-    
-}
+  
