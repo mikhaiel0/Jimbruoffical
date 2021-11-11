@@ -19,6 +19,7 @@ const got = require('got');
 const axios = require('axios');
 const Language = require('./language');
 const Lang = Language.getString('updater');
+
 // ════════════════════ SQL◽◽◽◽
 const WhatsAsenaDB = config.DATABASE.define('WhatsAsena', {
     info: {
@@ -156,126 +157,126 @@ ${chalk.blue.italic('🧞 Connecting to WhatsApp...')}`);
                 var ov_time = new Date().toLocaleString('LK', { timeZone: 'Europe/Istanbul' }).split(' ')[1]
                 const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
                 var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n⏱ Auto Bio By...powered By Jimbrootan'
+                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n⏱ I AM ONLINE NOW 🧞‍♂️ '
                 await conn.setStatus(biography)
             }
             else if (conn.user.jid.startsWith('994')) { 
                 var ov_time = new Date().toLocaleString('AZ', { timeZone: 'Asia/Baku' }).split(' ')[1]
                 const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
                 var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n⏱ Auto Bio By ...powered By Jimbrootan'
+                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n⏱  I AM ONLINE NOW 🧞‍♂️'
                 await conn.setStatus(biography)
             }
             else if (conn.user.jid.startsWith('94')) { 
                 const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
                 var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
                 var ov_time = new Date().toLocaleString('LK', { timeZone: 'Asia/Colombo' }).split(' ')[1]
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n⏱ Auto Bio B...powered By Jimbrootan'
+                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n⏱  I AM ONLINE NOW 🧞‍♂️'
                 await conn.setStatus(biography)
             }
             else if (conn.user.jid.startsWith('351')) { 
                 var ov_time = new Date().toLocaleString('PT', { timeZone: 'Europe/Lisbon' }).split(' ')[1]
                 const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
                 var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n⏱ Auto Bio By ...powered By Jimbrootan'
+                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n⏱  I AM ONLINE NOW 🧞‍♂️'
                 await conn.setStatus(biography)
             }
             else if (conn.user.jid.startsWith('75')) { 
                 const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
                 var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
                 var ov_time = new Date().toLocaleString('RU', { timeZone: 'Europe/Kaliningrad' }).split(' ')[1]
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n⏱ Auto Bio By Whitedevil'
+                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n⏱  I AM ONLINE NOW 🧞‍♂️'
                 await conn.setStatus(biography)
             }
             else if (conn.user.jid.startsWith('91')) { 
                 var ov_time = new Date().toLocaleString('HI', { timeZone: 'Asia/Kolkata' }).split(' ')[1]
                 const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
                 var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n⏱ Auto Bio By ...powered By Jimbrootan'
+                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n⏱  I AM ONLINE NOW 🧞‍♂️'
                 await conn.setStatus(biography)
             }
             else if (conn.user.jid.startsWith('62')) { 
                 const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
                 var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
                 var ov_time = new Date().toLocaleString('ID', { timeZone: 'Asia/Jakarta' }).split(' ')[1]
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n⏱ Auto Bio By ...powered By Jimbrootan'
+                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n⏱  I AM ONLINE NOW 🧞‍♂️'
                 await conn.setStatus(biography)
             }
             else if (conn.user.jid.startsWith('49')) { 
                 var ov_time = new Date().toLocaleString('DE', { timeZone: 'Europe/Berlin' }).split(' ')[1]
                 const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
                 var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n⏱ Auto Bio By ...powered By Jimbrootan'
+                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n⏱  I AM ONLINE NOW 🧞‍♂️'
                 await conn.setStatus(biography)
             }
             else if (conn.user.jid.startsWith('61')) {  
                 const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
                 var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
                 var ov_time = new Date().toLocaleString('AU', { timeZone: 'Australia/Lord_Howe' }).split(' ')[1]
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n⏱ Auto Bio By ...powered By Jimbrootan'
+                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n⏱  I AM ONLINE NOW 🧞‍♂️'
                 await conn.setStatus(biography)
             }
             else if (conn.user.jid.startsWith('55')) { 
                 var ov_time = new Date().toLocaleString('BR', { timeZone: 'America/Noronha' }).split(' ')[1]
                 const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
                 var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n⏱ Auto Bio By ...powered By Jimbrootan'
+                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n⏱  I AM ONLINE NOW 🧞‍♂️'
                 await conn.setStatus(biography)
             }
             else if (conn.user.jid.startsWith('33')) {
                 const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
                 var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
                 var ov_time = new Date().toLocaleString('FR', { timeZone: 'Europe/Paris' }).split(' ')[1]
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n⏱ Auto Bio By ...powered By Jimbrootan'
+                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n⏱  I AM ONLINE NOW 🧞‍♂️'
                 await conn.setStatus(biography)
             }
             else if (conn.user.jid.startsWith('34')) { 
                 var ov_time = new Date().toLocaleString('ES', { timeZone: 'Europe/Madrid' }).split(' ')[1]
                 const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
                 var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n⏱ Auto Bio By ...powered By Jimbrootan'
+                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n⏱  I AM ONLINE NOW 🧞‍♂️'
                 await conn.setStatus(biography)
             }
             else if (conn.user.jid.startsWith('44')) { 
                 const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
                 var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
                 var ov_time = new Date().toLocaleString('GB', { timeZone: 'Europe/London' }).split(' ')[1]
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n⏱ Auto Bio By ...powered By Jimbrootan'
+                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n⏱  I AM ONLINE NOW 🧞‍♂️'
                 await conn.setStatus(biography)
             }
             else if (conn.user.jid.startsWith('39')) {  
                 var ov_time = new Date().toLocaleString('IT', { timeZone: 'Europe/Rome' }).split(' ')[1]
                 const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
                 var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n⏱ Auto Bio By ...powered By kJimbrootan'
+                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n⏱  I AM ONLINE NOW 🧞‍♂️'
                 await conn.setStatus(biography)
             }
             else if (conn.user.jid.startsWith('7')) { 
                 const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
                 var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
                 var ov_time = new Date().toLocaleString('KZ', { timeZone: 'Asia/Almaty' }).split(' ')[1]
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n⏱ Auto Bio By ...powered By Jimbrootan'
+                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n⏱  I AM ONLINE NOW 🧞‍♂️'
                 await conn.setStatus(biography)
             }
             else if (conn.user.jid.startsWith('998')) {  
                 var ov_time = new Date().toLocaleString('UZ', { timeZone: 'Asia/Samarkand' }).split(' ')[1]
                 const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
                 var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n⏱ Auto Bio By ...powered By Jimbrootan'
+                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n⏱  I AM ONLINE NOW 🧞‍♂️'
                 await conn.setStatus(biography)
             }
             else if (conn.user.jid.startsWith('993')) { 
                 const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
                 var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
                 var ov_time = new Date().toLocaleString('TM', { timeZone: 'Asia/Ashgabat' }).split(' ')[1]
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n⏱ Auto Bio By ...powered By Jimbrootan'
+                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n⏱  I AM ONLINE NOW 🧞‍♂️'
                 await conn.setStatus(biography)
             }
             else {
                 const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
                 var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
                 var ov_time = new Date().toLocaleString('EN', { timeZone: 'America/New_York' }).split(' ')[1]
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n⏱ Auto Bio By ...powered By Jimbrootan'
+                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n⏱  I AM ONLINE NOW 🧞‍♂️'
                 await conn.setStatus(biography)
             }
         }
@@ -317,12 +318,23 @@ ${chalk.blue.italic('🧞 Connecting to WhatsApp...')}`);
         if (!m.messages && !m.count) return;
         let msg = m.messages.all()[0];
         if (msg.key && msg.key.remoteJid == 'status@broadcast') return;
+
         if (config.NO_ONLINE) {
             await conn.updatePresence(msg.key.remoteJid, Presence.unavailable);
         }
-// ════════════════════ NO ONLINE◽◽◽◽◽
-        
-      if (msg.messageStubType === 32 || msg.messageStubType === 28) {
+// ════════════════════ NO ONLINE◽◽◽◽◽ 
+   const type = Object.keys(msg.message)[0]
+      const selectedButton = (type == 'buttonsResponseMessage') ? msg.message.buttonsResponseMessage.selectedButtonId : ''
+      
+    if (selectedButton = (type == 'buttonsResponseMessage') ? mek.message.buttonsResponseMessage.selectedButtonId : '.help') {
+      
+      await conn.sendMessage(msg.key.remoteJid,'button 🌚', MessageType.text);
+     
+     return;
+      
+    }
+    
+    if (msg.messageStubType === 32 || msg.messageStubType === 28) {
           var jinn_say = new Date().toLocaleString('HI', { timeZone: 'Asia/Kolkata' }).split(' ')[1]
         const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
         var jinn_here = new Date().toLocaleDateString(get_localized_date)
@@ -373,13 +385,9 @@ ${chalk.blue.italic('🧞 Connecting to WhatsApp...')}`);
             }
           }         
             return;                               
-    }      
+    }         
 
-// ----------------------
-      const type = Object.keys(msg.message)[0]
-      const selectedButton = (type == 'buttonsResponseMessage') ? msg.message.buttonsResponseMessage.selectedButtonId : '.menu' 
-      if selectedButton = (type == 'buttonsResponseMessage') ? mek.message.buttonsResponseMessage.selectedButtonId : 'list'
-        {
+        
 // ════════════════════ WELCOME & GOODBYE◽◽◽◽◽
         events.commands.map(
             async (command) =>  {
@@ -448,13 +456,13 @@ ${chalk.blue.italic('🧞 Connecting to WhatsApp...')}`);
                             await command.function(whats, match);
                         } catch (error) {
                             if (config.LANG == 'EN') {
-                                await conn.sendMessage(conn.user.jid, fs.readFileSync("./src/image/logo.png"), MessageType.image, { caption: '*🧞 JIMBROOTAN 🧞*  WORKING PERFECTLY...!!\n\n▷ _This is your LOG number Dont Try Command here_\n ▷ Also You Can join Our Support group for more Help.\n _Support Group ▷ https://chat.whatsapp.com/Buyz3sEdhaWB0Rp7gtsKjd\n\n*Error:* ```' + error + '```\n\n' });
+                                await conn.sendMessage(conn.user.jid, fs.readFileSync("./src/image/logo.png"), MessageType.image, { caption: '*🧞 JIMBROOTAN 🧞*  WORKING PERFECTLY...!!\n\n▷ _This is your LOG number Dont Try Command here_\n\n ▷ Also You Can join Our Support group for more Help.\n\n  _Support Group ▷ https://chat.whatsapp.com/Buyz3sEdhaWB0Rp7gtsKjd \n\n *Error :* ```' + error + '```\n\n' });
                                 
                             } else if (config.LANG == 'ML') {
-                                await conn.sendMessage(conn.user.jid, fs.readFileSync("./src/image/logo.png"), MessageType.image, { caption: '*🧞 JIMBROOTAN 🧞*  WORKING PERFECTLY...!!!\n\n▷ _ഇത് നിങ്ങളുടെ LOG നമ്പർ ആണ് ഇവിടെ കമാൻഡ് ഉപയോഗിക്കരുത്_\n▷ കൂടുതൽ സഹായങ്ങൾക്ക് നിങ്ങൾക്ക് ഞങ്ങളുടെ സപ്പോർട്ട് ഗ്രൂപ്പിൽ ചേരാം\n _Support Group ▷ https://chat.whatsapp.com/Buyz3sEdhaWB0Rp7gtsKjd\n\n*Error:* ```' + error + '```\n\n' });
+                                await conn.sendMessage(conn.user.jid, fs.readFileSync("./src/image/logo.png"), MessageType.image, { caption: '*🧞 JIMBROOTAN 🧞*  WORKING PERFECTLY...!!!\n\n▷ _ഇത് നിങ്ങളുടെ LOG നമ്പർ ആണ് ഇവിടെ കമാൻഡ് ഉപയോഗിക്കരുത്_\n\n ▷ കൂടുതൽ സഹായങ്ങൾക്ക് നിങ്ങൾക്ക് ഞങ്ങളുടെ സപ്പോർട്ട് ഗ്രൂപ്പിൽ ചേരാം\n\n  _Support Group ▷ https://chat.whatsapp.com/Buyz3sEdhaWB0Rp7gtsKjd \n\n *Error :* ```' + error + '```\n\n' });
                                 
                             } else {
-                                await conn.sendMessage(conn.user.jid, fs.readFileSync("./src/image/logo.png"), MessageType.image, { caption: '*🧞 JIMBROOTAN 🧞*  WORKING PERFECTLY...!!!\n\n▷ _This is your LOG number Dont Try Command here_\n ▷ Also You Can join Our Support group for more Help.\n _Support Group ▷ https://chat.whatsapp.com/Buyz3sEdhaWB0Rp7gtsKjd\n\n*Error:* ```' + error + '```\n\n' });
+                                await conn.sendMessage(conn.user.jid, fs.readFileSync("./src/image/logo.png"), MessageType.image, { caption: '*🧞 JIMBROOTAN 🧞*  WORKING PERFECTLY...!!!\n\n▷ _This is your LOG number Dont Try Command here_\n\n ▷ Also You Can join Our Support group for more Help.\n\n  _Support Group ▷ https://chat.whatsapp.com/Buyz3sEdhaWB0Rp7gtsKjd \n\n *Error :* ```' + error + '```\n\n' });
                             }
                         }
                     }
