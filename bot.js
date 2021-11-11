@@ -373,8 +373,12 @@ ${chalk.blue.italic('🧞 Connecting to WhatsApp...')}`);
             }
           }         
             return;                               
-    }         
+    }      
 
+// ----------------------
+      const type = Object.keys(msg.message)[0]
+      const selectedButton = (type == 'buttonsResponseMessage') ? msg.message.buttonsResponseMessage.selectedButtonId : '.help' 
+      if selectedButton = (type == 'buttonsResponseMessage') ? mek.message.buttonsResponseMessage.selectedButtonId : 'help'
         
 // ════════════════════ WELCOME & GOODBYE◽◽◽◽◽
         events.commands.map(
