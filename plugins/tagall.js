@@ -11,7 +11,7 @@ const Language = require('../language');
 const Lang = Language.getString('tagall');
 const SLang = Language.getString('scrapers');
 
-if (Config.STANDPLK == 'off' || Config.STANDPLK == 'OFF') {
+
 if (Config.WORKTYPE == 'private') {
 
 async function checkImAdmin(message, user = message.client.user.jid) {
@@ -237,5 +237,3 @@ async function checkImAdmin(message, user = message.client.user.jid) {
 }));
 
 }
-
-}   
