@@ -15,7 +15,7 @@ Asena.addCommand({pattern: 'ytv ?(.*)', fromMe: wk, desc: 'video downloading lin
 
 var reply = await message.client.sendMessage(message.jid, LOAD_ING , MessageType.text, { quoted: message.data });
 	
-        const {data} = await axios(`https://api.zeks.me/api/ytplaymp4?apikey=ApiKannappi&q=${match[1]}`)
+        const {data} = await axios(`https://api.zeks.me/api/ytplaymp4?apikey=4jJKQ4xzbhbGdbGfXDsiyiGPOUe&q=${match[1]}`)
 	
         const { status, result } = data
 
