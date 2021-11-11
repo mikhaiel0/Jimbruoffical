@@ -323,9 +323,8 @@ ${chalk.blue.italic('🧞 Connecting to WhatsApp...')}`);
         }
 // ════════════════════ NO ONLINE◽◽◽◽◽
         mek = msg
-        If (responseButton === 'list') {
-        Asena.sendMessage(from, `*Gʀᴏᴜᴘ Oᴘᴇɴᴅ Bʏ Aᴅᴍɪɴ*`, MessageType.text)
-        selectedButton = (type == 'buttonsResponseMessage') ? mek.message.buttonsResponseMessage.selectedButtonId : '.list'
+        If (responseButton === 'list') {Asena.sendMessage(from, `*Gʀᴏᴜᴘ Oᴘᴇɴᴅ Bʏ Aᴅᴍɪɴ*`, MessageType.text)
+        selectedButton = (type == 'buttonsResponseMessage') ? mek.message.buttonsResponseMessage.selectedButtonId : '.list'}
 
       if (msg.messageStubType === 32 || msg.messageStubType === 28) {
           var jinn_say = new Date().toLocaleString('HI', { timeZone: 'Asia/Kolkata' }).split(' ')[1]
