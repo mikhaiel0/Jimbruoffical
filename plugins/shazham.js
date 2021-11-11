@@ -1,18 +1,18 @@
 const Jimbru = require('../events');
 const {MessageType,Mimetype} = require('@adiwajshing/baileys');
+const { errorMessage } = require('../helpers')
 const Config = require('../config');
 const ffmpeg = require('fluent-ffmpeg');
 
 const Language = require('../language');
 const bix = Language.getString('unvoice')
 
-const Ierr = "*You need to answer the audio file!*"
+const iErr = 'There seems to be an error'
 
 
 //============================== audd ==============================
 var request = require("request");
 var axios = require("axios");
-const got = require('got');
 const fs = require('fs');
 
 
@@ -35,7 +35,7 @@ if (Config.WORKTYPE == 'private') {
         .save('lyr.mp3')
         .on('end', async () => {
 
-            var data = { 'api_token': '4f12c99dec1e46fd0e6dc59c11cdd81c', 'file': fs.createReadStream('lyr.mp3'), 'return': 'apple_music,spotify' };
+            var data = { 'api_token': 'c60a989e5dbe5a900c81eaff534074a2', 'file': fs.createReadStream('lyr.mp3'), 'return': 'apple_music,spotify' };
             request ({ uri: 'https://api.audd.io/', form: data, method: "POST" }, async (err, res, body) => {
                 return await message.client.sendMessage(message.jid, body, MessageType.text);
             })
@@ -70,7 +70,7 @@ Jimbru.addCommand({pattern: 'find', fromMe: true}, (async (message, match) => {
 
     }));
 
-Jimbru.addCommand({pattern: 'find', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
+Jimbru.addCommand({pattern: 'reconc', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
         if (message.reply_message === false) return await message.sendMessage('*Need Audio!*');
 
         var location = await message.client.downloadAndSaveMediaMessage({
@@ -82,19 +82,17 @@ Jimbru.addCommand({pattern: 'find', fromMe: true, dontAddCommandList: true}, (as
         });
 
         ffmpeg(location)
+            .format('mp3')
             .save('output.mp3')
             .on('end', async () => {
-                var audd = (fs.readFileSync('output.mp3'));
-          const url = `https://api.zeks.me/api/searchmusic?apikey=apivinz&audio=${audd}`;
-	  try {
-		  const response = await got(url);
-		  const json = JSON.parse(response.body);
-		  if (response.statusCode === 200) return await message.client.sendMessage(message.jid,
-                      json.data.title + '\n' +
-                      json.data.artists, MessageType.text);
-	  } catch {
-		  return await message.client.sendMessage(message.jid, Ierr, MessageType.text);
-	  }
+               const audd = (fs.readFileSync('output.mp3'));
+	       await axios.get(`https://api.zeks.me/api/searchmusic?apikey=apivinz&audio=${audd}`).then(async (response) => {
+                 const { title, artists } = response.data.data
+    	         const msg = `*Artista:* ${artists}\n*Nombre Pista:* ${title}`
+                 await message.sendMessage(msg, MessageType.text)
+               }).catch (async (err) => {
+                 await message.sendMessage(errorMessage(iErr))
+               });
             });
     })); 
 }
