@@ -12,7 +12,6 @@ const Config = require('../config');
 const Language = require('../language');
 const Lang = Language.getString('greetings');
 
-if (Config.STANDPLK == 'off' || Config.STANDPLK == 'OFF') {
 if (Config.WORKTYPE == 'private') {
 
 Jimbrootan.addCommand({pattern: 'welcome$', fromMe: true, desc: Lang.WELCOME_DESC}, (async (message, match) => {
@@ -159,4 +158,4 @@ Jimbrootan.addCommand({pattern: 'goodbye (.*)', fromMe: false, dontAddCommandLis
     }
 }));
 }
-}
+
