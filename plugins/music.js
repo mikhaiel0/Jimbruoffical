@@ -32,7 +32,7 @@ const spotifyApi = new SpotifyWebApi({
 const Language = require('../language');
 const Lang = Language.getString('scrapers');
 const LOAD_ING = "```Downloading media...```"
-if (config.STANDPLK == 'off' || config.STANDPLK == 'OFF') {
+
 Asena.addCommand({pattern: 'song ?(.*)', fromMe: false, desc: Lang.GET_DESC}, (async (message, match) => { 
 
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_SOME,MessageType.text);    
@@ -141,4 +141,4 @@ Asena.addCommand({pattern: 'song ?(.*)', fromMe: false, desc: Lang.GET_DESC}, (a
         await message.client.sendMessage(message.jid,'```' + Lang.LINK_TEXT + ' : ```'+ pallikkel +' \n ```' + Lang.NO_SPRT + '```',MessageType.text);
     }
     }));
-}
+
