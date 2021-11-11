@@ -13,7 +13,6 @@ const Config = require('../config');
 
 const Language = require('../language');
 const Lang = Language.getString('ffmpeg');
-if (Config.STANDPLK == 'off' || Config.STANDPLK == 'OFF') {
 if (Config.WORKTYPE == 'private') {
 
     Jimbrootan.addCommand({pattern: 'ffmpeg ?(.*)', fromMe: true, desc: Lang.FF_DESC}, (async (message, match) => {
@@ -143,4 +142,4 @@ else if (Config.WORKTYPE == 'public') {
     }));
     
 }
-}
+
