@@ -324,17 +324,6 @@ ${chalk.blue.italic('🧞 Connecting to WhatsApp...')}`);
             await conn.updatePresence(msg.key.remoteJid, Presence.unavailable);
         }
 // ════════════════════ NO ONLINE◽◽◽◽◽ 
-     const type = Object.keys(msg.message)[0]
-     
-     const selectedButton = (type == 'buttonsResponseMessage') ? msg.message.buttonsResponseMessage.selectedButtonId : ''
-
-    if (selectedButton = (type == 'buttonsResponseMessage') ? mek.message.buttonsResponseMessage.selectedButtonId : '') {
-
-      await conn.sendMessage(msg.key.remoteJid,'button', MessageType.text);
-
-     return;
-
-    }
 
     if (msg.messageStubType === 32 || msg.messageStubType === 28) {
           var jinn_say = new Date().toLocaleString('HI', { timeZone: 'Asia/Kolkata' }).split(' ')[1]
