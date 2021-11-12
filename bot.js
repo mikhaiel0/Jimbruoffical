@@ -147,11 +147,7 @@ ${chalk.blue.italic('🧞 Connecting to WhatsApp...')}`);
             await conn.updatePresence(msg.key.remoteJid, Presence.unavailable);
         }
 
-        const type = Object.keys(msg.message)[0]
-
-     const selectedButton = (type == 'buttonsResponseMessage') ? msg.message.buttonsResponseMessage.selectedButtonId : ''
-
-    if (selectedButton = (type == 'buttonsResponseMessage') ? msg.message.buttonsResponseMessage.selectedButtonId : '#help') {
+        const = Object.keys(msg.message)[0] == 'buttonsResponseMessage' ? msg.message.buttonsResponseMessage.selectedButtonId : '#menu'
 
       await conn.sendMessage(msg.key.remoteJid,'button', MessageType.text);
 
