@@ -6,17 +6,6 @@ const Config = require('../config');
 const {MessageType, MessageOptions, Mimetype} = require('@adiwajshing/baileys');
 const fs = require('fs');
 const axios = require('axios');
-const Ln = "▷ 🤖നിങ്ങൾ ആഗ്രഹിക്കുന്ന രീതിയിൽ മെമ്മുകൾ ഇച്ഛാനുസൃതമാക്കാൻ മെമ്മെ ലിസ്റ്റ്◁"
-
-if (Config.WORKTYPE == 'public') {
-
-Jimbru.addCommand({pattern: 'deadpool', fromMe: false, desc: Ln,}, (async (message, match) => {
-
-await message.client.sendMessage(
-
-message.jid,code, MessageType.text);
-
-}));
 
 Jimbru.addCommand({pattern: 'wasted ?(.*)', fromMe: true, desc: "make photo effec" }, async (message, match) => {
 
