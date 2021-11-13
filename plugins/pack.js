@@ -167,4 +167,3 @@ var webimage = await axios.get(`https://zenzapi.xyz/api/circle?image=${match[1]}
 await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption:Config.JINN})
 
 });
-        }
