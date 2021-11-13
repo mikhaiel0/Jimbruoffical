@@ -384,9 +384,9 @@ if (config.WORKTYPE == 'private') {
 
             const jinn_h = 'BEGIN:VCARD\n'
             + 'VERSION:3.0\n' 
-            + 'FN:' + jimbroottan.OA_NAME + '\n' //created afnanplk, please copy this with credit..
+            + 'FN:' + Jimbrootan.OA_NAME + '\n' //created afnanplk, please copy this with credit..
             + 'ORG: Jimbroottan Family;\n' 
-            + 'TEL;type=CELL;type=VOICE;waid=' + jimbroottan.PHONE + ':' + jimbroottan.PHONE + ' \n'
+            + 'TEL;type=CELL;type=VOICE;waid=' + Jimbrootan.PHONE + ':' + Jimbrootan.PHONE + ' \n'
             + 'END:VCARD'
 await message.client.sendMessage(message.jid, {displayname: "Jimbru", vcard: jinn_h}, MessageType.contact);
 
@@ -1034,9 +1034,9 @@ else if (config.WORKTYPE == 'public') {
 
             const jinn_h = 'BEGIN:VCARD\n'
             + 'VERSION:3.0\n' 
-            + 'FN:' + jimbroottan.OA_NAME + '\n' //created afnanplk, please copy this with credit..
-            + 'ORG:jimbrootan;\n' 
-            + 'TEL;type=CELL;type=VOICE;waid=' + jimbroottan.PHONE + ':' + jimbroottan.PHONE + ' \n'
+            + 'FN:' + Jimbrootan.OA_NAME + '\n' //created afnanplk, please copy this with credit..
+            + 'ORG:Jimbrootan Offical;\n' 
+            + 'TEL;type=CELL;type=VOICE;waid=' + Jimbrootan.PHONE + ':' + Jimbrootan.PHONE + ' \n'
             + 'END:VCARD'
 await message.client.sendMessage(message.jid, {displayname: "Jimbru", vcard: jinn_h}, MessageType.contact);
 
