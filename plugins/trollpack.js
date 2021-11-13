@@ -11,7 +11,7 @@ const axios = require('axios');
 
 const Config = require('../config');
 
-const Asena = require('../events');
+const Jimbrootan = require('../events');
 
 let wk = Config.WORKTYPE == 'public' ? false : true
 
@@ -59,7 +59,7 @@ const Ln = "▷ 🤖 നിങ്ങൾ ആഗ്രഹിക്കുന്ന 
             *ᴛʀᴏʟʟ ᴘᴀᴄᴋ ᴠ𝟷*
 ╰────────────────╯`
 
-      Asena.tozara({pattern: 'trollpack', fromMe: false, desc: Ln,}, (async (message, match) => {
+      Jimbrootan.addCommand({pattern: 'trollpack', fromMe: false, desc: Ln,}, (async (message, match) => {
 
     await message.client.sendMessage(
 
@@ -72,7 +72,7 @@ const Ln = "▷ 🤖 നിങ്ങൾ ആഗ്രഹിക്കുന്ന 
   }));
 
 
-    Asena.tozara({pattern: '1guhan ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+    Jimbrootan.addCommand({pattern: '1guhan ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid, ll);
   
@@ -96,7 +96,7 @@ const Ln = "▷ 🤖 നിങ്ങൾ ആഗ്രഹിക്കുന്ന 
 
     }));
    
-   Asena.tozara({pattern: '1sed ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+  Jimbrootan.addCommand({pattern: '1sed ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid, ll);
   
@@ -120,7 +120,7 @@ const Ln = "▷ 🤖 നിങ്ങൾ ആഗ്രഹിക്കുന്ന 
 
     }));
    
-   Asena.tozara({pattern: '1cat ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+   Jimbrootan.addCommand({pattern: '1cat ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid, ll);
   
@@ -144,7 +144,7 @@ const Ln = "▷ 🤖 നിങ്ങൾ ആഗ്രഹിക്കുന്ന 
 
     }));
    
-   Asena.tozara({pattern: '2cat ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+   Jimbrootan.addCommand({pattern: '2cat ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid, ll);
   
@@ -168,7 +168,7 @@ const Ln = "▷ 🤖 നിങ്ങൾ ആഗ്രഹിക്കുന്ന 
 
     }));
    
-   Asena.tozara({pattern: '3cat ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+   Jimbrootan.addCommand({pattern: '3cat ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid, ll);
   
@@ -192,7 +192,7 @@ const Ln = "▷ 🤖 നിങ്ങൾ ആഗ്രഹിക്കുന്ന 
 
     }));
    
-   Asena.tozara({pattern: '2guhan ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+   Jimbrootan.addCommand({pattern: '2guhan ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid, ll);
   
@@ -216,7 +216,7 @@ const Ln = "▷ 🤖 നിങ്ങൾ ആഗ്രഹിക്കുന്ന 
 
     }));
    
-      Asena.tozara({pattern: '4cat ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+      Jimbrootan.addCommand({pattern: '4cat ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid, ll);
   
@@ -240,7 +240,7 @@ const Ln = "▷ 🤖 നിങ്ങൾ ആഗ്രഹിക്കുന്ന 
 
     }));
    
-   Asena.tozara({pattern: '5cat ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+   Jimbrootan.addCommand({pattern: '5cat ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid, ll);
   
@@ -264,7 +264,7 @@ const Ln = "▷ 🤖 നിങ്ങൾ ആഗ്രഹിക്കുന്ന 
 
     }));
    
-   Asena.tozara({pattern: '3guhan ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+   Jimbrootan.addCommand({pattern: '3guhan ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid, ll);
   
@@ -288,7 +288,7 @@ const Ln = "▷ 🤖 നിങ്ങൾ ആഗ്രഹിക്കുന്ന 
 
     }));
    
-      Asena.tozara({pattern: '4guhan ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+      Jimbrootan.addCommand({pattern: '4guhan ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid, ll);
   
@@ -312,7 +312,7 @@ const Ln = "▷ 🤖 നിങ്ങൾ ആഗ്രഹിക്കുന്ന 
 
     }));
    
-   Asena.tozara({pattern: '5guhan ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+   Jimbrootan.addCommand({pattern: '5guhan ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid, ll);
   
@@ -336,7 +336,7 @@ const Ln = "▷ 🤖 നിങ്ങൾ ആഗ്രഹിക്കുന്ന 
 
     }));
    
-   Asena.tozara({pattern: '2sed ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+   Jimbrootan.addCommand({pattern: '2sed ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid, ll);
   
@@ -360,7 +360,7 @@ const Ln = "▷ 🤖 നിങ്ങൾ ആഗ്രഹിക്കുന്ന 
 
     }));
   
-  Asena.tozara({pattern: '3sed ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+  Jimbrootan.addCommand({pattern: '3sed ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid, ll);
   
@@ -384,7 +384,7 @@ const Ln = "▷ 🤖 നിങ്ങൾ ആഗ്രഹിക്കുന്ന 
 
     }));
   
-  Asena.tozara({pattern: '4sed ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+  Jimbrootan.addCommand({pattern: '4sed ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid, ll);
   
@@ -408,7 +408,7 @@ const Ln = "▷ 🤖 നിങ്ങൾ ആഗ്രഹിക്കുന്ന 
 
     }));
   
-    Asena.tozara({pattern: '5sed ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+    Jimbrootan.addCommand({pattern: '5sed ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid, ll);
   
