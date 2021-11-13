@@ -1,7 +1,7 @@
 /* 
 Codded Mikhaiel
 */
-const shazz = require('../events');
+const Jimbru = require('../events');
 const Config = require('../config');
 const {MessageType, MessageOptions, Mimetype} = require('@adiwajshing/baileys');
 const fs = require('fs');
@@ -11,7 +11,7 @@ const Ln = "▷ 🤖നിങ്ങൾ ആഗ്രഹിക്കുന്ന �
 if (Config.WORKTYPE == 'public') {
 
 const code = `╭────────────────╮
- Config.BOTNAME
+ Config.BOT_NAME
 ╰────────────────╯
 🎀 *ᴄᴏᴍᴍᴀɴᴅs*🎀
 
@@ -37,7 +37,7 @@ const code = `╭────────────────╮
 ┣
 ┗╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍ `
 
-shazz.addCommand({pattern: 'deadpool', fromMe: false, desc: Ln,}, (async (message, match) => {
+Jimbru.addCommand({pattern: 'deadpool', fromMe: false, desc: Ln,}, (async (message, match) => {
 
 await message.client.sendMessage(
 
@@ -45,7 +45,7 @@ message.jid,code, MessageType.text);
 
 }));
 
-shazz.addCommand({pattern: 'wasted ?(.*)', fromMe: true, desc: "make photo effec" }, async (message, match) => {
+Jimbru.addCommand({pattern: 'wasted ?(.*)', fromMe: true, desc: "make photo effec" }, async (message, match) => {
 
 if (match === '') return await message.sendMessage('give me a url');
 
@@ -55,7 +55,7 @@ await message.client.sendMessage(message.jid,Buffer.from(webimage.data), Message
 
 });
 
-shazz.addCommand({pattern: 'gta ?(.*)', fromMe: true, desc: "make gta poster photo effec" }, async (message, match) => {
+Jimbru.addCommand({pattern: 'gta ?(.*)', fromMe: true, desc: "make gta poster photo effec" }, async (message, match) => {
 
 if (match === '') return await message.sendMessage('give me a url');
 
