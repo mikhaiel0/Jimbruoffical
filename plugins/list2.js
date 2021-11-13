@@ -18,7 +18,7 @@ const hrs = new Date().getHours({ timeZone: Config.TIME_ZONE })
 
 let whb = Config.WORKTYPE == 'public' ? false : true
 
-Jimbru.addCommand({pattern: 'main', fromMe: whb, dontAddCommandList: true}, (async (message, match) => {
+Jimbru.addCommand({pattern: 'pack34', fromMe: whb, dontAddCommandList: true}, (async (message, match) => {
 // send a buttons message!
     var plk_say = new Date().toLocaleString('HI', { timeZone: 'Asia/Kolkata' }).split(' ')[1]
 const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
