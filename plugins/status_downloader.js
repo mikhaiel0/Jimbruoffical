@@ -2,7 +2,8 @@
  Copyright (C) 2021 Mikhaiel.
 Licensed under the  GPL-3.0 License;
 you may not use this file except in compliance with the License.
-*/
+
+
 
 const Jimbru = require('../events');
 const {MessageType, Mimetype} = require('@adiwajshing/baileys');
@@ -43,3 +44,4 @@ const NEED_REPLY = '⚠️ tag stataus'
             });
         return 
     }));
+*/
