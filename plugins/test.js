@@ -59,3 +59,23 @@ if (hrs >= 19 && hrs <= 24) wish = '*ɢᴏᴏᴅ ɴɪɢʜᴛ 🌙*'
       await message.client.sendMessage(message.jid, buttonMessage, MessageType.buttonsMessage)
 
 }));
+/
+Location
+
+location
+const media = await conn.prepareMessage(id, {degreesLatitude: 24.121231, degreesLongitude: 55.1121221}, MessageType.location)
+const buttons = [
+  {buttonId: 'id1', buttonText: {displayText: 'Button 1'}, type: 1},
+  {buttonId: 'id2', buttonText: {displayText: 'Button 2'}, type: 1},
+  {buttonId: 'id3', buttonText: {displayText: 'Button 3'}, type: 1}
+]
+const buttonMessage = {
+    locationMessage: media.message.locationMessage,
+    contentText: "Hi it's button message",
+    footerText: 'Hello World',
+    buttons: buttons,
+    headerType: 6
+}
+const sendMsg = await conn.sendMessage(id, buttonMessage, MessageType.buttonsMessage
+
+///
