@@ -59,7 +59,7 @@ if (hrs >= 19 && hrs <= 24) wish = '*ɢᴏᴏᴅ ɴɪɢʜᴛ 🌙*'
       await message.client.sendMessage(message.jid, buttonMessage, MessageType.buttonsMessage)
 
 }));
-/
+/*
 Location
 
 location
@@ -78,4 +78,4 @@ const buttonMessage = {
 }
 const sendMsg = await conn.sendMessage(id, buttonMessage, MessageType.buttonsMessage
 
-///
+*/
