@@ -64,4 +64,3 @@ if (con.LANG === 'EN') {
             await message.client.sendMessage(message.jid, TRSON + `${r_text[i]}`, MessageType.text);
 
         }));
-}
