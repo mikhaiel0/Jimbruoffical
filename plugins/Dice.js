@@ -1,7 +1,7 @@
 
 /*
 --- Re-Codded by @Mikhaiel ---
-*/
+
 
 const Jimbru = require('../events');
 const {MessageType} = require('@adiwajshing/baileys');
@@ -64,3 +64,4 @@ if (con.LANG === 'EN') {
             await message.client.sendMessage(message.jid, TRSON + `${r_text[i]}`, MessageType.text);
 
         }));
+*/
