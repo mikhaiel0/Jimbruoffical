@@ -9,7 +9,7 @@ const Jimbrootan = require('../events');
 const {MessageType, MessageOptions, Mimetype} = require('@adiwajshing/baileys');
 const {spawnSync} = require('child_process');
 const Config = require('../config');
-const Jimbrootan = require('../jimbroottan');
+const Jimbru = require('../jimbroottan');
 const chalk = require('chalk');
 const axios = require('axios');
 let am = Config.WORKTYPE == 'public' ? false : true
