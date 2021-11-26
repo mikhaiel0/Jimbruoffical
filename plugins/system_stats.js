@@ -21,7 +21,7 @@ const Lang = Language.getString('system_stats');
             
             var image = await axios.get (Config.ALIVE_LOGO, {responseType: 'arraybuffer'})
        
-        await message.client.sendMessage (message.jid, Buffer.from (image.data), MessageType.image, {mimetype: Mimetype.png, caption:  "\n\n*༺࿀࿉ ━◆ ᴊɪᴍʙʀᴏᴏᴛᴀɴ ᴠ - 𝟹.𝟶 ◆━ ࿉࿁༻*\n\n “Keep your face to the sun and you will never see the shadows.”― Helen Keller\n\n *Hey Master, Im Alive Now 🧞*\n\n*◯● Github Link : https://github.com/Mikhaiel/Jimbrootan"})
+        await message.client.sendMessage (message.jid, Buffer.from (image.data), MessageType.image, {mimetype: Mimetype.png, caption:  "*╭➤ 𝐈 𝐀𝐌 𝐒𝐓𝐈𝐋𝐋 𝐀𝐋𝐈𝐕𝐄 🧞*» \n *│❖ Wᴏʀᴋ ᴛʏᴘᴇ : '+Config.WORKTYPE+'* \n *│❖Nᴜᴍʙᴇʀ : '+Config.PHONE+'* \n *│❖ ɪɢ : 👀* \n *│❖ ᴏᴡɴᴇʀ : '+Config.OA_NAME+'* \n *╰────────────────❋ཻུ۪۪⸙* \n\n\ *⌕ ❙❘❙❙❘❙❚❙❘❙❙❚❙❘❙❘❙❚❙❘❙❙❚❙❘❙❙❘❙❚❙❘* \n      *𝕵𝖎𝖒𝖇𝖗𝖔𝖔𝖙𝖆𝖓 𝖔𝖋𝖋𝖎𝖈𝖆𝖑*    \n *╭◪ ᴄᴏᴅᴇᴅ ʙʏ ᴍɪᴋʜᴀɪᴇʟ* \n *╰─────────────────❋ཻུ۪۪⸙*"})
 
     }
     else {
