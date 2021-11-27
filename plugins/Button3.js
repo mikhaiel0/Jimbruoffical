@@ -22,11 +22,11 @@ let wk = Config.WORKTYPE == 'public' ? false : true
 Asena.addCommand({pattern: 'jimbru ?(.*)', fromMe:wk , desc:MENU_LIST}, (async (message, match) => {
 // send a list message!
     const buttons = [
-  {buttonId: '#list', buttonText: {displayText: Mikhaiel.BTN1}, type: 1},
-  {buttonId: '#menu', buttonText: {displayText: Mikhaiel.BTN2}, type: 1}
+  {buttonId: '#list', buttonText: {displayText: Mikhaiel.BUTTON_ONE}, type: 1},
+  {buttonId: '#menu', buttonText: {displayText: Mikhaiel.BUTTON_TWO}, type: 1}
 ]
 const buttonMessage = {
-    contentText: Mikhaiel.Button_Text,
+    contentText: Mikhaiel.BUTTON_DESC,
     footerText: Config.BOT_NAME,
     buttons: buttons,
     headerType: 1
