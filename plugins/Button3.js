@@ -8,6 +8,7 @@ const Asena = require('../events');
 const {MessageType, GroupSettingChange, Mimetype, MessageOptions} = require('@adiwajshing/baileys');
 const fs = require('fs');
 const Config = require('../config')
+const Mikhaiel = require('../jimbroottan');
 const axios = require('axios')
 const request = require('request');
 const os = require('os');
@@ -21,8 +22,8 @@ let wk = Config.WORKTYPE == 'public' ? false : true
 Asena.addCommand({pattern: 'jimbru ?(.*)', fromMe:wk , desc:MENU_LIST}, (async (message, match) => {
 // send a list message!
     const buttons = [
-  {buttonId: '#list', buttonText: {displayText: Config.BTN1}, type: 1},
-  {buttonId: '#menu', buttonText: {displayText: Config.BTN2}, type: 1}
+  {buttonId: '#list', buttonText: {displayText: Mikhaiel.BTN1}, type: 1},
+  {buttonId: '#menu', buttonText: {displayText: Mikhaiel.BTN2}, type: 1}
 ]
 const buttonMessage = {
     contentText: "Jimbrootan offical",
