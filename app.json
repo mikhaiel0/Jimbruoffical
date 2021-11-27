@@ -88,16 +88,16 @@
         },
         "BUTTON_REPLY_ONE": {
             "description": "Add Your Customisible Button reply for Button One",
-            "required": true,
+            "required": false,
             "value": "Button reply one"
         },
         "BUTTON_REPLY_TWO": {
             "description": "Add Your Customisible Button reply for Button One",
-            "required": true,
+            "required": false,
             "value": "Button reply two"
         },
         "PM_BLOCK": {
-            "description": "Link Engelleme Sistemi. Link Blocking System.",
+            "description": "Link Blocking System.",
             "required": true,
             "value": "false"
         },
@@ -240,7 +240,7 @@
         },
         "REMOVE_BG_API_KEY": {
             "description": "https://remove.bg",
-            "required": "false"
+            "required": false,
         },
         "DEPLOYER": {
             "description": "enter your name here",
