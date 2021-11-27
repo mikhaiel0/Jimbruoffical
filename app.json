@@ -66,13 +66,23 @@
             "required": true,
             "value": "🪡"
         },
+        "BUTTON_ONE": {
+            "description": "Add Your Customisible Button Display Text For Button One [click button]",
+            "required": false,
+            "value": "BUTTON ONE"
+        },
+        "BUTTON_TWO": {
+            "description": "Add Your Customisible Button Display Text For Button TWO [click button]",
+            "required": false,
+            "value": "BUTTON TWO"
+        },
         "BUTTON_REPLY_ONE": {
-            "description": "Add Your Customized Button reply for Button One",
+            "description": "Add Your Customisible Button reply for Button One",
             "required": true,
             "value": "Button reply one"
         },
         "BUTTON_REPLY_TWO": {
-            "description": "Add Your Customized Button reply for Button One",
+            "description": "Add Your Customisible Button reply for Button One",
             "required": true,
             "value": "Button reply two"
         },
