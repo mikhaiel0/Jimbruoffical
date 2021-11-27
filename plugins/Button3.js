@@ -27,7 +27,7 @@ Asena.addCommand({pattern: 'jimbru ?(.*)', fromMe:wk , desc:MENU_LIST}, (async (
 ]
 const buttonMessage = {
     contentText: Mikhaiel.Button_Text,
-    footerText: 'Mikhaiel',
+    footerText: 'Config.BOT_NAME',
     buttons: buttons,
     headerType: 1
 }
