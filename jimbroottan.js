@@ -16,7 +16,7 @@ module.exports = {
  OA_NAME: process.env.DEPLOYER === undefined ? 'Mikhaiel' : process.env.DEPLOYER,
  PHONE: process.env.NUMBER === undefined ? '+919544846609' : process.env.NUMBER,    
  IG_USER: process.env.IG_USER === undefined ? '@the_real_mikhaiel' : process.env.IG_USER,
- BTN1: process.env.BTN1 === undefined ? 'Button one' : process.env.BTN1,
- BTN2: process.env.BTN2 === undefined ? 'Button two' : process.env.BTN2,
- Button_Text: process.env.Button_Text === undefined ? 'Helloo' : process.env.Button_Text,
+ BUTTON_ONE: process.env.BUTTON_ONE === undefined ? 'Button one' : process.env.BUTTON_ONE,
+ BUTTON_TWO: process.env.BUTTON_TWO === undefined ? 'Button two' : process.env.BUTTON_TWO,
+ BUTTON_DESC: process.env.BUTTON_DESC === undefined ? 'Helloo' : process.env.BUTTON_DESC,
 };
