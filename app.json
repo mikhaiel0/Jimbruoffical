@@ -66,6 +66,11 @@
             "required": true,
             "value": "🪡"
         },
+        "BUTTON_DESC": {
+            "description": "Add Your Customisible Button Discription Text For Customisible Button",
+            "required": false,
+            "value": "Add Text you want"
+        },
         "BUTTON_ONE": {
             "description": "Add Your Customisible Button Display Text For Button One [click button]",
             "required": false,
