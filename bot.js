@@ -11,7 +11,6 @@ const path = require("path");
 const events = require("./events");
 const chalk = require('chalk');
 const config = require('./config');
-const CRelpy = require('../jimbroottan');
 const simpleGit = require('simple-git');
 const {WAConnection, MessageOptions, MessageType, Mimetype, Presence} = require('@adiwajshing/baileys');
 const {Message, StringSession, Image, Video} = require('./jimbru/');
@@ -332,12 +331,12 @@ const _0x2ba249=_0x3085;function _0x315e(){const _0x1721af=['1480084snwaPr','63Q
 switch(Button) {
    case '#list':
 
- await conn.sendMessage(msg.key.remoteJid, CReply.listbtn, MessageType.text);
+ await conn.sendMessage(msg.key.remoteJid, config.listbtn, MessageType.text);
 
 return;
       case '#menu':
 
- await conn.sendMessage(msg.key.remoteJid, CReply.menubtn, MessageType.text);
+ await conn.sendMessage(msg.key.remoteJid, config.menubtn, MessageType.text);
 
 return;
       case 'menu':
