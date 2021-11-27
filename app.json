@@ -66,6 +66,16 @@
             "required": true,
             "value": "🪡"
         },
+        "BUTTON_REPLY_ONE": {
+            "description": "Add Your Customized Button reply for Button One",
+            "required": true,
+            "value": "Button reply one"
+        },
+        "BUTTON_REPLY_TWO": {
+            "description": "Add Your Customized Button reply for Button One",
+            "required": true,
+            "value": "Button reply two"
+        },
         "PM_BLOCK": {
             "description": "Link Engelleme Sistemi. Link Blocking System.",
             "required": true,
