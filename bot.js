@@ -331,12 +331,12 @@ const _0x2ba249=_0x3085;function _0x315e(){const _0x1721af=['1480084snwaPr','63Q
 switch(Button) {
    case '#list':
 
- await conn.sendMessage(msg.key.remoteJid, config.listbtn, MessageType.text);
+ await conn.sendMessage(msg.key.remoteJid, config.BUTTON_REPLY_ONE, MessageType.text);
 
 return;
       case '#menu':
 
- await conn.sendMessage(msg.key.remoteJid, config.menubtn, MessageType.text);
+ await conn.sendMessage(msg.key.remoteJid, config.BUTTON_REPLY_TWO, MessageType.text);
 
 return;
       case 'menu':
