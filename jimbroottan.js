@@ -18,5 +18,6 @@ module.exports = {
  IG_USER: process.env.IG_USER === undefined ? '@the_real_mikhaiel' : process.env.IG_USER,
  BTN1: process.env.BTN1 === undefined ? 'Button one' : process.env.BTN1,
  BTN2: process.env.BTN2 === undefined ? 'Button two' : process.env.BTN2,
-
+ listbtn: process.env.listbtn === undefined ? 'mone ninak vere pani onnulle' : process.env.listbtn,
+ menubtn: process.env.menubtn === undefined ? 'nthaa mownu' : process.env.menubtn,
 };
