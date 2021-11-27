@@ -15,5 +15,5 @@ module.exports = {
  MKLO: process.env.BAD_WORDS === undefined ? false : process.env.BAD_WORDS,
  OA_NAME: process.env.DEPLOYER === undefined ? 'Mikhaiel' : process.env.DEPLOYER,
  PHONE: process.env.NUMBER === undefined ? '+919544846609' : process.env.NUMBER,    
-
+ IG_USER: process.env.IG_USER === undefined ? '@the_real_mikhaiel' : process.env.IG_USER,
 };
