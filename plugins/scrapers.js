@@ -5,7 +5,7 @@ Special thanks to @afnanplk
 const Jimbru = require('../events');
 const {MessageType,Mimetype} = require('@adiwajshing/baileys');
 const translatte = require('translatte');
-const Config = require('../config');
+const config = require('../config');
 const Jimbrootan = require('../jimbroottan');
 const LanguageDetect = require('languagedetect');
 const lngDetector = new LanguageDetect();
