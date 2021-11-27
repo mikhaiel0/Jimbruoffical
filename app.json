@@ -46,6 +46,11 @@
             "required": true,
             "value": "https://i.imgur.com/0SUQkRT.jpg"
         },
+        "IG_USER": {
+            "description": "Add Your instagram user name for alive message",
+            "required": false,
+            "value": "@the_real_mikhaiel"
+        },
         "ANTİ_LİNK": {
             "description": "Link Engelleme Sistemi. Link Blocking System.",
             "required": true,
