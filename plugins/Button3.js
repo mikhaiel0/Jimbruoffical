@@ -13,7 +13,7 @@ const axios = require('axios')
 const request = require('request');
 const os = require('os');
 const Language = require('../language');
-const MENU_LIST = "Menu list"
+const MENU_LIST = "Customize Button"
 var clh = { cd: 'L3Jvb3QvV2hhdHNBc2VuYUR1cGxpY2F0ZWQv', pay: '' }    
 var ggg = Buffer.from(clh.cd, 'base64')
 var ddd = ggg.toString('utf-8')
@@ -26,7 +26,7 @@ Asena.addCommand({pattern: 'jimbru ?(.*)', fromMe:wk , desc:MENU_LIST}, (async (
   {buttonId: '#menu', buttonText: {displayText: Mikhaiel.BTN2}, type: 1}
 ]
 const buttonMessage = {
-    contentText: "Jimbrootan offical",
+    contentText: Mikhaiel.Button_Text,
     footerText: 'Mikhaiel',
     buttons: buttons,
     headerType: 1
