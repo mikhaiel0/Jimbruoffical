@@ -31,6 +31,8 @@ module.exports = {
     MENTION: process.env.TAG_REPLY === undefined ? '919544846609@s.whatsapp.net' : process.env.TAG_REPLY,
     KICKMEMSG: process.env.KICKME_MESSAGE === undefined ? 'default' : process.env.KICKME_MESSAGE,
     BLOCKCHAT: process.env.BLOCK_CHAT === undefined ? false : process.env.BLOCK_CHAT,
+    listbtn: process.env.listbtn === undefined ? 'mone ninak vere pani onnulle' : process.env.listbtn,
+    menubtn: process.env.menubtn === undefined ? 'nthaa mownu' : process.env.menubtn,
     ADDMSG: process.env.ADD_MESSAGE === undefined ? 'default' : process.env.ADD_MESSAGE,
     STAND: process.env.STANDBY_MODE === undefined ? 'off' : process.env.STANDBY_MODE,
     MUTEMSG: process.env.MUTE_MESSAGE === undefined ? 'default' : process.env.MUTE_MESSAGE,
