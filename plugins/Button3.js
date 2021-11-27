@@ -21,8 +21,8 @@ let wk = Config.WORKTYPE == 'public' ? false : true
 Asena.addCommand({pattern: 'jimbru ?(.*)', fromMe:wk , desc:MENU_LIST}, (async (message, match) => {
 // send a list message!
     const buttons = [
-  {buttonId: '#list', buttonText: {displayText: '+ Config.BTN1 +'}, type: 1},
-  {buttonId: '#menu', buttonText: {displayText: '+ Config.BTN2 +'}, type: 1}
+  {buttonId: '#list', buttonText: {displayText: Config.BTN1}, type: 1},
+  {buttonId: '#menu', buttonText: {displayText: Config.BTN2}, type: 1}
 ]
 const buttonMessage = {
     contentText: "Jimbrootan offical",
