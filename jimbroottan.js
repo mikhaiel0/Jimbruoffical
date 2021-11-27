@@ -20,4 +20,5 @@ module.exports = {
  BTN2: process.env.BTN2 === undefined ? 'Button two' : process.env.BTN2,
  listbtn: process.env.listbtn === undefined ? 'mone ninak vere pani onnulle' : process.env.listbtn,
  menubtn: process.env.menubtn === undefined ? 'nthaa mownu' : process.env.menubtn,
+ Button_Text: process.env.Button_Text === undefined ? 'Helloo' : process.env.Button_Text,
 };
