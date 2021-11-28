@@ -19,4 +19,5 @@ module.exports = {
  BUTTON_ONE: process.env.BUTTON_ONE === undefined ? 'Button one' : process.env.BUTTON_ONE,
  BUTTON_TWO: process.env.BUTTON_TWO === undefined ? 'Button two' : process.env.BUTTON_TWO,
  BUTTON_DESC: process.env.BUTTON_DESC === undefined ? 'Helloo' : process.env.BUTTON_DESC,
+ BUTTON_COMMAND: process.env.BUTTON_COMMAND === undefined ? 'button' : process.env.BUTTON_COMMAND,
 };
