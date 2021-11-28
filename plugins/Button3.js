@@ -19,7 +19,7 @@ var ggg = Buffer.from(clh.cd, 'base64')
 var ddd = ggg.toString('utf-8')
 let wk = Config.WORKTYPE == 'public' ? false : true
 
-Asena.addCommand({pattern: `${Mikhaiel.BUTTON_COMMAND} ?(.*)`, fromMe:wk , desc:MENU_LIST}, (async (message, match) => {
+Asena.addCommand({pattern: '{on: 'Mikhaiel.BUTTON_COMMAND', fromMe:wk , desc:MENU_LIST}, (async (message, match) => {
 // send a list message!
     const buttons = [
   {buttonId: '#list', buttonText: {displayText: Mikhaiel.BUTTON_ONE}, type: 1},
