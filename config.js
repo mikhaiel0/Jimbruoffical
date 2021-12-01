@@ -17,7 +17,7 @@ DEBUG = process.env.DEBUG === undefined ? false : convertToBool(process.env.DEBU
 module.exports = {
     VERSION: 'v8.5.0 Global Stable',
     SESSION: process.env.JIMBROOTAN_SESSION === undefined ? '' : process.env.JIMBROOTAN_SESSION,
-    ANTİLİNK: process.env.ANTİ_LİNK === undefined ? 'false' : process.env.ANTİ_LİNK,
+    WHATS_LINK_BLOCK: process.env.WHATS_LINK_BLOCK === undefined ? 'false' : process.env.WHATS_LINK_BLOCK,
     AUTO_BIO: process.env.AUTO_BIO === undefined ? 'false' : process.env.AUTO_BIO,
     REMOVE: process.env.THERI_KICK_GP === undefined ? 'false' : process.env.THERI_KICK_GP,
     JINN: process.env.ALL_CAPTION === undefined ? 'MADE BY JIMBRU' : process.env.ALL_CAPTION,
