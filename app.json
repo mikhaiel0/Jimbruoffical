@@ -21,6 +21,11 @@
             "required": true,
             "value": "en"
         },
+        "ANTI_FAKE_REMOVE": {
+            "description": "Fake number auto remover (Except Indian numbers)! Give true for activating!",
+            "required": true,
+            "value": "false"
+        },
         "AUTO_BIO": {
             "description": "Change Your live Bio",
             "required": false,
@@ -51,8 +56,8 @@
             "required": false,
             "value": "@the_real_mikhaiel"
         },
-        "ANTİ_LİNK": {
-            "description": "Link Engelleme Sistemi. Link Blocking System.",
+        "WHATS_LINK_BLOCK": {
+            "description": "Whatsapp Link Blocking System [ only whatsapp links ] .",
             "required": true,
             "value": "false"
         },
