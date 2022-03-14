@@ -72,7 +72,6 @@ async function whatsAsena () {
     
 // ════════════════════WA CONNECTION◽◽◽◽    
     const conn = new WAConnection();
-    conn.version = [3, 3234, 9];
     const Session = new StringSession();
     conn.browserDescription = ['JIMBRU v3.0.1', 'Safari', '90']
 
