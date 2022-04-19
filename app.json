@@ -52,14 +52,24 @@
             "value": "https://i.imgur.com/0SUQkRT.jpg"
         },
         "ALIVE_BUTTON_ONE": {
-            "description": "Enter your alive below",
+            "description": "Enter your alive button text below",
             "required": true,
             "value": "Uff 😋"
         },
+        "ALIVE_REPLY_ONE": {
+            "description": "Enter your alive button reply below",
+            "required": true,
+            "value": "Thank you 🤸"
+        },
         "ALIVE_BUTTON_TWO": {
-            "description": "Enter your alive button below",
+            "description": "Enter your alive button text below",
             "required": true,
             "value": "Hehe😂"
+        },
+        "ALIVE_REPLY_TWO": {
+            "description": "Enter your alive button reply below",
+            "required": true,
+            "value": "yaa monee😹"
         },
         "IG_USER": {
             "description": "Add Your instagram user name for alive message",
