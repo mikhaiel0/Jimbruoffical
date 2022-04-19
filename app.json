@@ -51,6 +51,16 @@
             "required": true,
             "value": "https://i.imgur.com/0SUQkRT.jpg"
         },
+        "ALIVE_BUTTON_ONE": {
+            "description": "Enter your alive below",
+            "required": true,
+            "value": "Uff 😋"
+        },
+        "ALIVE_BUTTON_TWO": {
+            "description": "Enter your alive button below",
+            "required": true,
+            "value": "Hehe😂"
+        },
         "IG_USER": {
             "description": "Add Your instagram user name for alive message",
             "required": false,
