@@ -16,7 +16,7 @@ let am = Config.WORKTYPE == 'public' ? false : true
 const Language = require('../language');
 const Lang = Language.getString('system_stats');
 
-    Jimbrootan.addCommand({pattern: 'alive', fromMe: true, desc: Lang.ALIVE_DESC}, (async (message, match) => {
+    Jimbrootan.addCommand({pattern: 'xhur', fromMe: true, desc: Lang.ALIVE_DESC}, (async (message, match) => {
 
         if (Config.ALIVEMSG == 'default') {
             
@@ -48,7 +48,7 @@ const Lang = Language.getString('system_stats');
 
  if (Config.WORKTYPE == 'public') {
 
-    Jimbrootan.addCommand({pattern: 'alive', fromMe: false, dontAddCommandList:true}, (async (message, match) => {
+    Jimbrootan.addCommand({pattern: 'xhur', fromMe: false, dontAddCommandList:true}, (async (message, match) => {
 
         if (Config.ALIVEMSG == 'default') {
             
