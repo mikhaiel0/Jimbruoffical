@@ -7,6 +7,7 @@ const {MessageType, GroupSettingChange, Mimetype, MessageOptions} = require('@ad
 const fs = require('fs');
 const Config = require('../config')
 const config = require('../config')
+const Jimbru = require('../jimbroottan');
 const axios = require('axios')
 const request = require('request');
 const os = require('os');
