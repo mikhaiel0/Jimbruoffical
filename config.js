@@ -34,6 +34,9 @@ module.exports = {
 
     BUTTON_REPLY_ONE: process.env.BUTTON_REPLY_ONE === undefined ? 'mone ninak vere pani onnulle' : process.env.BUTTON_REPLY_ONE,
     BUTTON_REPLY_TWO: process.env.BUTTON_REPLY_TWO === undefined ? 'nthaa mownu' : process.env.BUTTON_REPLY_TWO,
+    
+    ALIVE_BUTTON_ONE: process.env.ALIVE_BUTTON_ONE === undefined ? 'mone ninak vere pani onnulle' : process.env.ALIVE_BUTTON_ONE,
+    ALIVE_BUTTON_TWO: process.env.ALIVE_BUTTON_TWO === undefined ? 'nthaa mownu' : process.env.ALIVE_BUTTON_TWO,
 
     ADDMSG: process.env.ADD_MESSAGE === undefined ? 'default' : process.env.ADD_MESSAGE,
     STAND: process.env.STANDBY_MODE === undefined ? 'off' : process.env.STANDBY_MODE,
