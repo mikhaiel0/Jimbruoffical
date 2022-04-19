@@ -25,7 +25,7 @@ Asena.addCommand({pattern: 'alive', fromMe: whb, dontAddCommandList: true}, (asy
       ]
       
       const buttonMessage = {
-          contentText: '*╭➤ 𝐈 𝐀𝐌 𝐒𝐓𝐈𝐋𝐋 𝐀𝐋𝐈𝐕𝐄 🧞*» \n*│❖ Wᴏʀᴋ ᴛʏᴘᴇ : '+ Config.WORKTYPE +'* \n*│❖Nᴜᴍʙᴇʀ : '+ Jimbru.PHONE +'* \n*│❖ ɪɢ : '+ Jimbru.IG_USER +'* \n*│❖ ᴏᴡɴᴇʀ : '+ Jimbru.OA_NAME +'* \n*╰────────────────❋ཻུ۪۪⸙* \n   *⌕ ❙❘❙❙❘❙❚❙❘❙❙❚❙❘❙❘❙❚❙❘❙❙❚❙❘❙❙❘❙❚❙❘*   \n   *𝕵𝖎𝖒𝖇𝖗𝖔𝖔𝖙𝖆𝖓 𝖔𝖋𝖋𝖎𝖈𝖆𝖑*   \n *╭◪ ᴄᴏᴅᴇᴅ ʙʏ ᴍɪᴋʜᴀɪᴇʟ* \n *╰─────────────────❋ཻུ۪۪⸙*'})
+          contentText: '*╭➤ 𝐈 𝐀𝐌 𝐒𝐓𝐈𝐋𝐋 𝐀𝐋𝐈𝐕𝐄 🧞*» \n*│❖ Wᴏʀᴋ ᴛʏᴘᴇ : '+ Config.WORKTYPE +'* \n*│❖Nᴜᴍʙᴇʀ : '+ Jimbru.PHONE +'* \n*│❖ ɪɢ : '+ Jimbru.IG_USER +'* \n*│❖ ᴏᴡɴᴇʀ : '+ Jimbru.OA_NAME +'* \n*╰────────────────❋ཻུ۪۪⸙* \n   *⌕ ❙❘❙❙❘❙❚❙❘❙❙❚❙❘❙❘❙❚❙❘❙❙❚❙❘❙❙❘❙❚❙❘*   \n   *𝕵𝖎𝖒𝖇𝖗𝖔𝖔𝖙𝖆𝖓 𝖔𝖋𝖋𝖎𝖈𝖆𝖑*   \n *╭◪ ᴄᴏᴅᴇᴅ ʙʏ ᴍɪᴋʜᴀɪᴇʟ* \n *╰─────────────────❋ཻུ۪۪⸙*',
           footerText: Config.BOT_NAME,
           buttons: buttons,
           headerType: 1
