@@ -32,5 +32,5 @@ const buttonMessage = {
     templateButtons: templateButtons,
     image: {url: 'https://i.imgur.com/0SUQkRT.jpeg'}
 }
- await message.client.sendMessage(message.jid, templateMessage, buttonMessage, MessageType.buttonsMessage)
+ await message.client.sendMessage(message.jid, buttonMessage, MessageType.buttonsMessage)
     }));
