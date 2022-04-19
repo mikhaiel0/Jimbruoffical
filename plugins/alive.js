@@ -21,8 +21,8 @@ let whb = Config.WORKTYPE == 'public' ? false : true
 Asena.addCommand({pattern: 'alive', fromMe: whb, dontAddCommandList: true}, (async (message, match) => {
 // send a buttons message 
     const buttons = [
-        {buttonId: 'id1', buttonText: {displayText: Config.ALIVE_BUTTON_ONE }, type: 1},
-        {buttonId: 'id2', buttonText: {displayText: Config.ALIVE_BUTTON_TWO }, type: 1}
+        {buttonId: 'alivebutton1', buttonText: {displayText: Config.ALIVE_BUTTON_ONE }, type: 1},
+        {buttonId: 'alivebutton2', buttonText: {displayText: Config.ALIVE_BUTTON_TWO }, type: 1}
       ]
       
       const buttonMessage = {
